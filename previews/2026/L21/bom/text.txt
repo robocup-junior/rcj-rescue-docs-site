@@ -1,0 +1,309 @@
+Name of the            Total Cost            Total Cost ($)
+    Team name:                                                         QUANTUMSPEED                                                                                                                                                      Local Currency         Local Currency         U.S.A. Dollars
+                                                                                                                                                                                                                                              Euro
+                                                                                                                                                                                                                                                                   € 759,60                $873,37
+                                                                                                                                                                                                                                              EUR
+
+HARDWARE
+#  Component                    Part name                                   Autor                                                          Source                Status                            Quantity           Unit cost (Euro)     Unit cost (US Dollars) Total Cost (Euro) Total Cost (USA Dollars)
+ 1 Microcontroller              Raspberry Pi 5 8GB RAM                      Raspberry Pi                                                   https://www.tme. Reused                                                  1              151,69                 $175,57          € 151,69                  $175,57
+                                                                                                                                           eu/it/details/sc111
+                                                                                                                                           https://www.tme.
+ 2 Microcontroller dissipator   Raspberry Pi active cooler                  Raspberry Pi                                                                         Reused                                             1                 4,72                  $5,46              € 4,72                  $5,46
+                                                                                                                                           2/raspberry-pi-
+                                                                                                                                           eu/it/details/sc114
+ 3 Memory card                  64GB microSD                                Sandisk                                                        https://www.
+                                                                                                                                           minicomputer/rasp Reused
+                                                                                                                                           8/raspberry-pi-
+                                                                                                                                                                                                                    1                14,99                 $17,35            € 14,99                  $17,35
+                                                                                                                                           mediaworld.
+                                                                                                                                           https://www.tme.
+ 4 Camera                       Raspberry Pi Camera Module 3                Raspberry Pi                                                   berry-pi/raspberry-
+                                                                                                                                           accessori/raspberr    Reused                                             2                30,34                 $35,12            € 60,68                  $70,23
+                                                                                                                                           it/it/product/_sche
+                                                                                                                                           eu/it/details/sc122
+ 5 Hardware accelerat           Raspberry Pi AI HAT+                        Raspberry Pi                                                   pi-5-8gb-ram/
+                                                                                                                                           y-pi/raspberry-pi-
+                                                                                                                                           https://www.kubii.com/it/schede-integrate/4343-2136-kit-ai-ai-hat-raspberry-pi-3272496319608.html#/kit_ai_hat_raspberry_pi-cappello_ai_26_top
+                                                                                                                                                                 New                                                1              123,48                 $142,92          € 123,48                  $142,92
+                                                                                                                                           da-di-memoria-
+                                                                                                                                           4/raspberry-pi-
+ 6 Robot chassis                Custom made                                 QuantumSpeed/BambuLab                                          active-cooler/
+                                                                                                                                           https://eu.store.
+                                                                                                                                           sandisk-sdsqxah- New                                                     1                11,50                 $13,31            € 11,50                  $13,31
+                                                                                                                                           accessori/raspberr
+                                                                                                                                           bambulab.
+                                                                                                                                           064g-gn6aa-
+                                                                                                                                           https://us.
+ 7 Microcontroller battery      Ovonic 2S LiPo Battery 5200mAh 7.4V         Ovonic                                                         y-pi/camera-          Reused                                             1                17,00                 $19,68            € 17,00                  $19,68
+                                                                                                                                           com/it/products/pl
+                                                                                                                                           177538.html
+                                                                                                                                           ovonicshop.
+ 8 Motors battery               Ovonic 2S LiPo Battery 2200mAh 11.1V        Ovonic                                                         module-3-wide/
+                                                                                                                                           https://www.          New                                                1                14,00                 $16,20            € 14,00                  $16,20
+                                                                                                                                           a-basic-filament?
+                                                                                                                                           com/products/2-
+                                                                                                                                           ampow.
+                                                                                                                                           https://www.tme.
+ 9 Drive motor                  156:1 Metal gearmotor 20DX44L MM 12V CB     Pololu                                                         variant=59361122
+                                                                                                                                           ovonic-2s-lipo-       New                                                4                36,92                 $42,73          € 147,68                  $170,92
+                                                                                                                                           com/it/products/ov
+                                                                                                                                           eu/it/details/pololu
+10 Motors controller            Dual-Channel H-Bridge Driver Board Module   Akozon                                                         3076515872
+                                                                                                                                           https://www.
+                                                                                                                                           battery-5200mah-      Reused                                             1                25,86                 $29,93            € 25,86                  $29,93
+                                                                                                                                           onic-50c-7-4v-
+                                                                                                                                           -3480/motori-
+                                                                                                                                           amazon.
+                                                                                                                                           2s1p-7-4v-
+                                                                                                                                           https://www.tme.
+11 Motors clamp                 20D MM Metal Gearmotor Bracket              Pololu                                                         2200mah-2s1p-
+                                                                                                                                           dc/pololu/156-1-      New                                                2                 9,36                 $10,83            € 18,72                  $21,67
+                                                                                                                                           it/dp/B07H2MDX
+                                                                                                                                           hardcase-rc-lipo-
+                                                                                                                                           eu/en/details/polol
+12 Wheels                       Custom made                                 QuantumSpeed/BambuLab/Reschimica                               deans-2pcs-lipo-
+                                                                                                                                           https://www.
+                                                                                                                                           metal-gearmotor-      New                                                4                 5,00                  $5,79            € 20,00                  $23,15
+                                                                                                                                           MN?
+                                                                                                                                           battery-with-
+                                                                                                                                           u-
+                                                                                                                                           battery?
+                                                                                                                                           reschimica.
+                                                                                                                                           20dx44l-mm-12v- Reused
+                                                                                                                                           https://www.
+13 Little servos for arm        180-degree metal gear servo motors          Behogan                                                        ref=cm_sw_r_cp_
+                                                                                                                                           deans-t-plug-for-
+                                                                                                                                           1138/accessories-                                                        4                 1,99                  $2,30              € 7,96                  $9,21
+                                                                                                                                           variant=42940968
+                                                                                                                                           com/it/gomme-
+                                                                                                                                           cb/
+                                                                                                                                           amazon.
+14 Big servo for arm            270-degree metal gear servo motors 20KG     Diymore                                                        ud_dp_AGQPQZ
+                                                                                                                                           https://www.
+                                                                                                                                           1-8-1-10-rc-
+                                                                                                                                           for-                  New                                                1                19,59                 $22,67            € 19,59                  $22,67
+                                                                                                                                           173812
+                                                                                                                                           siliconiche/127-
+                                                                                                                                           it/dp/B0FFSTDF9
+                                                                                                                                           N6X7RGT8K04C
+                                                                                                                                           amazon.
+                                                                                                                                           vehicles-car-
+                                                                                                                                           micromotors/polol
+                                                                                                                                           https://www.az-
+15 Servos controller            PCA9685 Servo driver                        AZDelivery                                                     203-r20-silicone-
+                                                                                                                                           5?                    New                                                1                10,99                 $12,72            € 10,99                  $12,72
+                                                                                                                                           X8&ref_=cm_sw_r
+                                                                                                                                           it/dp/B0BD4DDTY
+                                                                                                                                           trucks-airplane-
+                                                                                                                                           u/20d-mm-metal-
+                                                                                                                                           delivery.
+16 Distance sensors             VL53L0X Time-of-Flight                      AZDelivery                                                     liquido-per-
+                                                                                                                                           https://www.az-
+                                                                                                                                           ref=cm_sw_r_cp_ New                                                      5                 3,80                  $4,40            € 19,00                  $21,99
+                                                                                                                                           _cp_ud_dp_AGQ
+                                                                                                                                           7?
+                                                                                                                                           boats
+                                                                                                                                           gearmotor-
+                                                                                                                                           de/it/products/pca
+                                                                                                                                           stampi-di-media-
+                                                                                                                                           delivery.
+                                                                                                                                           ud_dp_CQB1HFT
+                                                                                                                                           https://www.
+17 Rotation sensor              Adafruit LSM6DSOX + LIS3MDL                 Adafruit                                                       PQZN6X7RGT8K
+                                                                                                                                           _encoding=UTF8
+                                                                                                                                           bracket-pair/
+                                                                                                                                           9685-                 Reused                                             1                19,95                 $23,09            € 19,95                  $23,09
+                                                                                                                                           durezza.
+                                                                                                                                           de/it/products/vl53
+                                                                                                                                           1AJRVF117YD1N
+                                                                                                                                           adafruit.
+18 Microswitches                Micro touch switches 125V 1A                DAOKAI                                                         04CX8&social_sh Reused
+                                                                                                                                           &ref=cm_sw_r_cp
+                                                                                                                                           https://www.
+                                                                                                                                           servotreiber?                                                            8                 0,63                  $0,73              € 5,04                  $5,83
+                                                                                                                                           html#8370/fullscre
+                                                                                                                                           l0x-time-of-flight-
+                                                                                                                                           &ref_=cm_sw_r_c
+                                                                                                                                           com/product/4517
+                                                                                                                                           are=cm_sw_r_cp_
+                                                                                                                                           _ud_dp_95BP2TJ
+                                                                                                                                           amazon.
+                                                                                                                                           variant=40364395
+19 Expansion card               PCA9548A Multiplexer I2C                    AZDelivery                                                     https://www.
+                                                                                                                                           en-initial/ https:
+                                                                                                                                           tof-laser-
+                                                                                                                                           p_ud_dp_CQB1H         Reused                                             1                 4,99                  $5,78             € 4,99                   $5,78
+                                                                                                                                           ud_dp_AGQPQZ
+                                                                                                                                           VHMEGPH8PZY
+                                                                                                                                           it/dp/B09WVMRD
+                                                                                                                                           410
+                                                                                                                                           google.com/url?
+                                                                                                                                           //eu.store.
+                                                                                                                                           abstandssensor?
+                                                                                                                                           https://it.rs-online.
+                                                                                                                                           FT1AJRVF117YD         Reused
+20 Switches                     Switches ON - OFF                           RS Italia                                                      N6X7RGT8K04C
+                                                                                                                                           C6&ref_=cm_sw_
+                                                                                                                                           5V?                   Reused                                             2                 3,61                  $4,18              € 7,22                  $8,36
+                                                                                                                                           q=https://www.az-
+                                                                                                                                           bambulab.
+                                                                                                                                           variant=32344531
+                                                                                                                                           com/web/p/interrut
+                                                                                                                                           1N&social_share=
+21 Servo adapter                I2C Power & Logic Shifter                   Melopero                                                       https://www.
+                                                                                                                                           X8
+                                                                                                                                           r_cp_ud_dp_95B
+                                                                                                                                           _encoding=UTF8        Reused                                             1                 6,05                  $7,00              € 6,05                  $7,00
+                                                                                                                                           delivery.
+                                                                                                                                           com/it/products/tp
+                                                                                                                                           435616
+                                                                                                                                           tori-a-
+                                                                                                                                           cm_sw_r_cp_ud_
+                                                                                                                                           melopero.
+                                                                                                                                           P2TJVHMEGPH8
+                                                                                                                                           &psc=1&ref=cm_s
+                                                                                                                                           https://www.
+22 Power converter              Power converter Step up DC DC               Heemol                                                         de/it/products/tca9 New
+                                                                                                                                           u-for-ams?
+                                                                                                                                           levetta/7347062
+                                                                                                                                           dp_CQB1HFT1AJ                                                            1                 9,50                 $11,00              € 9,50                 $11,00
+                                                                                                                                           com/it/shop/melop
+                                                                                                                                           PZYC6&social_sh
+                                                                                                                                           w_r_cp_ud_dp_78
+                                                                                                                                           amazon.it/-
+23 Power converter              Power converter Step down DC DC             AZDelivery                                                     548a-i2c-iic-
+                                                                                                                                           https://www.az-
+                                                                                                                                           variant=59361470 Reused
+                                                                                                                                           RVF117YD1N                                                               1                 4,99                  $5,78              € 4,99                  $5,78
+                                                                                                                                           ero/meloperoi2cp
+                                                                                                                                           are=cm_sw_r_cp_
+                                                                                                                                           ZA4N0R7ACP5X
+                                                                                                                                           /en/Heemol-
+                                                                                                                                           multiplexer?
+                                                                                                                                           delivery.
+                                                                                                                                           4399167492
+                                                                                                                                           https://www.tme.
+24 LEDs                         RGBW Led string                             IPIXEL LED                                                     owerandlogicconv New
+                                                                                                                                           ud_dp_95BP2TJV
+                                                                                                                                           PY8PCH&ref_=c
+                                                                                                                                           Converter-                                                               1                10,00                 $11,57            € 10,00                  $11,57
+                                                                                                                                           variant%
+                                                                                                                                           de/it/products/lm2
+                                                                                                                                           eu/it/details/s0081
+25 Cables                       Various cables custom made                  QuantumSpeed/OBI Italia                                        erter/
+                                                                                                                                           https://www.obi-
+                                                                                                                                           HMEGPH8PZYC6
+                                                                                                                                           m_sw_r_cp_ud_d
+                                                                                                                                           Voltage-              New                                                1                10,00                 $11,57            € 10,00                  $11,57
+                                                                                                                                           3D323443939410
+                                                                                                                                           596s-dc-dc-step-
+                                                                                                                                           44ca4s1-
+                                                                                                                                           italia.it/
+                                                                                                                                           &th=1
+                                                                                                                                           p_78ZA4N0R7AC New
+                                                                                                                                           Regulator-
+                                                                                                                                           https://www.obi-
+                                                                                                                                           88&sa=D&source
+26 Connecting parts             screws M1-M2-M3, glue, cable ties, ...      OBI Italia                                                     down-modul-1?
+                                                                                                                                           rgbnw/fonti-di-                                                          1                 5,00                  $5,79            € 10,00                   $5,79
+                                                                                                                                           P5XPY8PCH&soc
+                                                                                                                                           Constant/dp/B0C9
+                                                                                                                                           italia.it/
+                                                                                                                                           =editors&ust=178
+                                                                                                                                           variant=12228728
+                                                                                                                                           luce-led-a-
+                                                                                                                                           ial_share=cm_sw
+                                                                                                                                           GVF9XC/ref=sr_1
+                                                                                                                                           1290442869682&
+                                                                                                                                           291424
+                                                                                                                                           nastro/ipixel-
+                                                                                                                                           _r_cp_ud_dp_78Z
+                                                                                                                                           _1?
+                                                                                                                                           usg=AOvVaw2he
+                                                                                                                                           led/s008144ca4sa
+                                                                                                                                           A4N0R7ACP5XP
+                                                                                                                                           crid=2IV9GG2R3
+                                                                                                                                           JCFae_ZrPwJzaA
+                                                                                                                                           1-c1-rgb-4000k-
+                                                                                                                                           Y8PCH
+                                                                                                                                           FJK4&dib=eyJ2Ijo
+                                                                                                                                           5rfPt
+SOFTWARE                                                                                                                                   ip20/
+                                                                                                                                           iMSJ9.
+                                                                                                                                           5fl_SYodjwqu6Qe
+#  Name                         Software's Tool/Library                     Description                                                    Source
+                                                                                                                                           sNKjh24RjitwgDv       Autor                             Cost (Euro)        Cost (USA Dollars)
+ 1 Open CV                      Library                                     Image processing library                                       2e8dcyBegynAgH
+                                                                                                                                           https://opencv.org/                       Opencv.org FREE                  FREE
+                                                                                                                                           QfQvawvj7fGaIBjg
+ 2 picamera2                    Library                                     Camera control on Raspberry Pi                                 https://pypi.org/project/picamera2/  Raspberry Pi Ltd FREE                 FREE
+                                                                                                                                           PIVtWaH3Yqbg5f
+ 3 libcamera                    Library                                     Camera control on Raspberry Pi                                 https://libcamera.org/
+                                                                                                                                           Uv6LntmPVmcm6                   The libcamera Project FREE                 FREE
+ 4 ai_edge_litert               Library                                     Lightweight AI models for compact devices                      https://pypi.org/project/ai-edge-litert/
+                                                                                                                                           VEcyZIvO6ckBrK                                  Google FREE                FREE
+ 5 tflite_runtime               Library                                     Lightweight AI models for compact devices                      6lLn6cOyQY3f2tqj
+                                                                                                                                           https://pypi.org/project/tflite-runtime/        Google FREE                FREE
+                                                                                                                                           3hCioDrzzgfzwF4
+ 6 numpy                        Library                                     Fast mathematical calculations on large data arrays            https://numpy.org/                     Travis Oliphant FREE                FREE
+                                                                                                                                           NUWYl7ndWGMk
+ 7 lgpio                        Library                                     Hardware pin control for electronic components                 https://pypi.org/project/lgpio/
+                                                                                                                                           OTbD_3T5Ys0ulg                        Joan (joan2937) FREE                 FREE
+ 8 gpiozero                     Library                                     Hardware pin control for electronic components                 0THWAOpNuohm
+                                                                                                                                           https://pypi.org/project/gpiozero/
+                                                                                                                                                                  Ben Nuttall and Dave Jones FREE                     FREE
+ 9 board                        Library                                     Automatic identification of the hardware board model in use    DihLSgSXFmZW-
+                                                                                                                                           https://pypi.org/project/board/     Adafruit Industries FREE               FREE
+                                                                                                                                           22AfmykronLs_Py
+10 adafruit_tca9548a            Library                                     Management of multiple sensors connected to the same channel   https://github.com/WifWaf/TCA9548A
+                                                                                                                                           8lPqQnkn2RAWg                       Adafruit Industries FREE               FREE
+11 adafruit_lsm6ds (lsm6ds33)   Library                                     Accelerometer and gyroscope data reading (movement)            https://github.com/adafruit/adafruit_lsm6ds
+                                                                                                                                           679XHnW4hgbaf1                      Adafruit Industries FREE               FREE
+12 adafruit_lis3mdl             Library                                     Magnetometer data reading (compass)                            VOMGoAQqgbMX
+                                                                                                                                           https://github.com/adafruit/Adafruit_LIS3MDL
+                                                                                                                                                                               Adafruit Industries FREE               FREE
+                                                                                                                                           ITjn1NvG0uog1tj
+13 time                         Library                                     Management of times, dates, and pauses in the code             https://pypi.org/project/timelib/
+                                                                                                                                                                  Python Software Foundation FREE                     FREE
+                                                                                                                                           GBRIeddNadCis5
+14 datetime                     Library                                     Management of times, dates, and pauses in the code             https://pypi.org/project/DateTime/
+                                                                                                                                           xub47eMzc08H88         Python    Software Foundation    FREE               FREE
+15 random                       Library                                     Generation of random numbers or choices                        https://pypi.org/project/random-321/
+                                                                                                                                           TDo6uvpoKhLEIv Python Software Foundation FREE                             FREE
+16 signal                       Library                                     Management of clean program interruption                       Xh-SQ.
+                                                                                                                                           https://pypi.org/project/python-signal/
+                                                                                                                                                                  Python Software Foundation FREE                     FREE
+                                                                                                                                           9UXCaU6hEAq84
+17 sys                          Library                                     Direct interaction with the operating system                   https://docs.python.org/3/library/sys.html
+                                                                                                                                                                  Python Software Foundation FREE                     FREE
+                                                                                                                                           NfycaQUlCejPzek
+18 traceback                    Library                                     Detailed analysis of programming errors                        https://pypi.org/project/traceback-with-variables/
+                                                                                                                                           Lz3bbFTdHw-            Python Software Foundation FREE                     FREE
+19 math                         Library                                     Advanced mathematical formulas and constants                   Bblw&dib_tag=se
+                                                                                                                                           https://pypi.org/project/mathlib/
+                                                                                                                                                                  Python Software Foundation FREE                     FREE
+20 pathlib                      Library                                     Simplified management of file and folder paths                 &keywords=PS61 Python Software Foundation FREE
+                                                                                                                                           https://pypi.org/project/pathlib/                                          FREE
+                                                                                                                                           088+step+up+10A
+21 threading                    Library                                     Simultaneous execution of multiple tasks                       https://pypi.org/project/thread/
+                                                                                                                                           &qid=1778923700        Python Software Foundation FREE                     FREE
+22 Visual Studio Code           Software's Tool                             Writing and editing programming code                           https://code.visualstudio.com/
+                                                                                                                                           &s=industrial&spr                             Microsoft FREE               FREE
+23 Google Colab                 Software's Tool                             Running Python code online on Google servers                   efix=ps61088+ste
+                                                                                                                                           https://colab.research.google.com/              Google FREE                FREE
+24 Overleaf                     Software's Tool                             Writing scientific texts and documents in LaTeX                p+up+10a%
+                                                                                                                                           https://it.overleaf.com/project        Digital Science FREE/EDUCATION FREE/EDUCATION
+                                                                                                                                           2Cindustrial%
+25 Google Slides                Software's Tool                             Creating and editing presentations                             https://workspace.google.com/products/slides/
+                                                                                                                                           2C186&sr=1-1                                    Google FREE                FREE
+26 Roboflow                     Software's Tool                             AI dataset management and preparation                          https://roboflow.com/                   Roboflow, Inc. FREE                FREE
+27 LabelingIMG                  Software's Tool                             Tool for manual image labeling                                 https://pypi.org/project/labelImg/             Tzutalin FREE               FREE
+28 Fusion 360                   Software's Tool                             Computer-aided 3D design and modeling                          https://www.autodesk.com/it/products/fusion-360/overview
+                                                                                                                                                                                         Autodesk FREE                FREE
+29 Bambu studio                 Software's Tool                             Preparing 3D files for 3D printing                             https://bambulab.com/it-it/download/studioBambu Lab FREE                   FREE
+30 Real VNC                     Software's Tool                             remote access and control software                             https://www.realvnc.com/en/               Andy Harter FREE                 FREE
+31 Premiere Pro                 Software's Tool                             Professional video editing and cutting                         https://www.adobe.com/                     Adobe Inc.               € 1,00               $1,16)
+32 After Effect                 Software's Tool                             Creation of special effects and motion graphics                https://www.adobe.com/ Company of Science and Art                   € 1,00               $1,16)
+33 Media Encoder                Software's Tool                             Fast conversion and rendering of video files                   https://www.adobe.com/                     Adobe Inc.               € 1,00               $1,16)
+34 Photoshop                    Software's Tool                             Photo editing and digital image manipulation                   https://www.adobe.com/ Thomas and John Knoll                        € 1,00               $1,16)

@@ -1,0 +1,124 @@
+TEAM VAST
+                                                     Anya                                                              Shruti                                                                                           Trischa
+                                                                     Won 2nd Place National (India) - Score ~ 470-500 points
+
+                                                           Anya Agarwal                                  Shruti Purumala                                                 Trischa Taneja
+                                                                     Anya led hardware integration                     Shruti developed Samarth's
+                                                                                                                                                                                       Trischa led Samarth's
+                                                                      and navigation development,                          DFS/BFS navigation
+                                                                                                                                                                                        mechanical design,
+                                                                      including PID wall-following,                         algorithms, heading
+                                                                                                                                                                                       creating the custom
+                                                                        heading correction, ramp                            correction, and cell
+                                                                     detection, and OpenMV-based                                                                                        Fusion 360 chassis,
+                                                                                                                      realignment system. She also
+                                                                        victim detection. She has                                                                                      component mounts,
+                                                                                                                       managed overall software
+                                                                      experience of over 8 years in                                                                                   sensor cutouts, and the
+                                                                                                                           integration and has
+                                                                       robotics including multiple                                                                                    dual-purpose rescue kit
+                                                                     languages and has led multiple                    experience in Python, C++,
+                                                                                                                                                                                            deployment
+                                                                         teams for international                       and computer vision using
+                                                                                                                                                                                            mechanism.
+                                                                              competitions.                                       OpenCV.
+
+                                                                          OpenMV H7 + Camera: Detects                                                                                                             Storage for rescue kits: Stores
+                           HARDWARE                                        victims and provides visual                                                                                                            up to 8 rescue kits and guides
+                                                                           information for navigation.                                                                                                            them toward the release
+                                                                                                                                                                                                                  mechanism using gravity. The
+                                                                                                                                                                                                                  servo below will block the
+                                                                          Front Ultrasonic Sensor (1):                                                                                                            rescue kits form dropping into
+                                                                         Measures distance to walls and                                                                                                           the dropping chute.
+                                                                               obstacles ahead.
+
+                                                                                                                                                                                                                      Servo: The servo will be
+                                                                         Side Ultrasonic Sensor (2- left &                                                                                                           mounted here and will be
+                                                                         right): Maintains wall alignment                                                                                                         attached with thearm. Rotates
+                                                                              and detects openings.                                                                                                               the deployment arm to release
+                                                                                                                                                                                                                    rescue kits when a victim is
+                                                                                                                                                                                                                             detected
+                                                                             Gyroscope: Tracks robot
+                                                                          orientation and turning angles
+                                                                             for accurate movement.                                                                                                               Release Arm: Rotates based on
+                                                                                                                                                                                                                   victim detection to release a
+                                                                                                                             Rescue Kit Drop Chute: Guides rescue kits from                                       specific number of rescue kits.
+                                                                                                                                the release mechanism to the ground for                                           to position and release rescue
+                                                                          Color Sensor: Detects floor tiles,                  accurate victim aid delivery. It has 2 ways for                                             kits accurately.
+                                                                          checkpoints, and special maze                           ease and so the kit doesn’t get stuck.
+                                                                                      zones.
+      Main                         Rescue Kit
+                    Battery:
+  Controller                         Dropper         Motors (4 )(2
+                   Powers all
+   (Cytron                        Mechanism:          right and 2
+                   electronic
+ 2040): Main                     Automatically       left): Drives           Wheels (4): Provide traction
+                       and
+  processing                     deploys rescue      the left and            and mobility throughout the
+                   mechanica
+unit that reads                    kits when a        right wheel                       maze.
+                   l systems.
+   sensors,                          victim is           during
+   executes                         detected,         movement
+ algorithms,                        ensuring         and turning.                                                            Camera detects          Cytron RP2040             Signal sent to servo                                   Kit falls through
+                                                                                                                                                                                                         Release gate opens
+ and controls                     accurate and                                                                                    victim
+                                                                                                                            (letter/cognitive)
+                                                                                                                                                      processes and
+                                                                                                                                                     verifies location
+                                                                                                                                                                                  to rotate arm
+                                                                                                                                                                                                         and path is cleared
+                                                                                                                                                                                                                                    gravity at the victim
+                                                                                                                                                                                                                                           location
+                                                                                                                                                                                   downward
+     robot                      reliable delivery.
+ movement.
+
+                        SOFTWARE                                                             Depth-First Search (DFS) Exploration:
+
+                                                                              Depth-First Search (DFS) is used to systematically explore the maze.
+                                                                              The robot prioritizes unexplored paths, marking each tile as visited
+                  Programming Environment:                                    and storing junction information. When a dead end is reached, the
+ Language: C++, Python                                                        robot backtracks to the nearest unexplored junction and continues
+ Controller: Cytron 2040                                                      exploring until the entire maze has been mapped.
+ Libraries Used:                                                              Key Features
+    MPU6050_LIGHT: Processes IMU data for orientation and turn                   Explores every reachable path.
+    tracking.                                                                    Prevents repeated exploration of visited areas.
+    Adafruit_TCS34725: Reads color sensor data for tile and                      Uses backtracking to recover from dead ends.
+    checkpoint detection.                                                        Builds a complete map of the maze for later navigation.
+    Adafruit_NeoPixel: Controls RGB LEDs for robot status and
+    victim indication.
+
+                                                                                                                Breadth-First Search (BFS) Recovery & Path Planning:
+                                                                              When no unexplored paths remain nearby, Samarth uses Breadth-First Search (BFS) to find the shortest route through previously explored
+   Entire Software Overview Diagram- BFS & DFS
+                                                                              safe cells. The algorithm searches the mapped maze, identifies the nearest unexplored frontier or the start tile, and generates an efficient
+                                                                                path to reach it. This allows the robot to recover from dead ends, continue exploration, and reliably return to the starting position after
+                                                                                                                                          completing the maze.
+                                                                                                                                                                                                                                   Key Features
+                                                                                                                                                                                                                               Allows blue-tile recrossing
+                                                                                                                                                                                                                                        avoidance
+                                                                                                                                                                                                                               Recovers efficiently from
+                                                                                                                                                                                                                                       dead ends.
+                                                                                                                                                                                                                                 Routes the robot to te
+                                                                                                                                                                                                                                   nearest exploration
+                                                                                                                                                                                                                                         frontier.
+                                                                                                                                                                                                                               Guarantees a return path
+                                                                                                                                                                                                                                     to the start tile.
+
+                                                                                    Victim Detection System
+                                                                                Samarth uses an OpenMV H7+ camera
+                                                                             running an Edge Impulse machine learning
+                                                                              model to autonomously identify victims.
+                                                                                 Images captured by the camera are
+                                                                              processed onboard in real time, allowing
+                                                                               the robot to classify victims, trigger LED
+                                                                                   indicators, and initiate rescue kit
+                                                                             deployment without external computation.
+                                                                                             Key Features
+                                                                                  Real-time onboard image processing.
+                                                                                 Edge Impulse machine learning model.
+                                                                                    Autonomous victim classification.
+                                                                                     Triggers rescue kit deployment.
+                                                                                  Provides LED-based victim indication.

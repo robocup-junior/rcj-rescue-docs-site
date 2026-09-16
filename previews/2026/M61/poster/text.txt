@@ -1,0 +1,78 @@
+OUR INNOVATIVE SUSPENSION
+                                                                                The front drive axle can rock left and
+                                                                                                                                                  HARDWARE
+                                                                                right to adjust to diﬀerent obstacles
+                                                                                                                                                                                                       MCU
+
+                                                                                                                                                                                         1            STM32F767ZI hihg-performance MCU
+                                                                                                                                                                                                      running at 216MHz makes sure our robot
+                                                                                                                                                                                                      adapts to the environment in real-time
+
+                                                                                                                                                       MOTORS
+
+OUR LEGACY
+                                                                                                                                                       DDSM210 brushless servo motors proppel
+                                                                                                                                                       out robot throughout the maze with
+                                                                                                                                                       astonishing accuracy
+                                                                                                                                                                                                        2
+SERŠ TEAM has been building robots and competign with
+them since 2012. We are a group of students dedicated to                                                                                                                                              DISTANCE SENSORS
+creating advanced robotics solutions and representing                                                                                                                                    3            ST’s VL53L3CX ToF distance sensors are
+                                                                                                                                                                                                      more resiliant to strong ambient light, this
+
+                                                                                                         1
+Slovenia at international competitions like RoboCup                                                                                                                                                   allows out robot to detect every wall clearly
+
+                                                                                                                                                       COLOR SENSOR
+
+TEAM MEMBERS                                                                                 5
+                                                                                                                                                       TCS34725 color sensor can measure color
+                                                                                                                                                       in under 3ms, alerting our robot in case of
+                                                                                                                                                       a black tile
+                                                                                                                                                                                                        4
+            Tadej Božičko
+                                                                                                                                                                                                      IMAGE RECOGNITION
+
+                                                                                                                                                                                         5
+            Team Lead | Hardware Engineer
+            Tadej has been with SERŠ for three years, he designed                                                                                                                                     A dedicated Raspberry PI 5 seperates the
+            custom PCBs, the chassis and other hardware. He also                                                                                                                                      image recognition pipeline from the rest of
+                                                                                                                                                                                                      the logic, allowing for uninterrupted driving
+            helped with the drivers for sensors and motors.
+
+            Mark Ptičar                                                                                                                               CAMERAS
+            Software Developer | Website Manager
+                                                                                                                 6                                    Two Raspberry wide camera module 3, both
+                                                                                                                                                      running at 30 fps can see and detect a victim     6
+                                                                                         3
+            Mark is a new member of the team. He manages our                                                                                          no matter where it is
+            website and sponsors, to secure funding for our robot.
+            In addition, he helped with the robot’s software.
+
+            Luka Turinek                                                    4
+            Machine Learning Engineer
+            Luka is also a new member. He was respnonsible
+            for the image recognition pipeline. He trained our
+                                                                                                     2
+            model from scratch using a custom dataset.
+                                                                                                                                                                             OUR FOUNDATION
+                                                                                                                                                                             Our software stack consists mainly of C++
+
+SOME OF OUR ACHIEVEMENTS                                                                                                                                                     due to it’s performance and manual memory
+                                                                                                                                                                             control, as well as python for image recognition.
+                                                                                                                                                                             This allowed us to focus on optimizing the core
+  2013, World Cup in Eindhoven, 1st Place
+                                                                                                                                                                             functions and use advance detection models for
+• 2015, World Cup in Hefei, 3rd Place (Cospace)
+                                                                                                                                                                             victims.
+• 2018, World Cup in Montreal, Innovation award
+• 2022, European Cup in Guimarães, 1st Place (Cospace SuperTeam)
+• 2023, European Cup in Varaždin, 1st Place (Cospace Advanced)
+• 2023, European Cup in Varaždin, 1st Place (Rescue Simulation SuperTeam)
+                                                                                                                         OUR CORNERSTONE
+                                                                                                                         Our robot excels with its cutting-edge mapping
+                                                                                                                         and pathﬁnding! It uses time-of-ﬂight distance
+                                                                                                                         and color sensors to scan the maze, stores the
+                                                                                                                         data in a 3D matrix, and applies Dijkstra’s
+                                                                                                                         algorithm to ﬁnd the optimal path, assigning
+                                                                                                                         higher cost to blue tiles for smarter navigation.

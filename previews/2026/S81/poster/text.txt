@@ -1,0 +1,66 @@
+RESCUE SIMULATION
+ANYANG                                                                             NAVIGATION & MAPPING                                                                                           WALL TOKEN DETECTION
+
+ABOUT OUR TEAM
+
+   Naeun Kim - Team Leader & Lead Developer
+   Nahyun Kim – Navigation & SLAM Engineer
+   Jihee Jung - AI & Computer Vision Engineer
+   Seojun Yang - -Research & Testing Engineer
+   Mingeun Kim - COACH
+  Awards: 2026 Robocup Korea Open 1st in Rescue Simultaion
+
+We used Python as our development language, and the total
+preparation period for the competition was approximately 13 weeks.
+
+                                                                                   Autonomous Exploration Strategy                                                                                Victim Detection Strategy
+ROBOT INTRODUCTION                                                                 Environment Representation The robot utilizes a grid-based mapping approach,
+                                                                                   dividing the environment into 12 cm cells.
+                                                                                                                                                                                                  The robot detects two categories of victims using dual front-angled cameras (Ca1: left, Ca2: right).
+                                                                                                                                                                                                  Trigger Conditions
+                                                                                   Each cell maintains real-time updates via:                                                                     Detection is initiated when either camera satisfies one of the following:
+              GPS                               LiDAR                                  LiDAR-based Cloud Map: Monitors wall occupancy and structural obstacles.                                       YOLO victims (H/S/U): White pixel ratio ≥ 4% in camera image AND corresponding side distance sensor ≤
+                                                                                       Color Sensors: Detects floor conditions to identify traversable surfaces.                                      0.15 m
+        Determining the                   slam and mapping                             Status Tracking: Categorizes exploration status into Explored (region entered)                                 Circle victims (C/F/O/P): Concentric circle detected with estimated distance ≤ 0.08 m AND side distance
+     robot's position within          Detecting walls for mapping                      and Visited (center of the cell reached).                                                                      sensor ≤ 0.08 m
+     our custom virtual cell                                                                                                                                                                      Each tile is limited to a maximum of 2 detection attempts to prevent redundant processing.
+                                                     distance sensor 1,2,3         Path Planning & Exploration Strategy
+                                                                                   The system constructs a topological graph by treating cell boundaries as nodes                                 YOLO-Based Detection (H / S / U)
+                                                                                   and connecting adjacent nodes as edges.                                                                        Targets with white backgrounds (Harmed, Stable, Unresponsive) are classified via YOLOv5.
+                                                    Front Obstacle detection          Frontier Selection: Nodes adjacent to unvisited cells are designated as frontiers for exploration.           1.Advance toward victim wall (670 ms, center-maintaining PD control)
+                                                                                      Navigation: The A algorithm* is employed to calculate the optimal path to the target frontier.               2.Align robot perpendicular to the wall using LiDAR linear regression on wall point cloud
+                                                                                      Cost-Aware Pathing: A 8x cost multiplier is applied to edges within swamp regions to discourage traversal    3.Three-angle sampling: capture at 0°, +15°, −30° relative to aligned angle
+                                                          distance sensor 4,5         and encourage path optimization around these areas.                                                          4.Run YOLOv5 inference (confidence threshold: 0.78, max detection distance: 0.25 m) at each angle
+                                                                                                                                                                                                   5.Majority vote: if the same class appears in ≥ 2 of 3 shots→ confirmed victim; otherwise discarded as false
+                                                         Back Obstacle detection   Exception Handling & Safety                                                                                       positive
+                                                                                      Obstacle Avoidance: If an obstacle is detected at the same coordinate more than three times, the
+                                                                                                                                                                                                  Concentric Circle Detection (C / F / O / P)
+                                                                                      corresponding node is permanently pruned from the graph.                                                    Victims marked with colored concentric rings are classified by ring color analysis.
+                                                                                      Hazard Response: Upon detecting a hole, the robot triggers an immediate reverse maneuver, marks the area     1.Advance + LiDAR perpendicular alignment (same as above)
+                                                                                      as impassable, and forbids further re-entry.                                                                 2.Fit ellipses to four color masks (Red, Green, Yellow, Blue) and determine outer radius
+                                                                                   Termination Condition Exploration is concluded once all valid frontiers are exhausted. The robot then           3.Divide the circle into 5 radial bands; sample 180 angles × 8 radii per band
+                                                                                                                                                                                                   4.Vote dominant color per ring; apply scoring: Red = −1, Yellow = 0, Green = +1, Blue = +2, Black = −2
+                                                                                   autonomously returns to the starting tile and transmits a completion signal.
+                                                                                                                                                                                                   5.Sum of 5 ring scores →    classification: 0 = F, 1 = P, 2 = C, 3 = O
+                                                                                   Self-made Half-Tile Wall Testing Map
+       color sensor                                                                                                                                                 ▼CloudMap
+   Floor color detection
+
+                      inertial unit
+                                                                                                                                                                                                  YOLOV5
+          Direction and angle measurement               camera sensor 1,2
+                Used to align the robot                 Victim detection
+                  to a desired angle
+                                                                                                                  ▲Node Graph
+                                                                                                                                          ▲GridMap
+                                                                                   Self-made Curved Wall Testing Map
+
+                                                                                                                                                                                                  Victims are classified using a YOLOv5 object detection model trained on Webots screenshots and Greek
+                                                                                                                                                                                                  letter datasets. Initial testing achieved 87.1% validation accuracy, but only 3 of 15 victims were detected in
+                                                                                                                                                                                                  the simulation environment.
+                                                                                                                                                                                                  To improve performance, unlabeled images were removed, robot POV images were added, Adaptive
+                                                                                                                                                                                                  Equalization replaced Histogram Equalization, and augmentation settings were optimized. After
+                                                                                                                                                                                                  retraining, the model achieved 86.5% validation accuracy but successfully detected 15 of 15 victims in
+                                                                                                                                                                                                  Webots.
+
+                                                                                                                               ▲GridMap

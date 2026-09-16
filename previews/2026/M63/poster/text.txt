@@ -1,0 +1,11 @@
+Adam Andrén, 15                                Alexander Andrén, 16
+                                Senior & Lead SW Developer                     Verification & Validation
+                                Hardware Construction                          Machine Vision
+
+Key Achievement:
+
+100% own‑developed DFS‑inspired navigation algorithm using a weighted backtracking system instead of a conventional
+backtracking stack. Our robot uses a fully custom exploration algorithm that replaces the traditional DFS stack with a tile‑based
+visit‑weighting system. Each tile maintains a visit counter, and tiles marked with 99 (“Exhausted Path”) are treated as fully explored
+and excluded from future navigation decisions. This allows the robot to perform deterministic DFS‑style exploration using only local
+state

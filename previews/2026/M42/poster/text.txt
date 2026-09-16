@@ -1,0 +1,98 @@
+RESCUE MAZE JUNIOR HARDWARE
+                                   B          .ROBOTS                                                                   O         VERVIEW
+                                                                                                                            Main Controlleè
+                                                                                                                             Arduino Giga RÅ
+                                                                                                                             Drive Trai
+                                                                                                                             4 DC motors with encodersÉ
+                                              ABOUT US                                                                       Rescue Kit Ejectio
+                                                                                                                             2 servo motor¾
+                                              We are B.Robots Seniors, an Austrian engineering team                          Wall Detection and Distance Measuremen¼
+                                              from HTL Bulme in Graz, Styria.                                                10 ToF sensor¾
+                                                                                                                             Victim Detectio
+                                                                  Paul Charusa - Hardware, CAD, PCÔ                          RasPi CM5 with TensorFlow-LighÀ
+                                                                  “I am the team captain and was responsible                 Sensor Connection
+                                                                  for the CAD design and parts of the PCB                    Custom PCB¾
+                                                                  layout.”                                                   Lighting for Camera suppor¼
+                                                                                                                             18 Neopixel RGBW LEDs to improve visibilitÌ
+    Achievements                                                                                                             Main Displaì
+    2024 - World Cup                                              Thomas Rauch - Camera, Vide)                               4” TFT-LCD display with interactive U
+                                                                  “I trained and programmed the Machine                      Inclination Measuremen¼
+       Participated
+    2025 - Austrian Open
+                                                                  Vision Model for optimal detection of victims.”            Adafruit BNO055 IM
+                                                                                                                             Frontal Collision Detection (Bumperä
+       1st plac7                                                                                                             Two mechanical switches for collision detection
+        Best Documentatio=                                        Vincent Rohkamm - Mapping, UI, Software
+        Best Poster
+    2025 - World Cup
+                                                                  IntegratioS
+                                                                  “I developed the mapping system, the UI and          Innovative Design Solutions
+                                                                  the main structure of the programs”                   Our Robot consists of 3 modular layers,
+       5th plac7
+                                                                                                                        each with its own PCB. The layers connect
+        Community Award
+                                                                                                                          ia pin headers and can be easily
+                                                                    Florian Wiesner - Sensor Integration, Drivinn
+                                                                                                                        v
+
+    2026 - Austrian Open                                                                                                seperated by removing just a few screws,
+                                                                    “I integrated the sensors and developed the         simplifying repairs and maintenace.
+       1st plac7
+                                                                    driving algorithms and parts of the main
+        Best Documentatio=
+                                                                    program.”                                                                                 upported by two ball bearings, the swivel
+        Best Poster                                                                                                                                       S
+
+                                                                                                                                                          axis rotates freely and self-aligns to ground
+                                                                                                                                                          obstacles, ensuring stable positioning and
+                                                                                                                                                          reliable sensor readings by improving
+                                                                                                                                                          ground contact.
+
+                                                                                                                              Cameras
+                                                                                                                              V   ictim detection is managed by a
+                                                                                                                              R   aspberry Pi 5 Compute Module with two
+                                                                                                                              wide-angle cameras that utilize a custom
+                                                                                                                              TensorFlow Lite model. To optimize power
+                                                                                                                              consumption and processing overhead, the
+                                                                                                                              Compute Module is connected to Time-of-
+                                                                                                                              Flight (ToF) sensors positioned next to the
+                                                                                                                              cameras. These sensors only trigger the
+                                                                                                                              cameras when a wall is detected. Once a
+                                                                                                                              victim is successfully detected and
+                                                                                                                              validated, the Raspberry Pi transmits the
+                                                                                                                              data via UART to the Arduino G iga for
+                                                                                                                              signaling and mapping reference.
+SOFTWARE OVERVIEW
+
+                                                                                                             I TERESTI G ALGORITH S
+Technologies & programming language
+
+T   he software of the Robot is coded in C++ and Python, using                                                 N                                 N                                      M
+VS   -Code, PlatformIO and G ithub.
+
+General Software Architecture                                                                                 A    * pathfinding
+T   he architecture is built on two nested state machines. The                                                Navigation uses an A* search over a 3D tile graph
+outer RobotState machine handles the operating mode, while                                                    for multiple maze levels. Tiles have a traversal cost.
+the inner RunState machine executes the competition run as                                                    T   he planner avoids expensive tiles automatically
+a deterministic cycle. Every loop iteration first executes the                                                whenever a cheaper route exists. Exploring and
+g   lobal cyclic tasks, and during a run, additional cyclic run                                               returning home use one consistent mechanism.
+tasks are layered on top. This guarantees that sensor data is                                                 T   he cost model also drives obstacle handling.
+always fresh®                                                                                                 When a bumper is triggered, the current tile's cost
+Each subsystem is realized as its own C++ class inside a                                                      is increased or the route is locked. The active path
+dedicated library. Dependencies are wired explicitly by                                                       is invalidated. The A* plans around the obstruction
+pointer injection during initialization. This removes hidden                                                  on the next cycle.
+g   lobal singletons, so every interaction path is visible in the
+UML     on the right, and each module can be tested in isolation.
+
+Innovations                                                                                                   PID controller - drive & turn
+Non-blocking sensor framework
+Modified ToF library with continuous ranging and data-ready
+
+polling instead of blocking reads)
+
+Continous Traversal
+T   he robot does not stop on each tile when driving straight. In
+the middle of each tile, information about walls, the floor, and
+ramps is saved and sent to the mapping system. The robot
+only stops if a wall is in front of it or if the mapping
+commands a turn.

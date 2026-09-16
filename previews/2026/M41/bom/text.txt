@@ -1,0 +1,447 @@
+HARDWARE
+
+                                                                                                                                                                Name of the     Total Cost   Total Cost ($)
+    Team name:                                                    Aurat                                                                                        Local Currency Local Currency U.S.A. Dollars
+                                                                                                                                                              South Corea WON
+                                                                                                                                                                    KRW       ₩1.787.494,33    $1.013,79
+
+#  Component             Part name                                            Autor                                Source Quantity               Unit cost    Unit cost (US        Total Cost     Total Cost
+                                                                                                                   https://it.                   (Local       Dollars)             (Local         (USA Dollars)
+ 1 Shock Absorbers       ZERO mc 53mm spring shock absorber                   ZERO mc                                                          8 ₩2.020,30                   $1,45   ₩266.888,00         $11,60
+                                                                                                                   aliexpre                      Currency)                         Currency)
+ 2 PLA                   Sunlu pla+ 2.0                                       SUNLU                                https:                      1 ₩33.361,00                 $21,79     ₩33.361,00        $21,79
+                                                                                                                   ss.
+                                                                                                                   //www.
+ 3 TPU                   Anycubic TPU 95a                                     Anycubic                             https:                      1 ₩56.215,00                 $36,73     ₩56.215,00        $36,73
+                                                                                                                   com/ite
+                                                                                                                   amazon.
+                                                                                                                   //www.
+                                                                                                                   -----------
+ 4 Linear Rails          Steel Bars (1mt)                                     Hardware Store                       m/10050
+                                                                                                                   it/SUNL                    10      ₩316,71                $0,21      ₩3.167,10         $2,07
+                                                                                                                   -amazon.
+                                                                                                                    0931280
+                                                                                                                    https:
+ 5 Custom PCB            Custom PCB                                           Loris Berra and Futura Elettronica    U-PLA-
+                                                                                                                    it/ANYC                    1 ₩32.865,33                 $21,52     ₩32.865,33        $21,52
+                                                                                                                    9629.
+                                                                                                                    //futuran
+                                                                                                                    Aggiorn
+                                                                                                                    https:
+ 6 Microcontroller       Arduino Mega 2560 Pro                                TECNOIOT                              UBIC-
+                                                                                                                    html?
+                                                                                                                                               1 ₩42.410,33                 $27,77     ₩42.410,33        $27,77
+                                                                                                                    et.it/?
+                                                                                                                    amento-
+                                                                                                                    //www.
+ 7 Processor             Raspberry Pi 5                                       Raspberry Pi                          Filament
+                                                                                                                    https:                     1 ₩353.429,23               $231,47   ₩353.429,23        $231,47
+                                                                                                                    spm=a2
+                                                                                                                    utm_sou
+                                                                                                                    resisten
+                                                                                                                    amazon.
+                                                                                                                    o-
+                                                                                                                    //www.
+                                                                                                                    https:
+ 8 Raspberry Cooler      Raspberry Cooler                                     Raspberry pi                          g0o.
+                                                                                                                    rce=goo
+                                                                                                                    za-
+                                                                                                                    it/TECN                    1 ₩12.370,32                  $8,10     ₩12.370,32         $8,10
+                                                                                                                    Stampa
+                                                                                                                    amazon.
+                                                                                                                    //amzn.
+ 9 Motor                 Dc Motor With 90 Degree Reduction                    School Supplies                       productli
+                                                                                                                    gle&utm
+                                                                                                                    -----------
+                                                                                                                    dimensi
+                                                                                                                    OIOT-                      3 ₩22.907,99                 $15,00     ₩68.723,97        $45,00
+                                                                                                                    nte-
+                                                                                                                    it/Raspb
+                                                                                                                    -eu/d/0f4I
+                                                                                                                    st.main.
+                                                                                                                    _mediu
+                                                                                                                     onale/dp
+                                                                                                                     Integrat
+                                                                                                                     https:
+10 Motor with Encoder    Dc Motor With 90 Degree Reduction and Encoder        Tomvorks                               Precisio
+                                                                                                                     erry-Pi-
+                                                                                                                     Xp9J
+                                                                                                                     9.14
+                                                                                                                     m=cpc&
+                                                                                                                                               1 ₩50.397,58                 $33,00     ₩50.397,58        $33,00
+                                                                                                                     /B0DHC
+                                                                                                                     o-
+                                                                                                                     //amzn.
+                                                                                                                     ne-
+                                                                                                                     Quad-
+11 JST Connectrors       JST Connectros Kit                                   School Supplies                        -----------
+                                                                                                                     c8NSDV
+                                                                                                                     utm_ca                    1 ₩17.669,70                 $11,57     ₩17.669,70        $11,57
+                                                                                                                     T8YDN/r
+                                                                                                                     ATMEG
+                                                                                                                     eu/d/05s
+                                                                                                                     Dimensi
+                                                                                                                     -Core-
+                                                                                                                      https:
+                                                                                                                      NSDVy
+12 Microservo Motor      microservo motor hight torque mf90                   Miuzei                                  mpaign=
+                                                                                                                      ef=sr_1_
+                                                                                                                      A2560-
+                                                                                                                      sAVJy
+                                                                                                                      onale/dp
+                                                                                                                      ARMA7
+                                                                                                                                               1 ₩32.071,19                 $21,00     ₩32.071,19        $21,00
+                         OpenMV SingTown Cam H7 Plus Genuine-5MP High                                                 //amzn.
+                                                                                                                      W&algo
+                                                                                                                      Sales-
+                                                                                                                      https:
+                                                                                                                      6?
+                                                                                                                      16AU-
+13 Cameras                                                                    OpenMV LLC                              /B0DJR
+                                                                                                                      6-                       2 ₩218.389,53               $143,00   ₩436.779,06        $286,00
+                         Definition Image Processing Machine Learning Smart                                           eu/d/0h
+                                                                                                                      _pvid=8
+                                                                                                                      Perform
+                                                                                                                      //amzn.
+                                                                                                                      __mk_it
+                                                                                                                      intestazi
+14 ToF                   vl6180x                                              Walfront                                https:
+                                                                                                                      FVLLS/r
+                                                                                                                      Bits/dp/                 6 ₩20.036,86                 $13,12   ₩120.221,16         $78,72
+                         Camera Robotics OpenMV4 H7 Plus                                                              Tp07bJ
+                                                                                                                      ddbed9f
+                                                                                                                      ance%
+                                                                                                                      eu/d/0c
+                                                                                                                      _IT=%
+                                                                                                                      oni-
+                                                                                                                      //amzn.
+                                                                                                                      ef=sr_1_
+                                                                                                                      B0CK2F
+                                                                                                                      -----------
+15 Clables               Cables                                               Recycled from School Supplies           -b614-
+                                                                                                                      20Rema
+                                                                                                                      mwMCo
+                                                                                                                      C3%
+                                                                                                                      Maschili/                         ₩0,00                $0,00          ₩0,00         $0,00
+                                                                                                                      eu/d/05h
+                                                                                                                      7?
+                                                                                                                      CG1K?
+                                                                                                                      -rketing&
+16 Color Sensor          CQRobot TCS34725FN                                   QCRobot                                  4ec8-
+                                                                                                                       https:
+                                                                                                                       9
+                                                                                                                       85M%
+                                                                                                                       dp/B098                 1 ₩30.040,01                 $19,67     ₩30.040,01        $19,67
+                                                                                                                       MhN99
+                                                                                                                       __mk_it
+                                                                                                                       ref_=ast
+                                                                                                                       927e-
+                                                                                                                       //amzn.
+                                                                                                                       gad_sou
+                                                                                                                       C3%
+                                                                                                                       -----------
+                                                                                                                       R819XX
+17 Capacitors            Capacitors                                           Recycled from School Supplies            _IT=%
+                                                                                                                       _sto_dp                          ₩0,00                $0,00          ₩0,00         $0,00
+                                                                                                                       1132dc5
+                                                                                                                       -eu/d/06
+                                                                                                                       rce=1&g
+                                                                                                                       85%
+                                                                                                                        /ref=sr_
+18 Resistors             Resistors                                            Recycled from School Supplies             C3%
+                                                                                                                        -----------
+                                                                                                                        &th=1                           ₩0,00                $0,00          ₩0,00         $0,00
+                                                                                                                        d1edd&
+                                                                                                                        mdHe0o
+                                                                                                                        ad_cam
+                                                                                                                        C5%
+                                                                                                                        1_2?
+                                                                                                                        -85M%
+                                                                                                                         -----------
+                                                                                                                         algo_ex
+19 Voltage Regulators    7805 - lm317                                         Recycled from School Supplies              paignid=
+                                                                                                                         BD%
+                                                                                                                         __mk_it                        ₩0,00                $0,00          ₩0,00         $0,00
+                                                                                                                         C3%
+                                                                                                                         -1732693
+20 Motor Driver          TB6612FNG                                            Shutao                                      p_id=8d
+                                                                                                                          https:
+                                                                                                                          C3%
+                                                                                                                          _IT=%                1 ₩32.529,35                 $21,30     ₩32.529,35        $21,30
+                                                                                                                          85%
+                                                                                                                          dbed9f-
+                                                                                                                          7709&g
+                                                                                                                          //amzn.
+                                                                                                                          95%
+                                                                                                                          C3%
+                                                                                                                          https:
+21 Led Strip             Led Strip                                            YIXISI                                      C5%
+                                                                                                                          b614-                1 ₩22.861,00                 $15,00     ₩22.861,00        $15,00
+                                                                                                                          braid=0
+                                                                                                                          eu/d/0g
+                                                                                                                          C3%
+                                                                                                                          85M%
+                                                                                                                          //amzn.
+22 Led Light Diffuser    Led Light Diffuser                                   Greenice                                    BD%
+                                                                                                                          https:               1    ₩1.582,00                $8,00      ₩1.582,00         $8,00
+                                                                                                                          4ec8-
+                                                                                                                          AAAAA
+                                                                                                                          OsFsDG
+                                                                                                                          91&crid
+                                                                                                                          C3%
+                                                                                                                          eu/d/090
+                                                                                                                          C3%
+                                                                                                                          //www.
+                                                                                                                          -----------
+23 Signaling Led Strip   Signaling Led Strip                                  Recycled                                    927e-
+                                                                                                                          D_OkO
+                                                                                                                          =2EYG
+                                                                                                                          85%
+                                                                                                                          KGGif                1        ₩0,00                $0,00          ₩0,00         $0,00
+                                                                                                                          95%
+                                                                                                                          amazon.
+                                                                                                                          ------------
+                                                                                                                           1132dc5
+                                                                                                                           NBCr4k
+                                                                                                                           HXAFX
+                                                                                                                           C5%
+24 Battery               11,1V 1600mAh 120C                                   Unnamed Brand                                C3%
+                                                                                                                           it/Profilo          2 ₩61.457,00                 $40,00   ₩122.914,00         $80,00
+                                                                                                                           d1edd-
+                                                                                                                           PPNK81
+                                                                                                                           -BD%
+                                                                                                                            DF6L&di
+25 Powerbank             Powerbank                                            Unnamed Brand                                 https:
+                                                                                                                            -91&crid           1 ₩24.620,00                 $16,17     ₩24.620,00        $16,17
+                                                                                                                             8&pdp_
+                                                                                                                             cqaGbW
+                                                                                                                             b=eyJ2Ij
+                                                                                                                             C3%
+                                                                                                                             //amzn.
+                                                                                                                             =3LLDM
+                                                                                                                             allumini
+                                                                                                                             -----------
+26 Bumper Wheels         Bumper Wheels                                        Hardware store                                 ext_f=%
+                                                                                                                             Kd1Xn&
+                                                                                                                             oiMSJ9.
+                                                                                                                             95%               1    ₩8.793,00                $5,77      ₩8.793,00         $5,77
+                                                                                                                             eu/d/07
+                                                                                                                             M78PC8
+                                                                                                                             -o-
+27 Big Bolts             Big Bolts                                            Hardware store                                  7B%
+                                                                                                                              -----------
+                                                                                                                              gclid=Cj
+                                                                                                                              4aBIpsa
+                                                                                                                              C3%              1    ₩8.793,00                $5,77      ₩8.793,00         $5,77
+                                                                                                                              DUdskl
+                                                                                                                              GB&dib
+                                                                                                                              diffusore
+                                                                                                                              22order
+                                                                                                                              -0KCQjwl
+                                                                                                                               cbOrPI0
+                                                                                                                               -----------
+                                                                                                                               91&crid
+28 Small Bolts           3mm                                                  hardware store                                   =eyJ2Ijo
+                                                                                                                               -striscia-      1    ₩8.793,00                $5,77      ₩8.793,00         $5,77
+                                                                                                                               %22%
+                                                                                                                               qTRBhC
+                                                                                                                               FFgEI1
+                                                                                                                               -=ER8ID
+29 Handle                Handle                                               Recycled from School Supplies                     iMSJ9.
+                                                                                                                                -----------
+                                                                                                                                metri/dp/      1        ₩0,00                $0,00          ₩0,00         $0,00
+                                                                                                                                3A%
+                                                                                                                                BARIsA
+                                                                                                                                Drng8N
+                                                                                                                                QVHRT
+                                                                                                                                -7
+                                                                                                                                -B00RH4
+                                                                                                                                 22203%
+                                                                                                                                 Nrkrxjs8
+                                                                                                                                 Oy3IzT
+                                                                                                                                 HV&dib
+                                                                                                                                 DQMEj_
+                                                                                                                                 10SS/ref
+                                                                                                                                 22%
+                                                                                                                                 YCvfwf
+                                                                                                                                 C7m5R
+                                                                                                                                 =eyJ2Ijo
+                                                                                                                                 VblAJsq
+                                                                                                                                 =sr_1_1
+                                                                                                                                 2C%
+                                                                                                                                 WgInaM
+                                                                                                                                 HXO2Td
+                                                                                                                                 iMSJ9.
+                                                                                                                                 fmXFcm
+                                                                                                                                 _sspa?
+                                                                                                                                 22spu_b
+                                                                                                                                 3yk9fPE
+                                                                                                                                 zQPge0
+                                                                                                                                 kTXdLvz
+                                                                                                                                 FD0RH3
+                                                                                                                                 __mk_it
+                                                                                                                                 est_type
+                                                                                                                                 rWmTge
+                                                                                                                                 QkaB_6
+                                                                                                                                 BrRKEz
+                                                                                                                                 v-
+                                                                                                                                 _IT=%
+                                                                                                                                 %22%
+                                                                                                                                 XzRjnw
+                                                                                                                                 92chs_h
+                                                                                                                                 gwfQlSp
+                                                                                                                                 0MIWaX
+                                                                                                                                 C3%
+                                                                                                                                 3A%
+                                                                                                                                 _1eSkC
+                                                                                                                                 kZCUPz
+                                                                                                                                 oCayYm
+                                                                                                                                 QJQSR
+                                                                                                                                 85M%
+                                                                                                                                 22price
+                                                                                                                                 xO2Ewf
+                                                                                                                                 P6-
+                                                                                                                                 l1fav3S
+                                                                                                                                 UEP0iV
+                                                                                                                                 C3%
+                                                                                                                                 %22%
+                                                                                                                                 nK8rLlw
+                                                                                                                                 CP6UvX
+                                                                                                                                 GZu6Ui
+                                                                                                                                 97HTaT
+                                                                                                                                 85%
+                                                                                                                                 2C%
+                                                                                                                                 aAl7SE
+                                                                                                                                 _PQA5c
+                                                                                                                                 _gEvZ2
+                                                                                                                                 ZooImO
+                                                                                                                                 C5%
+                                                                                                                                 22eval%
+                                                                                                                                 ALw_wc
+                                                                                                                                 rATQ_W
+                                                                                                                                 RY5Q8
+                                                                                                                                 FdA5KI_
+                                                                                                                                 BD%
+                                                                                                                                 22%
+                                                                                                                                 B
+                                                                                                                                 NdOcXI
+                                                                                                                                 P1pOlT
+                                                                                                                                 dFeknfc
+                                                                                                                                 C3%
+                                                                                                                                 3A%
+                                                                                                                                 wpYSsA
+                                                                                                                                 UsDK86
+                                                                                                                                 gyDJGn
+                                                                                                                                 95%
+                                                                                                                                 221%
+                                                                                                                                 xG8ISrf
+                                                                                                                                 YYPuAI
+                                                                                                                                 e129aB
+                                                                                                                                 C3%
+                                                                                                                                 22%
+                                                                                                                                 qcQu4E
+                                                                                                                                 m5fWJT
+                                                                                                                                 dHyljFm
+                                                                                                                                 91&crid
+                                                                                                                                 2C%
+                                                                                                                                 MeCKYt
+                                                                                                                                 _yBV5G
+                                                                                                                                 vz9bhn7
+                                                                                                                                 =1XQXX
+                                                                                                                                 22fromP
+                                                                                                                                 OkZ2ap
+                                                                                                                                 5qlumO
+                                                                                                                                 64G2Ha
+                                                                                                                                 1O3UJI
+                                                                                                                                 age%
+                                                                                                                                 R3ACG
+                                                                                                                                 s4SG4l
+                                                                                                                                 OxJAzn
+                                                                                                                                 7T&dib=
+                                                                                                                                 22%
+                                                                                                                                 8DazrM
+                                                                                                                                 HnMXvp
+                                                                                                                                 3Qn6kp
+                                                                                                                                 eyJ2Ijoi
+                                                                                                                                 3A%
+                                                                                                                                 DUQzY
+                                                                                                                                 FXNga1
+                                                                                                                                 cw2TurL
+                                                                                                                                 MSJ9.
+                                                                                                                                 22searc
+                                                                                                                                 25kFLLI
+                                                                                                                                 8WMbNj
+                                                                                                                                 FSYxmb
+                                                                                                                                 uE-
+                                                                                                                                 h%22%
+                                                                                                                                 L449jyjD
+                                                                                                                                 sZDk62
+                                                                                                                                 4zOsXj
+                                                                                                                                 NMnWO
+                                                                                                                                 7D&pdp
+                                                                                                                                 rYxxO4z
+                                                                                                                                 7BwOy7
+                                                                                                                                 OkIrhjvV
+                                                                                                                                 Nk2-
+                                                                                                                                 _npi=6%
+                                                                                                                                 QpDHe
+                                                                                                                                 KRdk-
+                                                                                                                                 heyd-
+                                                                                                                                 s_NIIj3R
+                                                                                                                                 40dis%
+                                                                                                                                 Ss2xO
+                                                                                                                                 mkhv32
+                                                                                                                                 SwckUl
+                                                                                                                                 mCCPf
+                                                                                                                                 21EUR
+                                                                                                                                 WBdrAH
+                                                                                                                                 _cOAQ
+                                                                                                                                 T5MLYA
+                                                                                                                                 D6W2V
+                                                                                                                                 %
+                                                                                                                                 2JVrkQu
+                                                                                                                                 PC5JpT
+                                                                                                                                 hFd9G2
+                                                                                                                                 oEnZIbJ
+                                                                                                                                 2111.00
+                                                                                                                                 Vh4AjF5
+                                                                                                                                 A94eTT
+                                                                                                                                 LFEm0B
+                                                                                                     SOFTWARE
+
+                                                                                                                                                      Name of the            Total Cost   Total Cost ($)
+    Team name:                                                     Aurat                                                                             Local Currency        Local Currency U.S.A. Dollars
+                                                                                                                                                   South Corea WON
+                                                                                                                                                         KRW                   ₩0,00          $0,00
+
+#  Name                              Software's Tool/LibraryDescription                                 Source                                   Autor                      Cost (Local   Cost (USA
+                                                                                                                                                                            Currency)     Dollars)
+ 1 Open CV                           Library                Image processing library                                                             Opencv.org
+                                                                                                        OpenCV - Biblioteca abierta de Computer Vision                      FREE          FREE
+ 2 IDE Arduino                       Software's Tool        IDE used for Arduino code                   Software | Arduino                       Arduino.cc                 FREE          FREE
+ 3 Numpy                             Library                Array and math library                      NumPy                                    Numpy developers           FREE          FREE
+ 4 PySerial                          Library                Serial communication library                pypi.org/project/pyserial                    Chris Liechti          FREE          FREE
+ 5 gpiozero                          Library                GPIO pin control library                    gpiozero.readthedocs.io                      Ben Nuttall            FREE          FREE
+ 6 Adafruit TCS34725 (Python)        Library                Python color sensor driver                                                               Adafruit Industries
+                                                                                                        https://github.com/adafruit/Adafruit_CircuitPython_TCS34725         FREE          FREE
+ 7 Adafruit Blinka                   Library                CircuitPython compatibility layer           pypi.org/project/Adafruit-Blinka             Adafruit Industries    FREE          FREE
+ 8 OpenMV (sensor/image)             Library                MicroPython machine vision library          https://github.com/openmv/openmv             OpenMV LLC             FREE          FREE
+ 9 Wire.h                            Library                I2C communication library                   github.com/arduino/ArduinoCore-avr           Arduino.cc             FREE          FREE
+10 Adafruit Unified Sensor           Library                Unified sensor abstraction layer            github.com/adafruit/Adafruit_Sensor          Adafruit Industries    FREE          FREE
+11 Adafruit BNO055                   Library                IMU 9-axis sensor library                   github.com/adafruit/Adafruit_BNO055          Adafruit Industries    FREE          FREE
+12 Adafruit VL6180X                  Library                ToF distance sensor library                 github.com/adafruit/Adafruit_VL6180X Adafruit Industries            FREE          FREE
+13 Servo.h                           Library                Servo motor control library                 github.com/arduino-libraries/Servo           Michael Margolis       FREE          FREE
+14 Python Std Libraries              Library                Core system and threading utilities         github.com/python/cpython                    Python Software Foundation
+                                                                                                                                                                            FREE          FREE
+15 avr/wdt.h                         Library                Watchdog timer control library              github.com/avrdudes/avr-libc                 AVR-LibC Team          FREE          FREE
+16 Visual Studio Code                Software's Tool        IDE used for Python code                    github.com/microsoft/vscode                  Microsoft              FREE          FREE
+17 Blender                           Software's Tool        3D creation suite                           github.com/blender/blender                   Blender Foundation FREE              FREE
+18 EasyEDA                           Software's Tool        PCB design tool                             easyeda.com                                  JLCPCB                 FREE          FREE
+19 OpenMV IDE                        Software's Tool        Machine vision development IDE              github.com/openmv/openmv-ide                 OpenMV LLC             FREE          FREE
+20 C/C++ Standard Library (math.h)   Library                Standard math library                       github.com/gcc-mirror/gcc                    GCC Developers         FREE          FREE
+21 utility/imumaths.h                Library                Vector and matrix math library              github.com/adafruit/Adafruit_BNO055          Adafruit Industries    FREE          FREE
+22 Mahotas                           Library                Computer vision and image processing        github.com/luispedro/mahotas                 Luis Pedro Coelho      FREE          FREE
+23 Scikit-learn (sklearn)            Library                Machine learning library                    github.com/scikit-learn/scikit-learn         Scikit-learn DevelopersFREE          FREE
+24 Matplotlib                        Library                Data visualization library                  github.com/matplotlib/matplotlib             Matplotlib Development  Team
+                                                                                                                                                                            FREE          FREE
+25 Seaborn                           Library                Statistical data visualization library      github.com/mwaskom/seaborn                   Michael Waskom         FREE          FREE

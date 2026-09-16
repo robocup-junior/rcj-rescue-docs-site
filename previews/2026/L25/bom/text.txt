@@ -1,0 +1,90 @@
+RESCUE JUNIOR - Bill of Materials (BOM)
+
+Team name:                          TOKAI Ghost
+
+Every Line/Maze team has to submit a bill of materials for their robot
+
+Instructions:
+*Enter Team name above
+*All costs need to be in local currency and their approximate
+conversion into dollars.
+*All components worth less can be summarized in one line quantity 1
+and their total cost (e.g. Screws)
+*In the Local Currency Name column, the team must enter the name
+of the local currency, if it is different from US dollars.
+
+*In the software sheet, in the Author column, the name of the
+designer, writer, or company that owns the software or library should
+be entered. If the team created their own algorithm, dataset, or AI
+model, they can include their names as authors.
+
+*On the hardware sheet, in the "Author" column, enter the name of the
+company, engineer, or part manufacturer. If the team made a custom
+part, such as the robot housing, the team should include their names
+as the authors.
+*IMPORTANT* The "Hardware" sheet is not required for simulation
+                                                                                                                                                   Name of the             Total Cost        Total Cost ($)
+      Team name:                                      TOKAI Ghost                                                                                 Local Currency         Local Currency      U.S.A. Dollars
+                                                                                                                                                  Japanese Yen
+                                                                                                                                                       JPY                  ¥69,702             $434.48
+
+                                                                                                                             Unit cost (Local                         Total Cost (Local      Total Cost
+#      Component                 Part name                     Autor                 Source                    Quantity      Currency)         Unit cost (US Dollars) Currency)              (USA Dollars)
+     1 Main Microcontroller      Teensy 4.0                    PJRC
+                                                               Raspberry Pi          digikey.jp                            1            ¥4,285                $26.71                  ¥4,285         $26.71
+     2 Image Processing SBC      Raspberry Pi 5 (8GB)          Foundation            akizukidenshi.com                     1           ¥17,600               $109.70                 ¥17,600        $109.70
+     3 Sub Microcontroller       Seeed XIAO RP2040             Seeed Studio          akizukidenshi.com                     2              ¥980                 $6.11                  ¥1,960         $12.22
+     4 Camera Module             IMX219-120                    Waveshare             waveshare.com                         1            ¥2,700                $16.83                  ¥2,700         $16.83
+     5 Line Sensor               LBR-127HLD                    Letex Technology      akizukidenshi.com                    16               ¥75                 $0.47                  ¥1,200          $7.52
+     6 Color Sensor              S9706                         Hamamatsu Photonics   akizukidenshi.com                     2              ¥600                 $3.74                  ¥1,200          $7.48
+     7 ToF Sensor Module         Custom VL53L0X Module         Takumi / JLCPCB       jlcpcb.com                            6              ¥788                 $4.91                  ¥4,728         $29.46
+     8 Micro Switch              SS-10GL13                     OMRON                 akizukidenshi.com                     2              ¥160                 $1.00                    ¥320          $2.00
+     9 Tactile Switch            DTS-63-N-V                    Cosland               akizukidenshi.com                     2               ¥15                 $0.09                     ¥30          $0.18
+    10 RGB LED                   WS2812B                       Worldsemi             akizukidenshi.com                     6               ¥50                 $0.31                    ¥300          $1.86
+    11 IMU                       BNO055                        Bosch  Sensortec
+                                                               SUNHOKEY              akizukidenshi.com                     1            ¥2,450                $15.27                  ¥2,450         $15.27
+    12 Display                   SSD1306 128x64                Electronics           akizukidenshi.com                     1              ¥580                 $3.61                    ¥580          $3.61
+    13 Drive Servo Motor         STS3032                       Feetech Robotics      akizukidenshi.com                     4            ¥4,800                $29.92                 ¥19,200        $119.68
+    14 Rescue Servo Motor        SG90                          TowerPro              akizukidenshi.com                     2              ¥650                 $4.05                  ¥1,300          $8.10
+    15 Rescue Servo Motor        SG92R                         TowerPro              akizukidenshi.com                     3              ¥780                 $4.86                  ¥2,340         $14.58
+    16 Camera Servo Motor        GH-S37D                       Generic               GH-S37D                               1              ¥580                 $3.62                    ¥580          $3.62
+    17 Main PCB                  Custom made                   Takumi / JLCPCB       jlcpcb.com                            1                ¥5                 $0.03                      ¥5          $0.03
+    18 Line Sensor PCB           Custom made                   Takumi / JLCPCB       jlcpcb.com                            1                ¥5                 $0.03                      ¥5          $0.03
+    19 Power PCB                 Custom made                   Takumi / JLCPCB       jlcpcb.com                            1               ¥20                 $0.12                     ¥20          $0.12
+    20 Rescue PCB                Custom made                   Takumi / JLCPCB       jlcpcb.com                            1                ¥1                 $0.01                      ¥1          $0.01
+    21 Front PCB                 Custom made                   Takumi / JLCPCB       jlcpcb.com                            1                ¥2                 $0.01                      ¥2          $0.01
+    22 Side PCB                  Custom made                   Takumi / JLCPCB       jlcpcb.com                            2                ¥1                 $0.01                      ¥2          $0.02
+    23 Frame Metal Parts         Custom made                   Takumi / JLCPCB       jlcpcb.com                            1               ¥30                 $0.19                     ¥30          $0.19
+    24 Metal Gear (Motor Side)   Custom made                   Takumi / JLCPCB       jlcpcb.com                            4               ¥19                 $0.12                     ¥76          $0.48
+    25 Metal Gear (Wheel Side)   Custom made                   Takumi / JLCPCB       jlcpcb.com                            4               ¥32                 $0.20                    ¥128          $0.80
+    26 Main Chassis Components   Custom made                   Takumi                3D Printer                            1            ¥2,400                $14.96                  ¥2,400         $14.96
+    27 Wheels                    Custom made                   Takumi                Silicone Rubber Molding               4               ¥90                 $0.56                    ¥360          $2.24
+    28 Fasteners                 Screws, nuts, spacers, etc.                         wilco.jp                              1            ¥2,200                $13.71                  ¥2,200         $13.71
+    29 Wiring                    Cables, connectors, etc.                            akizukidenshi.com                     1            ¥1,200                 $7.48                  ¥1,200          $7.48
+    30 Li-Po Battery             11.1V 2200mAh 30C             Fullymax Battery      goohobby.com                          1            ¥2,500                $15.58                  ¥2,500         $15.58
+                                                                                                                                    Name of the             Total Cost       Total Cost ($)
+       Team name:                                       TOKAI Ghost                                                                Local Currency         Local Currency     U.S.A. Dollars
+                                                                                                                                   Japanese Yen
+                                                                                                                                        JPY                   ¥0.00              $0.00
+                                                                                                                                                                Cost (LocalCost (USA
+#      Name                   Software's Tool/Library Description                               Source                              Autor                       Currency)  Dollars)
+     1 Open CV                Library                 Image processing library                  OpenCV - Biblioteca abierta de Com                Opencv.org FREE              FREE
+     2 Numpy                  Library                 Numerical computing library               NumPy                                      Numpy developers FREE               FREE
+     3 Pyserial               Library                 Serial communication library              https://pythonhosted.org/pyserial/        Pyserial developers FREE             FREE
+     4 PyTorch                Library                 Deep learning framework                   https://pytorch.org/                          Meta Platforms FREE              FREE
+     5 Picamera2              Library                 Camera control library for Raspberry Pi   Picamera2 Docs                       Raspberry Pi Foundation FREE              FREE
+     6 ultralytics            Library                 YOLO-based object detection library       https://docs.ultralytics.com/                       Ultralytics FREE           FREE
+     7 Albumentations         Library                 Image augmentation library                https://albumentations.ai/             Albumentations Team FREE                FREE
+     8 Adafruit SSD1306       Library                 OLED display driver library               https://docs.arduino.cc/libraries/ada      Adafruit Industries FREE            FREE
+     9 Adafruit GFX Library   Library                 Graphics rendering library                https://docs.arduino.cc/libraries/ada      Adafruit Industries FREE            FREE
+    10 Adafruit BNO055        Library                 IMU sensor interface library              https://docs.arduino.cc/libraries/ada      Adafruit Industries FREE            FREE
+    11 Adafruit NeoPixel      Library                 RGB LED control library                   https://docs.arduino.cc/libraries/ada      Adafruit Industries FREE            FREE
+    12 SCServo                Library                 Serial servo motor control library        https://docs.arduino.cc/libraries/scse      Feetech Robotics FREE              FREE
+    13 pololu VL53L0X         Library                 Time-of-flight distance sensor library    https://github.com/pololu/vl53l0x-ardu     Pololu Corporation FREE             FREE
+    14 Visual Studio Code     Software's Tool         Software                                  Visual Studio Code: edición de cód                   Microsoft FREE            FREE
+    15 Autodesk Fusion        Software's Tool         3D CAD software                           Fusión de Autodesk | Software basad                  Autodesk
+                                                                                                                                           Software Freedom     FREE/EDUCATION FREE/EDUCATION
+    16 Git                    Software's Tool         Version control system                    Git - Descargas                                 Conservancy FREE               FREE
+    17 PlatformIO IDE         Software's Tool         Data annotation tool                      PlatformIO                                   PlatformIO Labs FREE              FREE
+    18 Label Studio           Software's Tool         Image annotation tool                     https://labelstud.io                            HumanSignal FREE               FREE
+    19 KiCad                  Software's Tool         PCB design software                       Kicad                                KiCad Developers Team FREE                FREE

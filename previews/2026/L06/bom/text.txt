@@ -1,0 +1,456 @@
+RESCUE JUNIOR - Bill of Materials (BOM)
+
+Team name:       Bricks
+
+Every Line/Maze team has to submit a bill of materials for their robot
+
+Instructions:
+*Enter Team name above
+*All costs need to be in local currency and their approximate conversion
+
+*All components worth less can be summarized in one line quantity 1 a
+
+*In the Local Currency Name column, the team must enter the name o
+
+*In the software sheet, in the Author column, the name of the designer
+
+*On the hardware sheet, in the "Author" column, enter the name of the
+
+*IMPORTANT* The "Hardware" sheet is not required for simulation
+                                                          about 650USD
+medium moter x4                to move roboot(2)          to operate arms(1)
+                               to operate basket(1)
+color sensor     x3            to line-tracing(2)         to avoid obstacle(1)
+
+ultrasonic senso r             x1                         to distinguish shelter(1)
+                                                                                                                                                        Name of the    Total Cost         Total Cost ($)
+    Team name:                       Bricks                                                                                                             Local Currency Local Currency     U.S.A. Dollars
+                                                                                                                                                        Brazilian Real         11824.09             2094
+
+#   Component                        Part name                             Autor                  Source                    Quantity Unit cost (Local CUnit cost (USA DTotal Cost (Local CTotal Cost (USA Dollars)
+                                                                           Name of team
+                                                                                                                            1
+### PCB with electronic components   Custom made                           members/Jlcpcb         jlcpcb.com                                    338.8                 60          338.8               60
+### Wheels                           Nexus Robot Mecanum Wheel             Nexus Robot            robotshop.com             4                  112.93                 20         451.72               80
+### Sheet metall parts for frame     Custom made                                                  Local workshop            1                 1129.34               200         1129.34              200
+### Drive motors                     Maxon ECX TORQUE 22 XL Ø22 mm         Maxon Group            Maxon Motors              4                 1694.01               300         6776.04             1200
+### Robots shell                     Custom made                           Name of team members   3D Printer                1                  112.93                 20         112.93               20
+### Robots costume                   Custom made                           Name of team members   Self made                 1                  282.34                 50         282.34               50
+### Microcontroller                  Arduino Mega 2560                     Arduino                conrad.de                 2                  237.16                 42         474.32               84
+### Connecting parts                 Screws, nuts, washers, ...                                   Local tool store          1                  225.87                 40         225.87               40
+### Motors for arm                   NEMA-17-01 NEMA-17-01 0.4 Nm 1.68 A   Pololu Robotics
+                                                                           Conrad  Electronic
+                                                                                           and    conrad.de                 2                  118.58                 21         237.16               42
+### Stepper motor controllers        Pololu Tic T825                       Farnell An Avnet
+                                                                           Electronics            conrad.de                 2                   508.2                 90         1016.4              180
+### LEDs                             Various colours and sizes             Company
+                                                                           Farnell An Avnet       farnell.com               20                   2.82                0.5           56.4               10
+### Battery                          11.1 V 3700 mAh                       Company                farnell.com               3                  203.28                 36         609.84              108
+### Cables                           Various cables                                               Local electronics store   1                  112.93                 20         112.93               20
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+                                                                                                                                                                  Name of the                        Total Cost           Total Cost ($)
+     Team name:           Bricks                                                                                                                                  Local Currency                     Local Currency       U.S.A. Dollars
+                                                                                                                                                                  Brazilian Real                                      0                    0
+
+#    Name                 Software's Tool/Library   Description                                                                   Source                              Autor                          Cost (Local CurrencCost (USA Dollars)
+ ### VL53L0X-Arduino      Library                   For controlling the VL53L0X distance sensor on Arduino                        pololu/vl53l0x-arduino: Biblioteca PPololu                         FREE         FREE
+ ### Open CV              Library                   Image processing library                                                      OpenCV - Biblioteca abierta de CoOpencv.org                        FREE         FREE
+ ### IDE Arduino          Software's Tool           Software                                                                      Software | Arduino                  Arduino.cc                     FREE         FREE
+ ### Visual Studio Code   Software's Tool           Software                                                                      Visual Studio Code: edición de cóMicrosoft                         FREE         FREE
+ ### Numpy                Library                   Array and math library                                                        NumPy                               Numpy developers               FREE         FREE
+ ### Matplotlib           Library                   Python graphics generation library                                            Matplotlib — Visualización con PyMatplot lib dev team              FREE         FREE
+ ### Tinckercad           Software's Tool           Online platform for simulating circuits                                       Tinkercad                           Autodesk                       FREE         FREE
+ ### Git                  Software's Tool           Version control for managing functions                                        Git - Descargas                     Software Freedom Conservancy   FREE/EDUCATI
+                                                                                                                                                                                                     FREE         FREE/EDUCATI
+                                                                                                                                                                                                                  FREE
+ ### Fusion 360           Software's Tool           3D CAD shell design                                                           Fusión de Autodesk | Software baAutodesk                           ON           ON
+ ### Tic Arduino          Library                   Library for controlling a Nema 17 stepper motor with the Tic T825 driver      https://github.com/pololu/tic-arduinDavidEGrayson                  FREE         FREE
+ ### Modulemotorl298n     Library                   The library is designed to make it easy to use motors connected to an L298N module without having to worry abou Name of team members             FREE         FREE
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+ ###
+                                                                       Name of the            Total Cost          Total Cost ($)
+   Team name:   Bricks                                                 Local Currency         Local Currency      U.S.A. Dollars
+                                                                       Brazilian Real
+                                                                                                             77      #NAME?
+                                                                       BRL
+
+#   Component   Part name   Autor   Source   Quantity   Unit cost (LocalUnit cost (US Dollars) Total Cost (Local C
+                                                                                                                 Total Cost (USA Dollars)
+###                                                                            #NAME?                        77     #NAME?
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+###                                                                                                           0                0
+                                                               Name of the      Total Cost           Total Cost ($)
+   Team name:   Bricks                                         Local Currency   Local Currency       U.S.A. Dollars
+                                                               Brazilian Real                    0                    0
+
+#   Name        Software's Tool/Library Description   Source   Autor            Cost (Local CurrenCost (USA Dollars)
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###

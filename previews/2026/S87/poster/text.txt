@@ -1,0 +1,39 @@
+OGEE
+                            Team Members: Ege Serter, Osman Baran Ayaydın, Göktuğ Aslanoğlu, Erkam Tuna Bayoğlu
+                                                        Team Mentor: Gökhan Doğan
+
+               Past Experience                                    Sensor Strategy                                  Algorithms and Methods
+
+Erkam Tuna Bayoğlu: TÜBİTAK 2204-A Tech Design          1. LiDAR: Mounted on the top center. Used for1. Dynamic Navigation (Dijkstra)
+2nd Place (Turkey) & 2024 FRC Marmara Regional          complex obstacle detection (especially in non-   Exploration Planner: Applies a "Turn Penalty" to
+Winner.                                                 grid Area 4) and high-resolution (360-degree)    prevent zig-zagging and ensure smoother
+Ege Serter: CS & Algorithm expert. Gold Medalist        mapping.                                         trajectories.
+(Istanbul Science Olympics) & 2x Bronze Medalist                                                         Targeted Planner: Employs a Hysteresis Gate to
+(TÜBİTAK National Science Olympics).                   2. 3x RGB Cameras: Side-mounted cameras           prevent rotational oscillation in narrow
+Osman Baran Ayaydın: Software specialist. 1st & 2nd    simultaneously scan for victims in narrow         corridors.
+Place Winner (Turkey) in the TÜBİTAK 2204-A            corridors, while the downward-facing front    2. Advanced Computer Vision (OpenCV)
+Research Projects Competition.                         camera handles floor analysis (time-consuming Uses custom HSV filtering to reject wall reflections
+Göktuğ Aslanoğlu: Computer Vision & Autonomous         brown swamps, black holes, and silver         and fake 3D targets.
+Systems expert. TÜBİTAK BİLGEM & UME intern;           checkpoints).                                     Cognitive Targets: Analyzes ring thickness via
+experienced in underwater CV modules and LLMs.         3. GPS and IMU Integration: Absolute position     connected-components. Partially merged rings
+                                                       (GPS) and rotational heading (IMU Gyroscope)      are mathematically extrapolated to 5 based on
+                                                       data are fused to ensure flawless SLAM            thickness ratios.
+                                                       mapping.                                          Letter Victims: Accurately identifies letters by
+                                                                                                         counting white components
+                                                LOOP while simulation runs:
+                                                                                                     3. Grid-Based SLAM Mapping
+                                                  Read Sensors (LiDAR, GPS, IMU, Cameras)                Safety Margin (Inflation): Generates a 5mm
+                                                  IF tilt > 0.01: SKIP iteration (Prevent map error)     resolution LiDAR grid. Walls are "inflated" by
+                                                  Update Map (Pose, Visited FOV, Obstacles, Holes)       2.5cm and holes by 1.2cm to guarantee
+                                                  SWITCH robot_state:
+                                                                                                         collision-free paths.
+                                                    0 (Explore):                                         FOV Tracking: Safe areas within the camera's
+                                                      Follow Dijkstra exploration path.                  Field of View (FOV) are instantly marked as
+                                                      IF target detected -> State = 1                    "visited" using OpenCV fillPoly. A tilt-guard
+                                                    1 (Approach Target):
+                                                      Navigate to 0.06m from target.
+                                                                                                         prevents map corruption on uneven terrain.
+                                                        IF reached -> State = 2
+                                                      2 (Align & Identify):
+                                                        Rotate to face target.
+                                                        IF aligned -> Run Vision algorithms, Mark Done

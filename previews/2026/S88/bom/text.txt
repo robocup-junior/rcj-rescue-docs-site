@@ -1,0 +1,16 @@
+Name of the             Total Cost      Total Cost ($)
+       Team name:                                             Robomanics                                                        Local Currency         Local Currency    U.S.A. Dollars
+
+                                                                                                                                  Brazilian Real           R$0.00            $0.00
+
+#      Name                       Software's Tool/Library   Description                               Source                 Autor                     Cost (Local      Cost (USA
+     1 Python                     Software Tool             Main programming language                 https://python.org Python Software               FREE             FREE
+     2 Webots                     Software Tool             Robot simulation environment              https://cyberbotics.com            Cyberbotics FREE               FREE
+     3 YOLO                       Library                   Victim detection model                    https://ultralytics.com              Ultralytics FREE             FREE
+     4 OpenCV                     Library                   Computer vision and image processing      https://opencv.org              OpenCV Team FREE                  FREE
+     5 NumPy                      Library                   Numerical computing and matrix operations https://numpy.org         NumPy    Developers    FREE             FREE
+     6 Matplotlib                 Library                   Visualization and debugging               https://matplotlib.org Matplotlib Team           FREE             FREE
+     7 Visual Studio Code         Software Tool             Development environment                   https://code.visualstud              Microsoft FREE               FREE
+     8 GitHub                     Software Tool             Version control and collaboration         https://github.com                 GitHub Inc. FREE               FREE
+     9 LiDAR Sensor (Simulated)   Simulation Component      Virtual LiDAR for mapping                 Webots                             Cyberbotics Included           Included
+    10 GPS/IMU Sensors (Simulated)S imulation Component     Localization and orientation              Webots                             Cyberbotics Included           Included

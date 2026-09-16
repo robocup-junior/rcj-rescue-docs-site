@@ -1,0 +1,94 @@
+Wall and geometry mapping
+
+                                                          TEAM
+About us:
+                                                                                                                                                ÁGUABOTS
+We are the Brazil team Águabots, representing the Farias Brito educational institution. The name                                              INCHEON- ROBOCUP 2026 - RESCUE SIMULATION
+Águabots was chosen to symbolize the fluidity, adaptability, and intelligence of our robots, just like the
+importance of water for life and our mission to rescue victims in disaster situations, together with the                                                                             BRAZIL
+following members:
+
+                     Isaac Newton S. Araújo                                       Manuella A. N. Magalhães
+                          Responsible for AI and Software                              Responsible for mapping
+                          Archictecture
+
+                                                                                                                                     NAVIGATION AND EXPLORATION
+                     Isabella F. G. P. Araujo                                     Vinícius F.S. Oliveira
+                                                                                                                                                              Custom tile-based exploration combining semantic mapping, LiDAR
+                          Responsible for the design and                               Responsible for navigation and            Exploration
+                          path planning                                                movement                                                               clearance analysis, backtracking and failed-goal memory.
+
+                                                                                                                              Goal Selection                  Selects the next open unvisited neighbor tile or initiates backtracking
+                                                                                                                                                              when no new tile is reachable.
+                                      Awards:
+                                      1st place in the Brazilian Robotics Competition (CBR)                                        Planning                   DFS-style planning with weighted backtracking through visited non-                                                           Source: Authors, 2026
+
+                                      Rescue Simulation 2025.                                                                                                 blocked tiles.
+
+                                                                                                                             Motion Control                   Converts tile movements into calibrated Webots wheel-position
+                                                                                                                                                              targets.                                                                                   VICTIM RECOGNITION
+                                                                                                                                   Safety &                   Cancels unsafe movements, reverses partial motion, marks blocked
+                                                 HARDWARE                                                                          Recovery                   tiles, and ensures return-to-start behavior.                                                 Image Processing
+                                                                                                                                                                                                                                                            Frame filtering
+                                                                                                                                                                                     Create a bitmask                                                       Duplicate detection removal
+                                                                                                                                                              Use LIDAR to              for the tile
+                                                                                                                                                              detect walls
+                                                                                                                                                                                                                                                           Object Detection
+                                                                                                                                                                       NO
+                                                                                                                                                                                                                                                         Lightweight ONNX CNN
+                                                                                                                                                Depth-First       Has the                Are there
+                                                                                                                                                                current tile                any               Breadth-First    Is there an                   Detects: Target and victim
+                                                                                                                                                  Search                       YES                       NO                     unvisited    NO
+                                                                                                                            Start                              already been              unvisited            Search (BFS)                        End
+                                                                                                                                                                                                                                   path
+                                                                                                                                                   (DFS)          visited?              neighbors?                              available?                 Target Recognition
+                                  Source: Authors, 2026                           Source: Authors, 2026
+                              ROBOT COMPONENTS                            ROBOT IN SIMULATION                                                                                                                                                             CNN + Computer Vision
+                                                                                                                                                                Move the                                                                                    Circle detection
+Wheels: Two side-mounted wheels are responsible for the robot’s movement, allowing it to                                                                         robot                                                                                      Polar unwrapping
+move forward, make smooth turns, and rotate on its own axis.                                                                                                                                                                                                HSV color decoding
+                                                                                                                                                                                      Update the tile                    YES
+Inertial Unit: Used to ensure that the robot makes turns with exact 90º precision.                                           Flowchart: Authors, 2026
+                                                                                                                                                                                        bitmask                                                             Distance validation
+Color Sensor: Used to identify the color of the simulated arena’s floor. It allows the detection
+of holes that cannot be crossed.                                                                                                                                                                                                                           Victim Recognition
+GPS: Used to record and transmit the precise location of victims detected by the robot. It is                                                                                                                                                            CNN Pipeline
+also used to assist in mapping.
+LiDAR: Used for accurate wall detection in the environment. The data provided by the LiDAR is                                                                          MAPPING                                                                             Bounding box detection
+                                                                                                                                                                                                                                                           Image classification
+essential to avoid collisions and to build representations of the traversed space.                                                                                                                                                                         Fake victim rejection
+                                                                                                                        The mapping system represents the Rescue Simulation maze as a semantic tile-based map, since the arena is
+Cameras: Two cameras are positioned on the sides of the robot, assisting in precise victim
+                                                                                                                        organized as a grid of square tiles                                                                                                Training & Deployment
+detection through computer vision. Both cameras have a resolution of 64x64.
+                                                                                                                        The mapper receives standardized ROS 2 data, mainly filtered odometry and LiDAR scans. Odometry provides the
+Distance Sensor: Used to detect holes. It compensates for the color sensor’s limitation of                              robot’s position, while LiDAR detects nearby walls and obstacles. Ground sensors classify each tile as normal, colored,
+analyzing only one point, making hole detection more reliable.                                                          swamp, hole.
+
+                                                                                                                                      The mapper converts sensor observations into a semantic tile representation
+
+                  SYSTEM ARCHITECTURE                                                                                                 of the maze.
+
+                          WEBOTS                                   CORE ROS 2                     DECISION
+                                                                    MODULES
+
+                                                                      EKF                            TILE
+                              LIDAR
+                                                                  LOCALIZATION                   EXPLORATION
+
+                                                     TCP ROS
+                         GPU + IMU                   BRIDGE           SLAM                          PATH
+                                                                    TOOLBOX                       PLANNING
+
+                         CÂMERA
+                          CAMERA                                  SEMANTIC TILE                    MOTION
+                                                                     MAPPER                       EXECUTOR
+
+                           MOTOR
+                         CÂMERA                                       VICTIM                       MOTOR
+                         COMMANDS
+                                                                   DETECTATION                   COMMANDS
+
+                                                                                                                                                                                                                                                                                          Flowchart: Authors, 2026
+   Flowchart: Authors, 2026
+                                                                                                                                                                                     Source: Authors, 2026

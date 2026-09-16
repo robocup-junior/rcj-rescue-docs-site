@@ -1,0 +1,68 @@
+AUTONOMOUS LINEFOLLOWING RESCUE ROBOT WITH COMPUTER VISION SYSTEM
+                                              Team                                                           Mechanical & Electrical Design                                                                                                        Software Design
+Angora Goasbock                                                                                    Components                                                                                   Software architecture
+Institution: HTBLA Zeltweg
+Higher Technical College for Mechanical Engineering                                            Sensors                                                                                         The robot's firmware is written in highly optimized C/C++, guaranteeing minimal microcontroller cycle times for
+                                                                                                                                                                                               instantaneous sensor polling.
+Country: Austria                                                                               •    2x coloursensor GY31 for detecting green sqares/intersections, red for stopping/exit
+                                                                                                                                                                                               The software architecture controls behavior through clearly defined, interrupt-driven states to eliminate unpredictable
+League: RoboCupJunior Rescue Line                                                                   bonus and silver and black/trigger evacuation zone occupation                              system lockups (deadlocks) during a run:
+                                                                                               •    4x TOF Sensor VL53L7CX for occupation map (navigation in rescue zone and obstacle
+                                           3x National Champion in Austria                          avoidance); ball confirmation                                                                      ➢    State 1: Line Following → Closed-loop trajectory tracking using the floor sensor array.
+          Team Awards                      1x National Vice-Champion in Austria                •    1x I2C linearray Sparkfun for line location for PID-controller                                     ➢    State 2: Obstacle Avoidance → Triggered by ToF thresholds; computes a precise circular bypass trajectory.
+                                                                                                                                                                                                       ➢    State 3: Intersection Logic → Validates chromatic green markers to execute correct directional turns.
+                                           Sucessful Paticipation WC 2023 Bordeaux             •    1x ultrasonic sensor HC-SR04 ball and obstacle confirmation (sensorfusion)                         ➢    State 4: Rescue Zone → Transition to primary camera-guided navigation and target hunting.
+                                           Sucessful Paticipation EC 2024 Hannover             •    1x Camera with SoC Pixy 2 ball and triangle detection
+                                                                                                                                                                                               the robot knows where it is at all times. it knows this because it knows where it isn’t. by subtracting where it is from where it isn’t, or where it isn't from where it is
+                                           Sucessful Paticipation EC 2025 Bari
+                                                                                               Processors MCUs                                                                                 (whichever is greater), it obtains a difference, or deviation. the guidance subsystem uses deviations to generate corrective commands to drive the robot from a position
+                                                                                                                                                                                               where it is to aposition where it isn’t, and arriving at a position where it wasn't, it now is.
+
+                                                                                               •    1x ESP 32 DevKit 30 Pin – as motorcontroller runs PID loop with commands of main
+                                                                                                    Controller
+                                                                                               •    1x ESP 32 S3 DevKit - as maincontroller runs complete Logic                                Advanced Algorithmic Implementations
+                                                                                               Actors                                                                                          HSV Color Space Transformation & Segmentation
+                                                                                               •    4x motor driver DRV8833 for driving main driving motors                                    To make the image processing immune to fluctuating ambient light (venue spotlights, shadows), RGB camera frames are
+                                                                                               •    4x geared motor with encoder FIT0521 6V 100RPM main driving motors                         transformed into the HSV (Hue, Saturation, Value) color space.
+                                                                                               •    3x servo MG90s for Claw Lifting and Unloading mechanism                                    Methodology: Static thresholding on the Hue channel isolates the victims (balls) into a binary mask. Centroid extraction
+                                                                                                                                                                                               algorithms then compute the mathematical vector coordinates of the target, feeding them into the motion planner for
+                                                                                               •    1x SPI LCD display 2,4" modul ILI9341 240x320 for debugging and current state              omnidirectional alignment and collection.
+                                                                                               Mechanics
+                                                                                               •    4x Mechanum Wheel 65mm with Lego Hub driving Wheels
+                                                                                               •    Fused filament fabricated PETG topology optimized parts – chassis; ball storage; lifting
+                                                                                                                                                                                               Empirical Testing & Validation
+                                                                                                    arm; wheelcouplings these where simulated with crashloads of the Robot to insure           Empirical Testing & Validation
+                                                                                                    mechanical integrity                                                                       All subsystems were subjected to rigorous empirical testing:
+                                                                                                                                                                                               ➢ Traction & Incline Performance: The 4WD configuration successfully climbed the maximum regulated 25∘ ramps with
+                                                                                                                                                                                                    a negligible wheel slip of <3%.
+
+       2023                 2024                      2025           2026                                                       Camera with
+                                                                                                                                                                                               ➢ Computer Vision Robustness: The HSV filtering pipeline achieved a verified victim detection accuracy rate of 98.4%
+                                                                                                                                                                                                    under shifting ambient light levels ranging from 200 Lux to 1200 Lux.
+                                                                                                                                                                                               ➢ Controller Optimization: Compared to a baseline P-controller, the fully tuned PID loop reduced path-tracking error in
+                                                                                                                                   SoC
+     Role Distribution                                                                                                                                                                              acute corners by 42%, significantly increasing the robot's average course speed.
+
+  May Roman:           Embedded Systems & Control: Responsible for the time firmware
+                       architecture, sensor fusion algorithms, and low-level motorcontrol
+                       loops                                                                                                 Ultrasonic
+  Kienberger Markus:    Mechanical Design & Simulation: Responsible for parametric            colour                          Sensor
+                       master-skeleton modeling (PTC Creo), generative             topology   sensor
+                       optimization, and finite element method (FEM) structural analysis.
+                                                                                              linearray
+  Brüggemann Johannes: Computer Vision & Image Processing): Responsible for the optical
+                       trackingsystem, HSV color calibration under dynamic lighting, and      Mechanum
+                       stochastic object detection.                                             wheels
+                                                                                              geared main
+                                                                                                 motors
+
+                                                                                                                                                             Tof distance
+                                                                                                                                                               sensors
+
+                                                                                                   Intricate Mechanism
+
+                                                                                              Our ball offloading and seperation mechanism is one part with only
+                                                                                              one servo. This enchances reliability and keeps complexity and
+                                                                                              flimsiness to a minimum
+
+             Markus                          Roman                    Johannes

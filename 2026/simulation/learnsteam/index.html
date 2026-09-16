@@ -1,0 +1,353 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>learnsteam · RoboCupJunior Rescue</title><meta name=description content="Published team description papers, posters, bills of materials, source code and presentations from the RoboCupJunior Rescue leagues."><link rel=icon href=/rcj-rescue-docs-site/favicons/favicon.ico sizes=any><link rel=icon type=image/png sizes=32x32 href=/rcj-rescue-docs-site/favicons/icon-32x32.png><link rel=apple-touch-icon sizes=180x180 href=/rcj-rescue-docs-site/favicons/apple-touch-icon-180x180.png><meta name=twitter:card content="summary_large_image"><link rel=stylesheet href=/rcj-rescue-docs-site/css/site.min.2b0268f070dd653dfc0701c508fb85fe7f685dd68fe17a67ea93566fd67e77bf.css integrity="sha256-KwJo8HDdZT38BwHFCPuF/n9oXdaP4Xpn6pNWb9Z+d78="><meta property="og:url" content="https://robocup-junior.github.io/rcj-rescue-docs-site/2026/simulation/learnsteam/"><meta property="og:site_name" content="RoboCupJunior Rescue — Team Documents"><meta property="og:title" content="learnsteam"><meta property="og:description" content="Published team description papers, posters, bills of materials, source code and presentations from the RoboCupJunior Rescue leagues."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="2026"><meta property="og:image" content="https://robocup-junior.github.io/rcj-rescue-docs-site/assets/img/logo2.png"><link rel=canonical href=https://robocup-junior.github.io/rcj-rescue-docs-site/2026/simulation/learnsteam/></head><body><a class=skip href=#main>Skip to content</a>
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-award" viewBox="0 0 384 512"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4.0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4.0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4.0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2.8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4.0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1.4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 10-160 0 80 80 0 10160 0zM1.3 441.8 44.4 339.3c.2.1.3.2.4.4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2.0.5.0.7.2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7.8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1.4-.2.7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2.2-.3.4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></symbol><symbol id="i-users" viewBox="0 0 640 512"><path d="M144 0a80 80 0 110 160A80 80 0 11144 0zM512 0a80 80 0 110 160A80 80 0 11512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9.0 31 3.5 44.6 9.7-1.3 7.2-1.9 14.7-1.9 22.3.0 38.2 16.8 72.5 43.3 96-.2.0-.4.0-.7.0H21.3C9.6 320 0 310.4.0 298.7zM405.3 320c-.2.0-.4.0-.7.0 26.6-23.5 43.3-57.8 43.3-96 0-7.6-.7-15-1.9-22.3 13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.4zM224 224a96 96 0 11192 0 96 96 0 11-192 0zM128 485.3C128 411.7 187.7 352 261.3 352h117.3C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.6c-14.7.0-26.7-11.9-26.7-26.7z"/></symbol><symbol id="i-heart" viewBox="0 0 512 512"><path d="M47.6 300.4 228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6.0 115.2.0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></symbol><symbol id="i-chalkboard-user" viewBox="0 0 640 512"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3.0 64 28.7 64 64v288c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384v-32c0-17.7 14.3-32 32-32h64c17.7.0 32 14.3 32 32v32h64V64H224v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 110 192 96 96 0 110-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1.0 485.3.0 411.7 59.7 352 133.3 352z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2 5.2-7.1 10.4-14.2 15.4-21.4 19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2.0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3 5 7.2 10.2 14.3 15.4 21.4 19.8 27.1 39.7 54.4 49.2 86.2h160zM192 512c44.2.0 80-35.8 80-80v-16H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112 8.8.0 16 7.2 16 16s-7.2 16-16 16c-44.2.0-80 35.8-80 80z"/></symbol><symbol id="i-gear" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7.5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6.3-24.5-6.8-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6 4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2 5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5.0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8 8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 100-160 80 80 0 100 160z"/></symbol><symbol id="i-palette" viewBox="0 0 512 512"><path d="M512 256c0 .9.0 1.8.0 2.7-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5.0-48 21.5-48 48 0 3.4.4 6.7 1 9.9 2.1 10.2 6.5 20 10.8 29.9 6.1 13.8 12.1 27.5 12.1 42 0 31.8-21.6 60.7-53.4 62-3.5.1-7 .2-10.6.2C114.6 512 0 397.4.0 256S114.6.0 256 0 512 114.6 512 256zM128 288a32 32 0 10-64 0 32 32 0 1064 0zm0-96a32 32 0 100-64 32 32 0 100 64zM288 96a32 32 0 10-64 0 32 32 0 1064 0zm96 96a32 32 0 100-64 32 32 0 100 64z"/></symbol><symbol id="i-flask" viewBox="0 0 448 512"><path d="M288 0H160 128C110.3.0 96 14.3 96 32s14.3 32 32 32v132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2.0 429.7.0 442.6.0 480.9 31.1 512 69.4 512h309.2c38.3.0 69.4-31.1 69.4-69.4.0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7.0 32-14.3 32-32S337.7.0 320 0H288zM192 196.8V64h64v132.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></symbol></svg><header class=site-header><div class=wrap><a class=brand href=/rcj-rescue-docs-site/><img src=/rcj-rescue-docs-site/assets/img/logo2.png alt="RoboCupJunior Rescue" width=500 height=140>
+<span><b>Team Documents</b><span>Rescue 2026 · Incheon</span></span></a><nav aria-label="Related sites"><a class=pill href=https://rescue.rcj.cloud/events/2026/RoboCup2026/index.html>RoboCup 2026</a>
+<a class=pill href=https://rescue.rcj.cloud/events/2026/RoboCup2026/results.html>Results</a>
+<a class="pill solid" href=https://rescue.rcj.cloud/>Rescue site</a></nav></div></header><nav class=crumbs aria-label=Breadcrumb><div class=wrap><span aria-current=page>Leagues</span>
+<a href=/rcj-rescue-docs-site/2026/simulation/>Simulation 2026</a><span class=sep>›</span>
+<span aria-current=page>learnsteam</span></div></nav><main id=main><div class="wrap section"><div class=team-hero><div class=identity><div class=title-row><span class=chip><svg aria-hidden="true"><use href="#i-award"/></svg>Superteam Award</span></div><h1>learnsteam</h1><div class=where>Simulation league · Republic of Korea ·
+<span class=num>RoboCup 2026</span></div><div class=register><h2>Document register</h2><ol><li><a href=#doc-poster>Poster<span class=size>1 page</span><span class=state>Published</span></a></li><li><a href=#watch>Presentation video<span class=size>YouTube</span><span class=state>Published</span></a></li><li><a href=#doc-bom>Bill of materials<span class=size>42 KB</span><span class=state>Published</span></a></li><li><a href=#doc-tdp_pdf_optional>Team description paper<span class=size>10 pages</span><span class=state>Published</span></a></li><li><span class=absent>Engineering journal<span class=size></span><span class=state>Not shared</span></span></li><li><a href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S92-source_code.zip target=_blank rel=noopener>Source code<span class=size>112 KB · GitHub</span><span class=state>Published</span></a></li></ol><p class=note>Sharing each document is the team's decision. “Not shared” means this team
+chose not to publish it, or did not submit one — not that it is missing from the archive.</p></div></div><div class=photos><div class=photo-main><img src=/rcj-rescue-docs-site/images/2026/S92/team_photo.webp width=900 height=234 alt="The learnsteam team" loading=lazy decoding=async></div></div></div><div class=intro><h2>In their words</h2><div class=body><p>Team RM developed an autonomous rescue simulation robot designed to explore unknown</p><p>environments, detect victims and hazardous materials, generate maps, and return to the</p><p>starting point within the given time limit. The robot uses two motors, three cameras, GPS, a</p><p>gyroscope, and a 360-degree LiDAR sensor. LiDAR is used for obstacle detection,</p><p>point-cloud generation, and real-time mapping, while GPS and gyroscope data help estimate</p><p>the robot’s position and direction. The front, left, and right cameras identify wall tokens,</p><p>victims, hazardous signs, and floor types through OpenCV-based image processing.</p><p>The main feature of our robot is the integration of multiple sensors with a noise-aware</p><p>navigation and mapping system. Instead of relying only on simple obstacle detection, the</p><p>robot uses A* pathfinding, navigation preference values, and continuously updated map</p><p>layers to select safer routes. Compared with our previous version, the robot was redesigned to</p><p>reduce the effects of sensor noise and improve movement stability. These improvements</p><p>allowed the robot to explore more consistently, detect important objects more reliably, and</p><p>create a more accurate map during the simulation.</p></div></div><div class=keywords><a href=/rcj-rescue-docs-site/keywords/keywords-pathfinding/>Keywords: Pathfinding</a><a href=/rcj-rescue-docs-site/keywords/a-algorithm/>A* Algorithm</a><a href=/rcj-rescue-docs-site/keywords/dijkstras-algorithm/>Dijkstra's Algorithm</a><a href=/rcj-rescue-docs-site/keywords/wall-token-detection/>Wall Token Detection</a><a href=/rcj-rescue-docs-site/keywords/opencv/>OpenCV</a><a href=/rcj-rescue-docs-site/keywords/mapping/>Mapping</a><a href=/rcj-rescue-docs-site/keywords/numpy/>NumPy</a><a href=/rcj-rescue-docs-site/keywords/lidar/>LiDAR</a><a href=/rcj-rescue-docs-site/keywords/sensor-noise-reduction/>Sensor Noise Reduction</a></div><div class=doc-view><section id=doc-poster><h3>Poster</h3><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/poster/page-001.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/poster/page-001.webp width=1016 height=1423 alt="learnsteam — Poster, page 1 of 1" loading=lazy decoding=async><figcaption>Open this page on its own</figcaption></a></figure></div><p class=priv>1 page, rendered as images so they load quickly.
+This document has no text layer — the words in it are part of the image.</p><p><a class=pill href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S92-poster.pdf target=_blank rel=noopener>Download the original PDF (145 KB) from GitHub</a></p></section><section class=video id=watch><h3>Presentation video</h3><button type=button class=facade data-yt=BZZZ-PE0DeI aria-label="Play Presentation video for learnsteam">
+<img src=/rcj-rescue-docs-site/images/2026/S92/video_thumbnail.webp width=640 height=360 alt loading=lazy decoding=async>
+<span class=play aria-hidden=true></span></button><p class=priv>Hosted on YouTube. The player loads only when you press play.</p><p><a class=pill href="https://www.youtube.com/watch?v=BZZZ-PE0DeI" target=_blank rel=noopener>Open in YouTube</a></p></section><section id=doc-bom><h3>Bill of materials</h3><iframe src=/rcj-rescue-docs-site/files/2026/S92/bom.pdf title="Bill of materials for learnsteam" loading=lazy></iframe><p class=priv>Shown as the original PDF, because this one is smaller that
+way and its text stays selectable and searchable.</p><p style="margin:10px 0 0"><a class=pill href=/rcj-rescue-docs-site/files/2026/S92/bom.pdf target=_blank rel=noopener>Open Bill of materials</a></p></section><section id=doc-tdp_pdf_optional><h3>Team description paper</h3><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-001.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-001.webp width=850 height=1100 alt="learnsteam — Team description paper, page 1 of 10" loading=lazy decoding=async><figcaption>Page 1 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-002.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-002.webp width=850 height=1100 alt="learnsteam — Team description paper, page 2 of 10" loading=lazy decoding=async><figcaption>Page 2 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-003.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-003.webp width=850 height=1100 alt="learnsteam — Team description paper, page 3 of 10" loading=lazy decoding=async><figcaption>Page 3 of 10 — Open this page on its own</figcaption></a></figure></div><details class=doc-more><summary>Show the remaining 7 pages</summary><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-004.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-004.webp width=850 height=1100 alt="learnsteam — Team description paper, page 4 of 10" loading=lazy decoding=async><figcaption>Page 4 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-005.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-005.webp width=850 height=1100 alt="learnsteam — Team description paper, page 5 of 10" loading=lazy decoding=async><figcaption>Page 5 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-006.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-006.webp width=850 height=1100 alt="learnsteam — Team description paper, page 6 of 10" loading=lazy decoding=async><figcaption>Page 6 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-007.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-007.webp width=850 height=1100 alt="learnsteam — Team description paper, page 7 of 10" loading=lazy decoding=async><figcaption>Page 7 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-008.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-008.webp width=850 height=1100 alt="learnsteam — Team description paper, page 8 of 10" loading=lazy decoding=async><figcaption>Page 8 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-009.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-009.webp width=850 height=1100 alt="learnsteam — Team description paper, page 9 of 10" loading=lazy decoding=async><figcaption>Page 9 of 10 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-010.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S92/tdp/page-010.webp width=850 height=1100 alt="learnsteam — Team description paper, page 10 of 10" loading=lazy decoding=async><figcaption>Page 10 of 10 — Open this page on its own</figcaption></a></figure></div></details><details class=doc-text><summary>Read the text of this document — 2155 words</summary><pre tabindex=0 role=region aria-label="Extracted text of Team description paper for learnsteam">ROBOCUPJUNIOR RESCUE SIMULATION 2026
+
+                                   TEAM DESCRIPTION PAPER
+                                           Rescue Mind
+Abstract
+
+           Team RM developed an autonomous rescue simulation robot designed to explore unknown
+           environments, detect victims and hazardous materials, generate maps, and return to the
+           starting point within the given time limit. The robot uses two motors, three cameras, GPS, a
+           gyroscope, and a 360-degree LiDAR sensor. LiDAR is used for obstacle detection,
+           point-cloud generation, and real-time mapping, while GPS and gyroscope data help estimate
+           the robot’s position and direction. The front, left, and right cameras identify wall tokens,
+           victims, hazardous signs, and floor types through OpenCV-based image processing.
+
+           The main feature of our robot is the integration of multiple sensors with a noise-aware
+           navigation and mapping system. Instead of relying only on simple obstacle detection, the
+           robot uses A* pathfinding, navigation preference values, and continuously updated map
+           layers to select safer routes. Compared with our previous version, the robot was redesigned to
+           reduce the effects of sensor noise and improve movement stability. These improvements
+           allowed the robot to explore more consistently, detect important objects more reliably, and
+           create a more accurate map during the simulation.
+
+           Keywords: Pathfinding, A* Algorithm, Dijkstra’s Algorithm, Wall Token Detection,
+           OpenCV, Mapping, NumPy, LiDAR, Sensor Noise Reduction
+
+1.​ Introduction
+   a.​ Team
+
+           Jung Ha-min worked on coding and the Team Description Paper. He helped organize the
+           project documentation and explained the robot’s software structure, project goals, and
+           technical decisions.
+
+           Pyo Sang-woo mainly contributed to coding and video production. He supported the
+           development of navigation and detection functions and helped present the robot’s behavior
+           through the team video.
+
+           Kim Si-heon contributed to coding and poster production. He worked on exploration, path
+           planning, and detection functions, and designed the poster to summarize the robot’s main
+           improvements.
+
+           Choi Hyun-jun worked on coding and the Team Description Paper. He supported software
+           testing and helped connect the team’s technical implementation with the overall project plan.
+
+                                                                                                          1
+2.​ Project Planning
+   a.​ Overall Project Plan
+
+          Team RM’s objective was to build a more reliable and efficient robot than the previous
+          competition version. The robot had to explore the map, detect victims and hazardous signs,
+          avoid obstacles, record floor types, generate an accurate map, and return to the starting point
+          before the time limit.
+
+          The main constraints were the robot customization budget, limited match time, competition
+          rules, and sensor noise. Because of these constraints, the team focused on efficient sensor
+          placement, stable path planning, accurate detection, and noise reduction.
+
+          The project was planned in the following order: robot design, software architecture,
+          navigation, detection, mapping, and testing. This order was chosen because the software
+          depended on the sensor layout and available sensor data.
+
+Milestone 1: Sensor Configuration and Robot Design
+
+          The team redesigned the robot’s sensor layout based on problems from the previous
+          competition. Three cameras were placed at the front, left, and right sides, while LiDAR was
+          placed at the top center for 360-degree detection. GPS and the gyroscope were placed near
+          the center for stable position and direction data.
+
+Milestone 2: Software Architecture
+
+          The team divided the software into a main loop and a state machine. The main loop handles
+          continuous tasks such as navigation, mapping, and obstacle detection. The state machine
+          handles special situations such as initialization, victim reporting, stuck state, and ending.
+
+Milestone 3: Function Development
+
+          The team implemented LiDAR-based obstacle detection, OpenCV-based image processing,
+          A* pathfinding, and NumPy-based mapping. Based on previous performance, the team
+          changed from a node-based grid to a granular grid to improve curved-wall recognition and
+          mapping accuracy.
+
+Milestone 4: Testing and Improvement
+
+          The robot was tested on multiple maps. The team checked exploration consistency, victim
+          detection, obstacle avoidance, mapping accuracy, and return-to-start behavior. Test results
+          were used to improve navigation stability and reduce the effects of sensor noise.
+
+   b.​ Integration Plan
+
+      The robot was integrated by connecting the sensor system, mapper, pathfinder, executor, and
+      state machine. Each component satisfied one of the project requirements.
+
+      LiDAR provides obstacle and wall data. GPS and gyroscope provide position and direction data.
+      Cameras provide victim, hazardous sign, wall token, and floor information. The mapper
+
+                                                                                                            2
+     combines these data into map layers, and the pathfinder uses the map to calculate routes. The
+     executor controls the motors, while the state machine handles special events.
+
+     For example, when LiDAR detects a new obstacle, the mapper updates the occupied layer and
+     the pathfinder recalculates the route. When a camera detects a victim, the state machine switches
+     to the reporting state and prevents duplicate reporting.
+
+3.​ Robot Design
+
+     The robot was designed to balance efficiency, stability, and sensor accuracy within the
+     customization budget. The sensors were placed symmetrically to reduce the effects of simulation
+     noise and improve movement stability.
+
+  a.​ Components​
+
+     Motors: The robot uses two motors. Each motor controls speed and direction independently,
+     allowing the robot to move forward, turn, and adjust its path.
+
+     Cameras: The robot uses three cameras at the front, left, and right. They detect victims,
+     hazardous signs, wall tokens, and floor types. The side cameras reduce the chance of missing
+     objects outside the front view.
+
+     GPS: GPS measures the robot’s coordinates and supports mapping, path planning, and
+     return-to-start behavior. It is placed near the center for better accuracy.
+
+     Gyroscope: The gyroscope measures direction and rotation. It helps detect unexpected turning
+     and supports stable movement.
+
+     LiDAR: LiDAR is placed at the top center of the robot and scans in 360 degrees. It detects
+     obstacles, curved walls, and surrounding structures with accurate distance and angle data.
+
+                                                                                                     3
+4.​ Software
+     The robot software integrates navigation, detection, mapping, and control into a single
+     autonomous system. Sensor data from LiDAR, GPS, the gyroscope, and cameras are processed
+     in real time to update the map, identify important objects, and generate movement decisions. The
+     software was designed to be modular so that each subsystem can operate independently while
+     sharing information through common map layers and state management.
+
+  a.​ General software architecture
+
+        The software consists of a main loop and a state machine. The main loop continuously
+        processes sensor data, updates the map, detects obstacles, and calculates movement. The state
+        machine handles event-based situations.
+
+        stem easier to control because continuous tasks and special events were separated. The main
+        tools used were NumPy for grid maps and OpenCV for image processing. The main
+        algorithms were A*, Dijkstra’s algorithm for comparison, BFS correction, HSV filtering,
+        contour detection, and ray casting.
+
+  b.​ Navigation
+
+        The navigation system allows the robot to explore, select target points, avoid obstacles,
+        detect victims, and return to the starting point. When the robot starts, it builds a map of the
+        surrounding environment and selects a reachable target. If a victim is detected, the robot
+        stops, reports it, and continues exploration.
+
+        When exploration is complete or the remaining time becomes low, the robot returns to the
+        starting point.
+
+                                                                                                          4
+Path Planning
+
+      Dijkstra’s algorithm was considered because it can find the shortest path. However, it
+      checks many nodes and does not prioritize the target direction, which can reduce
+      efficiency.
+
+      Therefore, the team selected A* pathfinding. A* uses the following equation:
+
+             f(n) = g(n) &#43; h(n)
+
+      Here, g(n) is the actual cost from the start to the current node, and h(n) is the estimated
+      cost from the current node to the target. This helps the robot focus on efficient routes
+      instead of searching all directions.
+
+      The robot also uses a navigation preference layer. Areas near walls or obstacles receive
+      lower preference values, so the robot avoids moving too close to dangerous areas.
+
+                                                                                                    5
+       Navigation Testing
+
+              Navigation was tested on several maps. The team checked whether the robot could reach
+              target points, avoid obstacles, recover from blocked paths, and return to the start. When
+              movement was unstable, the pathfinder was adjusted to recalculate routes more
+              effectively.
+
+    c.​ Wall Token detection
+       The wall token detection system uses the front, left, and right cameras to detect victims and
+       hazardous signs. Each image is processed by a fixture detector using color filtering, contour
+       analysis, and pixel distribution.
+
+       Victim Detection
+​      ​
+              The system uses HSV color filtering for black, white, yellow, and red. Pixels within the
+              defined ranges become candidate regions. A wall mask removes objects that are not
+              located on walls.
+
+              After filtering, contours and bounding boxes are calculated. The center of the bounding
+              box is converted into an angle using the camera’s field of view, and ray casting is used to
+              estimate the object’s position on the map.
+
+              For victim classification, the letter area is extracted and divided into upper, middle, and
+              lower regions. The pixel distribution is compared with predefined patterns to identify the
+              victim type.
+
+                                                                                                          6
+​   Hazardous Material Detection
+
+          Hazardous signs are first classified by their main colors. Then the image is converted to
+          grayscale and divided into smaller regions. Pixel distribution in each region is compared
+          with predefined patterns. This method allows the robot to classify signs even when the
+          full sign is not visible.
+
+                                                                                                      7
+  Detection Testing
+
+        Detection was tested with different camera directions and incomplete images. The team
+        chose a color-based method because it was faster and simpler than a complex AI model
+        while still being reliable in the simulation environment.
+
+d.​ Mapping
+
+     The mapping system combines LiDAR, GPS, gyroscope, and camera data to generate a
+     real-time map. The map is used for navigation, obstacle avoidance, victim recording, and
+     return-to-start behavior.
+
+  Integer Grid
+
+        Sensor data is stored in an expandable integer grid. The mapper records walls, obstacles,
+        floor conditions, victim locations, explored areas, and the robot’s path. LiDAR is mainly
+        used for walls and obstacles, while cameras are used for floor types and wall tokens.
+
+        Because the robot uses continuous coordinate-based navigation instead of tile-based
+        movement, exact tile boundaries can be difficult to detect. To reduce this issue, the map is
+        continuously updated with new sensor data.
+
+  Granular Grid
+
+        The granular grid combines LiDAR data with additional information such as floor type
+        and structure location. Compared with the previous node-based grid, the granular grid
+        represents the environment in more detail and improves curved-wall recognition.
+
+        After the simulation ends, the granular grid can be converted into the competition’s
+        Bonus Grid format.
+
+  Floor and Obstacle Mapping
+
+        Floor types are detected mainly by color. Camera images are converted into a top-view
+        image using OpenCV’s cv.warpPerspective() function. HSV filters are then used to
+        identify black holes, swamps, and checkpoints.
+
+        Obstacles are detected using LiDAR. Detected points are stored as possible obstacles. If
+        the same position is detected multiple times, its confidence increases and it is stored as a
+        wall. Low-confidence points are removed as noise. The pathfinder then uses the
+        traversable and navigation preference layers to calculate safer paths.
+
+                                                                                                       8
+     Mapping Testing
+
+            Mapping was tested by running the robot on different maps and comparing the generated
+            map with the expected environment. The granular grid improved curved-wall recognition
+            and produced a more precise map than the previous node-based approach.
+
+5.​ Performance evaluation
+
+     The robot was evaluated based on exploration consistency, mapping accuracy, pathfinding
+     stability, detection reliability, and return-to-start behavior.
+
+     Testing Procedures
+
+            The team tested the robot on several maps. During each test, the team checked whether
+            the robot could explore unknown areas, avoid obstacles, detect victims and hazardous
+            signs, update the map, and return to the starting point.
+
+            For navigation, the team checked whether A* generated stable paths and recalculated
+            routes when paths were blocked. For mapping, the team checked whether LiDAR data
+            was correctly reflected in wall and obstacle layers. For detection, the team checked
+            whether wall tokens were identified from different camera angles and whether duplicate
+            reports were prevented.
+
+     Analysis of Results
+
+            The tests showed that the robot became more consistent after improving the sensor layout
+            and mapping system. Symmetrical sensor placement reduced noise effects, and the
+            granular grid improved curved-wall recognition. A* Pathfinding helped the robot find
+            efficient routes with fewer unnecessary calculations.
+
+            However, the robot sometimes failed to return to the starting point within the time limit.
+            This showed that time management and return strategy still need improvement. Based on
+
+                                                                                                     9
+            these results, the team adjusted the pathfinding process and focused on improving
+            navigation stability.
+
+            Overall, the robot performed exploration, mapping, detection, and path planning reliably
+            across multiple maps. The main improvements compared with the previous version were
+            sensor noise reduction, better mapping accuracy, and more stable navigation.
+
+6.​ Conclusion
+
+     Team RM developed an autonomous rescue simulation robot that integrates LiDAR, GPS,
+     gyroscope, and camera sensors to perform exploration, detection, mapping, and return-to-start
+     behavior. Compared with the previous version, the robot was improved through better sensor
+     placement, noise-aware mapping, A* navigation, and OpenCV-based detection.
+
+     Although return timing still needs improvement, the current system solved many problems from
+     the previous competition. Through this project, the team gained experience in autonomous
+     navigation, sensor integration, image processing, mapping, and software-based problem solving.
+
+References
+  [1] RoboCup Rescue Simulation Website​
+  &lt;https://junior.robocup.org/robocupjuniorrescue-league-simulation/&gt;
+
+  [2] NumPy Library Official Website​
+  &lt;https://numpy.org/&gt;
+
+  [3] OpenCV Library Official Website​
+  &lt;https://opencv.org/&gt;
+
+  [4] A* Algorithm​
+  &lt;https://byte348.com/A-star-algorithm/&gt;
+
+  [5] Dijkstra’s Algorithm​
+  &lt;https://www.w3schools.com/dsa/dsa_algo_graphs_dijkstra.php&gt;
+
+  [6] OpenCV Library, Geometric Transformations​
+  &lt;https://docs.opencv.org/4.x/da/d6e/tutorial_py_geometric_transformations.html&gt;
+
+  [7] OpenCV Library, Changing Colorspaces​
+  &lt;https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html&gt;
+
+  [8] OpenCV Library, Contour Approximation​
+  &lt;https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html&gt;
+
+  [9] Red Blob Games, Introduction to A*​
+  &lt;http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html&gt;
+
+                                                                                                     10
+</pre><p class=priv><a href=/rcj-rescue-docs-site/previews/2026/S92/tdp/text.txt target=_blank rel=noopener>Open as plain text</a></p></details><p class=priv>10 pages, rendered as images so they load quickly.
+The text above is the document's own, extracted from the PDF.</p><p><a class=pill href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S92-tdp.pdf target=_blank rel=noopener>Download the original PDF (3.5 MB) from GitHub</a></p></section><section id=doc-source_code><h3>Source code</h3><p>The team's own source code, 112 KB. It is a download
+rather than part of this page, because a zip is something you open on your computer.
+It comes from GitHub, which some school networks block.</p><p><a class="pill solid" href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S92-source_code.zip target=_blank rel=noopener>Download learnsteam's source code</a></p></section></div></div></main><footer class=site-footer><div class=wrap><p>Every document here is published with its team's consent, and a team that chose not to
+share something is named as such rather than left blank. Presentation videos are hosted on
+YouTube and load only when you press play.</p><nav><a href=https://rescue.rcj.cloud/>Rescue community site</a>
+<a href=https://junior.robocup.org/rescue/>RoboCupJunior</a>
+<a href=/rcj-rescue-docs-site/keywords/>Browse by topic</a></nav></div></footer><script>document.addEventListener("click",function(e){var t,s,n=e.target.closest("[data-yt]");if(!n)return;if(s=n.dataset.yt,!/^[A-Za-z0-9_-]{6,20}$/.test(s))return;t=document.createElement("iframe"),t.src="https://www.youtube-nocookie.com/embed/"+s+"?autoplay=1&rel=0",t.title=n.getAttribute("aria-label")||"Team presentation",t.allow="autoplay; fullscreen; encrypted-media",t.referrerPolicy="origin-when-cross-origin",t.setAttribute("allowfullscreen",""),n.replaceWith(t)})</script></body></html>

@@ -1,0 +1,571 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Anyang · RoboCupJunior Rescue</title><meta name=description content="Published team description papers, posters, bills of materials, source code and presentations from the RoboCupJunior Rescue leagues."><link rel=icon href=/rcj-rescue-docs-site/favicons/favicon.ico sizes=any><link rel=icon type=image/png sizes=32x32 href=/rcj-rescue-docs-site/favicons/icon-32x32.png><link rel=apple-touch-icon sizes=180x180 href=/rcj-rescue-docs-site/favicons/apple-touch-icon-180x180.png><meta name=twitter:card content="summary_large_image"><link rel=stylesheet href=/rcj-rescue-docs-site/css/site.min.2b0268f070dd653dfc0701c508fb85fe7f685dd68fe17a67ea93566fd67e77bf.css integrity="sha256-KwJo8HDdZT38BwHFCPuF/n9oXdaP4Xpn6pNWb9Z+d78="><meta property="og:url" content="https://robocup-junior.github.io/rcj-rescue-docs-site/2026/simulation/anyang/"><meta property="og:site_name" content="RoboCupJunior Rescue — Team Documents"><meta property="og:title" content="Anyang"><meta property="og:description" content="Published team description papers, posters, bills of materials, source code and presentations from the RoboCupJunior Rescue leagues."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="2026"><meta property="og:image" content="https://robocup-junior.github.io/rcj-rescue-docs-site/assets/img/logo2.png"><link rel=canonical href=https://robocup-junior.github.io/rcj-rescue-docs-site/2026/simulation/anyang/></head><body><a class=skip href=#main>Skip to content</a>
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-award" viewBox="0 0 384 512"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4.0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4.0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4.0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2.8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4.0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1.4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 10-160 0 80 80 0 10160 0zM1.3 441.8 44.4 339.3c.2.1.3.2.4.4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2.0.5.0.7.2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7.8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1.4-.2.7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2.2-.3.4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></symbol><symbol id="i-users" viewBox="0 0 640 512"><path d="M144 0a80 80 0 110 160A80 80 0 11144 0zM512 0a80 80 0 110 160A80 80 0 11512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9.0 31 3.5 44.6 9.7-1.3 7.2-1.9 14.7-1.9 22.3.0 38.2 16.8 72.5 43.3 96-.2.0-.4.0-.7.0H21.3C9.6 320 0 310.4.0 298.7zM405.3 320c-.2.0-.4.0-.7.0 26.6-23.5 43.3-57.8 43.3-96 0-7.6-.7-15-1.9-22.3 13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.4zM224 224a96 96 0 11192 0 96 96 0 11-192 0zM128 485.3C128 411.7 187.7 352 261.3 352h117.3C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.6c-14.7.0-26.7-11.9-26.7-26.7z"/></symbol><symbol id="i-heart" viewBox="0 0 512 512"><path d="M47.6 300.4 228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6.0 115.2.0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></symbol><symbol id="i-chalkboard-user" viewBox="0 0 640 512"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3.0 64 28.7 64 64v288c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384v-32c0-17.7 14.3-32 32-32h64c17.7.0 32 14.3 32 32v32h64V64H224v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 110 192 96 96 0 110-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1.0 485.3.0 411.7 59.7 352 133.3 352z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2 5.2-7.1 10.4-14.2 15.4-21.4 19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2.0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3 5 7.2 10.2 14.3 15.4 21.4 19.8 27.1 39.7 54.4 49.2 86.2h160zM192 512c44.2.0 80-35.8 80-80v-16H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112 8.8.0 16 7.2 16 16s-7.2 16-16 16c-44.2.0-80 35.8-80 80z"/></symbol><symbol id="i-gear" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7.5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6.3-24.5-6.8-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6 4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2 5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5.0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8 8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 100-160 80 80 0 100 160z"/></symbol><symbol id="i-palette" viewBox="0 0 512 512"><path d="M512 256c0 .9.0 1.8.0 2.7-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5.0-48 21.5-48 48 0 3.4.4 6.7 1 9.9 2.1 10.2 6.5 20 10.8 29.9 6.1 13.8 12.1 27.5 12.1 42 0 31.8-21.6 60.7-53.4 62-3.5.1-7 .2-10.6.2C114.6 512 0 397.4.0 256S114.6.0 256 0 512 114.6 512 256zM128 288a32 32 0 10-64 0 32 32 0 1064 0zm0-96a32 32 0 100-64 32 32 0 100 64zM288 96a32 32 0 10-64 0 32 32 0 1064 0zm96 96a32 32 0 100-64 32 32 0 100 64z"/></symbol><symbol id="i-flask" viewBox="0 0 448 512"><path d="M288 0H160 128C110.3.0 96 14.3 96 32s14.3 32 32 32v132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2.0 429.7.0 442.6.0 480.9 31.1 512 69.4 512h309.2c38.3.0 69.4-31.1 69.4-69.4.0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7.0 32-14.3 32-32S337.7.0 320 0H288zM192 196.8V64h64v132.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></symbol></svg><header class=site-header><div class=wrap><a class=brand href=/rcj-rescue-docs-site/><img src=/rcj-rescue-docs-site/assets/img/logo2.png alt="RoboCupJunior Rescue" width=500 height=140>
+<span><b>Team Documents</b><span>Rescue 2026 · Incheon</span></span></a><nav aria-label="Related sites"><a class=pill href=https://rescue.rcj.cloud/events/2026/RoboCup2026/index.html>RoboCup 2026</a>
+<a class=pill href=https://rescue.rcj.cloud/events/2026/RoboCup2026/results.html>Results</a>
+<a class="pill solid" href=https://rescue.rcj.cloud/>Rescue site</a></nav></div></header><nav class=crumbs aria-label=Breadcrumb><div class=wrap><span aria-current=page>Leagues</span>
+<a href=/rcj-rescue-docs-site/2026/simulation/>Simulation 2026</a><span class=sep>›</span>
+<span aria-current=page>Anyang</span></div></nav><main id=main><div class="wrap section"><div class=team-hero><div class=identity><div class=title-row></div><h1>Anyang</h1><div class=where>Simulation league · Republic of Korea ·
+<span class=num>RoboCup 2026</span></div><div class=register><h2>Document register</h2><ol><li><a href=#doc-poster>Poster<span class=size>1 page</span><span class=state>Published</span></a></li><li><a href=#watch>Presentation video<span class=size>YouTube</span><span class=state>Published</span></a></li><li><a href=#doc-bom>Bill of materials<span class=size>75 KB</span><span class=state>Published</span></a></li><li><a href=#doc-tdp_pdf_optional>Team description paper<span class=size>19 pages</span><span class=state>Published</span></a></li><li><span class=absent>Engineering journal<span class=size></span><span class=state>Not shared</span></span></li><li><a href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S81-source_code.zip target=_blank rel=noopener>Source code<span class=size>42 KB · GitHub</span><span class=state>Published</span></a></li></ol><p class=note>Sharing each document is the team's decision. “Not shared” means this team
+chose not to publish it, or did not submit one — not that it is missing from the archive.</p></div></div><div class=photos><div class=photo-main><img src=/rcj-rescue-docs-site/images/2026/S81/team_photo.webp width=900 height=675 alt="The Anyang team" loading=lazy decoding=async></div></div></div><div class=intro><h2>In their words</h2><div class=body><p>Our robot utilizes LiDAR sensors for mapping, integrated with an A* pathfinding algorithm and frontier-based exploration to ensure precise map reconstruction and exhaustive coverage of the entire arena. To maximize performance in the RoboCup simulation league, we have implemented a robust obstacle avoidance system and a multi-sensor fusion framework that enables seamless navigation in complex environments.</p><p>For victim identification, we employ camera data processed through a custom-trained YOLO model, achieving high accuracy in detecting victim letters. Furthermore, our system features a highly optimized recognition module for wall tokens, ensuring accurate classification and distinguishing them from victims across various mission scenarios.</p><p>Beyond basic navigation, our architecture incorporates a dynamic re-planning strategy that allows the robot to adapt to unexpected obstacles in real-time. By utilizing a multi-threaded GUI debug viewer, we monitor internal system logic and environmental data continuously. This ensures that the robot not only identifies targets efficiently but also maintains operational stability throughout the mission, effectively bridging the gap between raw sensor input and intelligent, mission-critical decision-making.</p></div></div><div class=keywords><a href=/rcj-rescue-docs-site/keywords/yolov5/>YOLOv5</a><a href=/rcj-rescue-docs-site/keywords/lidar-mapping/>LiDAR Mapping</a><a href=/rcj-rescue-docs-site/keywords/occupancy-grid-mapping/>Occupancy Grid Mapping</a><a href=/rcj-rescue-docs-site/keywords/sensor-fusion/>Sensor Fusion</a><a href=/rcj-rescue-docs-site/keywords/frontier-exploration/>Frontier Exploration</a><a href=/rcj-rescue-docs-site/keywords/pyhon/>Pyhon</a><a href=/rcj-rescue-docs-site/keywords/autonomous-navigation/>Autonomous Navigation</a><a href=/rcj-rescue-docs-site/keywords/github/>GitHub</a><a href=/rcj-rescue-docs-site/keywords/computer-vision/>Computer vision</a><a href=/rcj-rescue-docs-site/keywords/path-planning/>Path Planning</a></div><div class=doc-view><section id=doc-poster><h3>Poster</h3><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/poster/page-001.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/poster/page-001.webp width=1600 height=1132 alt="Anyang — Poster, page 1 of 1" loading=lazy decoding=async><figcaption>View full size</figcaption></a></figure></div><details class=doc-text><summary>Read the text of this document — 699 words</summary><pre tabindex=0 role=region aria-label="Extracted text of Poster for Anyang">RESCUE SIMULATION
+ANYANG                                                                             NAVIGATION &amp; MAPPING                                                                                           WALL TOKEN DETECTION
+
+ABOUT OUR TEAM
+
+   Naeun Kim - Team Leader &amp; Lead Developer
+   Nahyun Kim – Navigation &amp; SLAM Engineer
+   Jihee Jung - AI &amp; Computer Vision Engineer
+   Seojun Yang - -Research &amp; Testing Engineer
+   Mingeun Kim - COACH
+  Awards: 2026 Robocup Korea Open 1st in Rescue Simultaion
+
+We used Python as our development language, and the total
+preparation period for the competition was approximately 13 weeks.
+
+                                                                                   Autonomous Exploration Strategy                                                                                Victim Detection Strategy
+ROBOT INTRODUCTION                                                                 Environment Representation The robot utilizes a grid-based mapping approach,
+                                                                                   dividing the environment into 12 cm cells.
+                                                                                                                                                                                                  The robot detects two categories of victims using dual front-angled cameras (Ca1: left, Ca2: right).
+                                                                                                                                                                                                  Trigger Conditions
+                                                                                   Each cell maintains real-time updates via:                                                                     Detection is initiated when either camera satisfies one of the following:
+              GPS                               LiDAR                                  LiDAR-based Cloud Map: Monitors wall occupancy and structural obstacles.                                       YOLO victims (H/S/U): White pixel ratio ≥ 4% in camera image AND corresponding side distance sensor ≤
+                                                                                       Color Sensors: Detects floor conditions to identify traversable surfaces.                                      0.15 m
+        Determining the                   slam and mapping                             Status Tracking: Categorizes exploration status into Explored (region entered)                                 Circle victims (C/F/O/P): Concentric circle detected with estimated distance ≤ 0.08 m AND side distance
+     robot&#39;s position within          Detecting walls for mapping                      and Visited (center of the cell reached).                                                                      sensor ≤ 0.08 m
+     our custom virtual cell                                                                                                                                                                      Each tile is limited to a maximum of 2 detection attempts to prevent redundant processing.
+                                                     distance sensor 1,2,3         Path Planning &amp; Exploration Strategy
+                                                                                   The system constructs a topological graph by treating cell boundaries as nodes                                 YOLO-Based Detection (H / S / U)
+                                                                                   and connecting adjacent nodes as edges.                                                                        Targets with white backgrounds (Harmed, Stable, Unresponsive) are classified via YOLOv5.
+                                                    Front Obstacle detection          Frontier Selection: Nodes adjacent to unvisited cells are designated as frontiers for exploration.           1.Advance toward victim wall (670 ms, center-maintaining PD control)
+                                                                                      Navigation: The A algorithm* is employed to calculate the optimal path to the target frontier.               2.Align robot perpendicular to the wall using LiDAR linear regression on wall point cloud
+                                                                                      Cost-Aware Pathing: A 8x cost multiplier is applied to edges within swamp regions to discourage traversal    3.Three-angle sampling: capture at 0°, &#43;15°, −30° relative to aligned angle
+                                                          distance sensor 4,5         and encourage path optimization around these areas.                                                          4.Run YOLOv5 inference (confidence threshold: 0.78, max detection distance: 0.25 m) at each angle
+                                                                                                                                                                                                   5.Majority vote: if the same class appears in ≥ 2 of 3 shots→ confirmed victim; otherwise discarded as false
+                                                         Back Obstacle detection   Exception Handling &amp; Safety                                                                                       positive
+                                                                                      Obstacle Avoidance: If an obstacle is detected at the same coordinate more than three times, the
+                                                                                                                                                                                                  Concentric Circle Detection (C / F / O / P)
+                                                                                      corresponding node is permanently pruned from the graph.                                                    Victims marked with colored concentric rings are classified by ring color analysis.
+                                                                                      Hazard Response: Upon detecting a hole, the robot triggers an immediate reverse maneuver, marks the area     1.Advance &#43; LiDAR perpendicular alignment (same as above)
+                                                                                      as impassable, and forbids further re-entry.                                                                 2.Fit ellipses to four color masks (Red, Green, Yellow, Blue) and determine outer radius
+                                                                                   Termination Condition Exploration is concluded once all valid frontiers are exhausted. The robot then           3.Divide the circle into 5 radial bands; sample 180 angles × 8 radii per band
+                                                                                                                                                                                                   4.Vote dominant color per ring; apply scoring: Red = −1, Yellow = 0, Green = &#43;1, Blue = &#43;2, Black = −2
+                                                                                   autonomously returns to the starting tile and transmits a completion signal.
+                                                                                                                                                                                                   5.Sum of 5 ring scores →    classification: 0 = F, 1 = P, 2 = C, 3 = O
+                                                                                   Self-made Half-Tile Wall Testing Map
+       color sensor                                                                                                                                                 ▼CloudMap
+   Floor color detection
+
+                      inertial unit
+                                                                                                                                                                                                  YOLOV5
+          Direction and angle measurement               camera sensor 1,2
+                Used to align the robot                 Victim detection
+                  to a desired angle
+                                                                                                                  ▲Node Graph
+                                                                                                                                          ▲GridMap
+                                                                                   Self-made Curved Wall Testing Map
+
+                                                                                                                                                                                                  Victims are classified using a YOLOv5 object detection model trained on Webots screenshots and Greek
+                                                                                                                                                                                                  letter datasets. Initial testing achieved 87.1% validation accuracy, but only 3 of 15 victims were detected in
+                                                                                                                                                                                                  the simulation environment.
+                                                                                                                                                                                                  To improve performance, unlabeled images were removed, robot POV images were added, Adaptive
+                                                                                                                                                                                                  Equalization replaced Histogram Equalization, and augmentation settings were optimized. After
+                                                                                                                                                                                                  retraining, the model achieved 86.5% validation accuracy but successfully detected 15 of 15 victims in
+                                                                                                                                                                                                  Webots.
+
+                                                                                                                               ▲GridMap
+</pre><p class=priv><a href=/rcj-rescue-docs-site/previews/2026/S81/poster/text.txt target=_blank rel=noopener>Open as plain text</a></p></details><p class=priv>1 page, rendered as images so they load quickly.
+The text above is the document's own, extracted from the PDF.</p><p><a class=pill href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S81-poster.pdf target=_blank rel=noopener>Download the original PDF (916 KB) from GitHub</a></p></section><section class=video id=watch><h3>Presentation video</h3><button type=button class=facade data-yt=e8VeT7CbpCs aria-label="Play Presentation video for Anyang">
+<img src=/rcj-rescue-docs-site/images/2026/S81/video_thumbnail.webp width=640 height=336 alt loading=lazy decoding=async>
+<span class=play aria-hidden=true></span></button><p class=priv>Hosted on YouTube. The player loads only when you press play.</p><p><a class=pill href="https://www.youtube.com/watch?v=e8VeT7CbpCs" target=_blank rel=noopener>Open in YouTube</a></p></section><section id=doc-bom><h3>Bill of materials</h3><iframe src=/rcj-rescue-docs-site/files/2026/S81/bom.pdf title="Bill of materials for Anyang" loading=lazy></iframe><p class=priv>Shown as the original PDF, because this one is smaller that
+way and its text stays selectable and searchable.</p><p style="margin:10px 0 0"><a class=pill href=/rcj-rescue-docs-site/files/2026/S81/bom.pdf target=_blank rel=noopener>Open Bill of materials</a></p></section><section id=doc-tdp_pdf_optional><h3>Team description paper</h3><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-001.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-001.webp width=828 height=1171 alt="Anyang — Team description paper, page 1 of 19" loading=lazy decoding=async><figcaption>Page 1 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-002.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-002.webp width=828 height=1171 alt="Anyang — Team description paper, page 2 of 19" loading=lazy decoding=async><figcaption>Page 2 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-003.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-003.webp width=828 height=1171 alt="Anyang — Team description paper, page 3 of 19" loading=lazy decoding=async><figcaption>Page 3 of 19 — Open this page on its own</figcaption></a></figure></div><details class=doc-more><summary>Show the remaining 16 pages</summary><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-004.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-004.webp width=828 height=1171 alt="Anyang — Team description paper, page 4 of 19" loading=lazy decoding=async><figcaption>Page 4 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-005.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-005.webp width=828 height=1171 alt="Anyang — Team description paper, page 5 of 19" loading=lazy decoding=async><figcaption>Page 5 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-006.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-006.webp width=828 height=1171 alt="Anyang — Team description paper, page 6 of 19" loading=lazy decoding=async><figcaption>Page 6 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-007.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-007.webp width=828 height=1171 alt="Anyang — Team description paper, page 7 of 19" loading=lazy decoding=async><figcaption>Page 7 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-008.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-008.webp width=828 height=1171 alt="Anyang — Team description paper, page 8 of 19" loading=lazy decoding=async><figcaption>Page 8 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-009.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-009.webp width=828 height=1171 alt="Anyang — Team description paper, page 9 of 19" loading=lazy decoding=async><figcaption>Page 9 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-010.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-010.webp width=828 height=1171 alt="Anyang — Team description paper, page 10 of 19" loading=lazy decoding=async><figcaption>Page 10 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-011.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-011.webp width=828 height=1171 alt="Anyang — Team description paper, page 11 of 19" loading=lazy decoding=async><figcaption>Page 11 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-012.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-012.webp width=828 height=1171 alt="Anyang — Team description paper, page 12 of 19" loading=lazy decoding=async><figcaption>Page 12 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-013.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-013.webp width=828 height=1171 alt="Anyang — Team description paper, page 13 of 19" loading=lazy decoding=async><figcaption>Page 13 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-014.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-014.webp width=828 height=1171 alt="Anyang — Team description paper, page 14 of 19" loading=lazy decoding=async><figcaption>Page 14 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-015.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-015.webp width=828 height=1171 alt="Anyang — Team description paper, page 15 of 19" loading=lazy decoding=async><figcaption>Page 15 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-016.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-016.webp width=828 height=1171 alt="Anyang — Team description paper, page 16 of 19" loading=lazy decoding=async><figcaption>Page 16 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-017.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-017.webp width=828 height=1171 alt="Anyang — Team description paper, page 17 of 19" loading=lazy decoding=async><figcaption>Page 17 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-018.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-018.webp width=828 height=1171 alt="Anyang — Team description paper, page 18 of 19" loading=lazy decoding=async><figcaption>Page 18 of 19 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-019.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/S81/tdp/page-019.webp width=828 height=1171 alt="Anyang — Team description paper, page 19 of 19" loading=lazy decoding=async><figcaption>Page 19 of 19 — Open this page on its own</figcaption></a></figure></div></details><details class=doc-text><summary>Read the text of this document — 3667 words</summary><pre tabindex=0 role=region aria-label="Extracted text of Team description paper for Anyang">Rescue
+            Simulation_Anyang_Additional
+            Software Reference
+            Documents
+            2. Robot Design
+            2-1. Robot configuration &#43; sensors
+
+            Our robot is equipped with two
+            cameras, a GPS, five distance
+            sensors, one color sensor, an IMU
+            (Inertial Unit), and a LiDAR.
+
+            One of the most distinctive features of our robot is that the cameras are
+            mounted diagonally on the rear. Initially, we placed the cameras near the
+            wheels, but they were too close to the victims to recognize them properly. To
+            fix this, we tried moving them further inward, but they either interfered with the
+            wheels or had their view blocked by the robot&#39;s body. Ultimately, by positioning
+            the cameras on the rear diagonals, we secured a wider field of view and
+            allowed the robot to detect victims much faster than a front-facing setup,
+            maximizing the efficiency of our victim detection.
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                 1
+            We also faced a lot of trial and error
+            in distinguishing between real and
+            false victims. At first, we expected
+            that the readings from distance
+            sensors 4 and 5—which measure
+            the perpendicular distance to the
+            walls—would drop sharply when
+            passing a false victim. However,
+            physical testing showed very little
+            difference in the sensor values
+            between real and false victims, so
+            we switched to using LiDAR. But
+            another challenge arose: the LiDAR
+            had to be mounted on top to detect
+            walls for navigation, while the
+            victims were located near the center
+            of the walls, making them invisible to
+            the LiDAR.
+            To overcome this, we decided to tilt the camera angles as much as possible.
+            When the robot suspects a victim is present, it turns 15 degrees three times,
+            capturing and analyzing the image at each angle. If the model determines that
+            no victim is present in at least two out of the three checks, it classifies it as a
+            false victim. This algorithm significantly improved our detection accuracy.
+            Our autonomous navigation and mapping system also relies on the organic
+            integration of various sensors. First, the LiDAR detects surrounding walls to
+            establish the structural framework of the map. The GPS tracks the robot’s
+            coordinates for mapping, utilizing both absolute and relative coordinates to
+            construct node graphs for $A^*$ navigation. Meanwhile, the IMU checks the
+            robot&#39;s orientation and heading, playing a crucial role in aligning and matching
+            real-time LiDAR data with the map. For navigation, distance sensors 1, 2, and 3
+            check for immediate obstacles and unmapped walls in real-time to avoid
+            collisions. Lastly, the color sensor scans the floor to map and identify specific
+            zones, such as swamps, holes, and colored tiles, helping the robot navigate
+            safely and efficiently.
+
+            4. Navigation &#43; Implementation
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                  2
+            4-1. Overview
+
+            Our navigation program is built on frontier-based exploration combined with
+            the A* algorithm. The overall flow begins with scanning for frontiers, selecting
+            the nearest one, and navigating to it via the A* shortest-path algorithm. Once
+            the robot reaches the frontier and explores the area, it repeats this cycle until
+            no frontiers remain, at which point it returns to the starting tile and terminates.
+            Frontier selection relies on mapping data constructed from the GridMap and
+            CloudMap. Each tile is subdivided into 9 nodes to form a graph, with edges
+            connecting adjacent nodes. Two types of frontiers are defined: Case 1 frontiers
+            are nodes adjacent to unexplored cells, while Case 2 frontiers are the center
+            nodes of cells where explored = True but visited = False . To ensure Case 2
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                  3
+            frontiers are visited preferentially, their distance weight is multiplied by a factor
+            of 0.2.
+            Each Cell stores four pieces of information: wall, floor, explored , and visited .
+            The explored flag indicates whether more than 90% of the CloudMap points for
+            that Cell have been recorded, while visited indicates whether the robot has
+            physically reached the center of that Cell.
+            Upon arriving at a frontier, the robot updates the full map and proceeds to
+            select the next frontier. Once no frontiers remain, it returns to the starting tile
+            and the run is terminated.
+            Several terrain-handling mechanisms are also in place. When the color sensor
+            detects black, the robot identifies a hole, reverses, updates the floor data of the
+            Cell ahead, and removes the corresponding nodes and edges from the graph.
+            For tiles identified as swamp, the edge weights of all connected edges are
+            multiplied by 20 to strongly discourage routing through those areas. Color tile
+            zone classification is carried out when the robot reaches the center node of a
+            tile. If the distance sensor detects a collision with an obstacle at the same
+            target node three or more times, that node and its edges are deleted and the
+            path is replanned. Finally, if the robot&#39;s navigation target remains unchanged
+            for more than 50 ticks — indicating it may be stuck in a narrow passage
+            between half-tiles that appears traversable in the graph but physically is not —
+            the situation is classified as a stuck state, the relevant edge is removed, and the
+            path is replanned.
+
+            4-2. Research and Analysis, Reliability Tests and quality assurance
+
+            At RoboCup Korea Open 2026, navigation was carried out using Depth-First
+            Search (DFS) with each full tile treated as a single node. While this approach
+            worked in straightforward grid layouts, it proved inadequate for paths
+            composed of half-tiles or curved tiles, as the tile-granularity resolution made
+            those geometries difficult to recognize and traverse. As a result, the algorithm
+            could not be applied to Zone 4 at all, and the robot resorted to random driving
+            in that zone without any structured navigation. Further issues included
+            discontinuous LiDAR usage and difficulty returning to the starting tile within the
+            time limit. Overall, the system was assessed as inefficient and in clear need of
+            improvement.
+            To address these limitations, a new navigation architecture was designed
+            around three core components: a graph structure subdividing each Cell into 9
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                    4
+            nodes, the A* shortest-path algorithm, and frontier-based exploration. A
+            supporting mapping system was developed using a grid-based GridMap with
+            LiDAR point cloud data from the CloudMap.
+            When generating nodes, the Cell values at each of the 9 node positions are
+            checked. For edge and corner positions, all overlapping Cells are verified, and
+            if any one of them is a wall, the node at that position is not created. Unexplored
+            Cells ( explored = False ) contribute their adjacent nodes to the frontier list. The
+            robot selects the nearest frontier and navigates to it, then advances 2 cm
+            toward the unexplored Cell upon arrival to physically enter it, at which point
+             explored is set to True .
+
+            Issue 1: Premature explored Marking
+            During initial testing, it was observed that a Cell would be marked as explored
+            even when the robot had only barely entered it, resulting in large portions of the
+            map being left uncovered.
+            To resolve this, a visited flag was introduced. Unlike explored , visited is only
+            set to True when the robot reaches the center of a Cell. The frontier list was
+            accordingly updated to include the center nodes of Cells where explored == True
+            and visited == False , ensuring the robot follows through to the Cell center rather
+            than moving on after a shallow entry.
+
+            Map image showing robot traversal path                 Map image showing robot traversal path
+            before fix                                             after fix
+
+            Issue 2: Wall Misdetection and Navigation to Curved Wall Vertices
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                            5
+            Two related problems emerged in more complex environments. First, the wall
+            mapping correction algorithm (described in a later section) occasionally caused
+            flat walls to go undetected. Second, nodes were being generated at the vertex
+            positions of curved walls, leading the robot to attempt navigation toward those
+            geometrically inaccessible points.
+
+                                  World View and Node Graph Under Problematic Conditions
+
+            For flat walls, the obstacle-handling logic was applied directly: if the distance
+            sensor flags the same target node three or more times, the node and its
+            connected edges are deleted and the path is replanned. Curved walls, however,
+            are harder to detect with the distance sensor, and GPS readings tend to
+            fluctuate significantly when the robot slides along them. For these cases, a
+            time-based fallback was implemented — if the same target node persists for
+            more than 50 ticks, only the corresponding edge is deleted and the path is
+            replanned, without removing the node itself. Although escape takes slightly
+            longer in some edge cases, normal navigation is reliably recovered.
+            Issue 3: Vertex Looping When One of Four Adjacent Tiles Is Unexplored
+            A more subtle problem arose in situations where only one of four surrounding
+            tiles remained unexplored. In such cases, the shared corner node at the center
+            of the four tiles was typically selected as the frontier. If the robot failed to
+            identify the direction of the unexplored tile, completing the 2 cm forward step
+            upon arrival would not result in any tile being newly marked as explored ,
+            causing the same corner node to be repeatedly selected and the robot to
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                6
+            remain trapped in place. While the robot could occasionally escape if it
+            happened to move in the right direction, the process was time-consuming and
+            significantly reduced navigation efficiency.
+            To address this, the method for setting explored = True was revised from a GPS-
+            based approach to a CloudMap-based one. Under the previous method,
+             explored = True and wall mapping were applied to the robot&#39;s current Cell and
+
+            the four adjacent Cells based on the robot&#39;s GPS position. The revised method
+            instead surveys a 5×5 area centered on the robot&#39;s current Cell and marks any
+            Cell containing 10 or fewer _UNDEFINED cloud points in the CloudMap as explored
+            = True , applying wall mapping accordingly. This allows the explored status to
+
+            reflect actual sensor coverage rather than mere physical proximity.
+            In addition, map update timing was streamlined. Previously, updates were
+            triggered from various points in the code, leading to redundancy and
+            inconsistency. Updates are now limited to two events: upon arrival at a frontier,
+            and upon obstacle detection. The frontier weighting scheme was also adjusted
+            so that Case 2 frontiers ( explored &amp;&amp; not visited ) are assigned a weight of 0.2×
+            the distance, making them significantly more attractive than Case 1 frontiers
+            (adjacent to unexplored areas) and prioritizing thorough Cell-center coverage
+            over raw frontier expansion.
+            Following these changes, the vertex looping problem no longer occurs. The
+            robot now navigates systematically toward Cell centers while reliably covering
+            narrow and peripheral areas such as half-tile passages.
+            The self-designed map and its corresponding final node graph shown below
+            confirm that the robot navigates successfully throughout the environment.
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                 7
+              Map and node graph - Curved Wall Test
+
+             Map and node graph - Half-tile Wall Test
+
+            5. Victim Detection &#43; Implementation
+            5-1. Architecture design (with diagrams such as flowchart, UML,
+            pseudocode)
+
+            The victim detection system is built on the YOLOv5 architecture, a single-stage
+            object detector based on a CNN backbone. The robot&#39;s camera first screens
+            for white areas on walls as a pre-filter, since victim markers are always
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                              8
+            surrounded by white. If white is detected, the image is passed to the YOLOv5
+            model, which outputs bounding boxes and class labels for the three victim
+            types: omega (Ω), phi (Φ), and psi (Ψ).
+
+            YOLOv5 Detection Pipeline Flowchart
+
+            5-2. Research and Analysis
+
+            To identify victims, we used YOLOv5, a
+            real-time object detection model based on
+            a CNN architecture. YOLOv5 was selected
+            for its fast inference speed and high
+            accuracy in small-object detection,
+            making it well-suited for the Webots
+            environment where the robot must detect
+            Greek letter symbols (Ω, Φ, Ψ) displayed
+            on walls as victim markers. Training was
+            conducted using the Ultralytics YOLOv5
+            framework on Google Colab with an
+            NVIDIA A100 GPU, and data management
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                           9
+            and preprocessing were handled through
+            the Roboflow platform.
+            The dataset consisted of general Greek
+            letter images sourced from Roboflow
+            (omega: 674, phi: 567, psi: 586) and
+            screenshots captured directly from the
+            Webots map (omega: 435, phi: 464, psi:
+            534). For the screenshots, we varied the
+            direction of sunlight to diversify the wall
+            colors surrounding the victims, and
+            captured images from different distances
+            and angles to prepare the model for a
+            wide range of situations. The final dataset
+            was composed of omega: 1,109 images
+            (34%), phi: 1,031 images (32%), and psi:
+            1,120 images (34%), keeping the class
+            distribution balanced. All collected data
+            was labeled, preprocessed, and
+            augmented using Roboflow. Labeling was
+            done manually by drawing bounding
+            boxes around each victim and assigning
+            the corresponding class. Preprocessing
+            included Resize: Stretch to 640×640 and
+            Auto-Adjust Contrast: Using Histogram
+            Equalization. Augmentation settings were
+            as follows: Outputs per training example: 3
+            / Flip: Horizontal, Vertical / Rotation:
+            Between -45° and &#43;45° / Shear: ±30°
+            Horizontal, ±30° Vertical / Blur: Up to
+            6.5px / Noise: Up to 10% of pixels. After
+            preprocessing and augmentation, the total
+            number of images reached 7,731, split into
+            train: 6,756 (approximately 70%), valid:
+            648 (approximately 20%), and test: 327
+            (approximately 10%).
+            To address these issues, two approaches
+            were taken. First, unlabeled images were
+            removed from the dataset. Previously,
+
+Rescue Simulation_Anyang_Additional Software Reference Documents   10
+            images where the victim was barely
+            visible or where the text appeared in
+            colors other than black were kept in the
+            dataset without labels, as they were not
+            intended for training. However, we
+            determined that these images were
+            interfering with model training and real-
+            world performance, so 158 unnecessary
+            images were deleted. Second, we added
+            data captured from the robot&#39;s actual
+            point of view. While manually driving the
+            robot in Webots, the camera automatically
+            saved images whenever white areas were
+            detected, since the area surrounding
+            victim letters is white and serves as a
+            reliable indicator of a victim&#39;s presence.
+            Unlike the existing high-quality images,
+            this newly collected data has lower
+            resolution and blurrier text due to the
+            nature of the robot&#39;s camera. After these
+            deletions and additions, the dataset was
+            updated to omega: 1,199 images
+            (approximately 34%), phi: 1,103 images
+            (approximately 32%), and psi: 1,204
+            images (approximately 34%).
+            All other processes remained the same,
+            with the exception of the preprocessing
+            step. The original Histogram Equalization
+            adjusts contrast based on global
+            brightness information, which caused
+            victim text to become degraded in
+            environments with significant lighting
+            variation. To address this, we switched to
+            Adaptive Equalization, which adjusts
+            contrast independently for each local
+            region, resulting in a dataset better suited
+            for training. Additionally, since the original
+            augmentation settings applied rotation
+
+Rescue Simulation_Anyang_Additional Software Reference Documents   11
+            and blur too aggressively — making the
+            newly added low-quality images nearly
+            illegible — we adjusted the settings to
+            Rotation: Between -30° and &#43;30° and
+            Blur: Up to 6px. We also added 90°
+            Rotate: Clockwise, Counter-Clockwise,
+            and Upside Down to account for victims
+            placed at 90-degree rotational intervals in
+            the Webots map.
+
+            Training was conducted on Google Colab
+            using YOLOv5, achieving an initial overall
+            model accuracy of 0.871. However, when
+            tested in the actual Webots environment
+            on a custom map containing 15 victims
+            placed at various angles, only 3 were
+            successfully detected. When victims were
+            placed at tilted angles, none of the three
+            types were detected at all. Among the
+            non-tilted victims, omega was detected
+            but misclassified, psi was not detected at
+            all, and phi was correctly identified
+            approximately 50% of the time.
+            After applying the dataset improvements
+            and retraining, the overall model accuracy
+            slightly decreased to 0.865. However, in
+            the actual Webots environment, the
+            updated model successfully detected all
+            15 victims on the same map, correctly
+            identifying both rotated and upright
+            victims. This confirms that real-world
+            performance is a more meaningful
+            measure of reliability than benchmark
+            accuracy alone, and that dataset quality
+            and diversity have a greater impact on
+            detection performance than raw accuracy
+            scores.
+
+Rescue Simulation_Anyang_Additional Software Reference Documents   12
+            6. Mapping &#43; Implementation
+            6-1. Architecture design (with diagrams such as flowchart, UML,
+            pseudocode)
+
+                                                UML diagram About Mapping System
+
+            The mapping system is built around three core classes — Cell, GridMap, and
+            CloudMap — each responsible for a distinct layer of spatial representation.
+            A Cell is a class that stores all information pertaining to a single 12 cm × 12 cm
+            tile. Internally, it is structured as a 5×5 grid and conforms to the mapping data
+            transmission standard used for inter-module communication. Each Cell holds
+            wall information, floor type information, and two state flags: explored and
+             visited . The explored flag indicates whether more than 90% of the CloudMap
+
+            points covering that Cell have been recorded, while visited indicates whether
+            the robot has physically reached the center of that Cell.
+            GridMap is a two-dimensional array map structure of size (2n−1) × (2m−1),
+            composed of Cell objects. Given a pre-specified map size (n, m), the robot&#39;s
+            starting position is set as the center of the grid, enabling a relative origin
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                 13
+            system that allows dynamic adaptation regardless of the direction in which the
+            robot explores.
+            CloudMap stores a pixel-level occupancy map at 1 cm × 1 cm resolution using
+            LiDAR point cloud data. Each pixel is assigned one of three states: _UNDEFINED ,
+             _WALL , or _FREE . Like GridMap, it is initialized based on the input map
+
+            dimensions (n, m), accounting for the 12 cm × 12 cm tile size, with the robot&#39;s
+            starting position placed at the center. For each tick, one horizontal layer of
+            LiDAR range data is processed across a full 360-degree sweep. Using the
+             skimage.draw library, a ray is cast for each beam; the endpoint is marked as
+
+             _WALL , while all points along the ray between the robot and the endpoint are
+
+            marked as _FREE .
+            The CloudMap data is then used to populate the wall information in the
+            GridMap. For each Cell, the corresponding region of the CloudMap is
+            examined, and any pixel marked as _WALL is reflected into the Cell&#39;s internal
+            5×5 grid as a wall entry.
+            Floor tile type is determined by reading the color sensor. When a color tile is
+            detected, the current zone is simultaneously updated and verified. Wall data
+            and floor data are then consolidated — combining edge and corner information
+            from adjacent Cells according to the mapping transmission standard — and the
+            final map data is transmitted.
+
+                        CloudMap output image
+                                                                   GridMap output image
+
+            6-2. Research and Analysis
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                               14
+            As described in the navigation section, the approach used at the February 2026
+            competition relied on tile-by-tile movement, with wall mapping performed via
+            LiDAR point cloud data collected at each tile center. This meant that wall
+            information was captured only at discrete, non-contiguous positions, producing
+            a fragmented representation with significant gaps between sampling points.
+            Since the revised navigation system required continuous, high-resolution wall
+            data to support subgraph construction and fine-grained pathfinding,
+            developing a continuously updated CloudMap became a foundational
+            requirement.
+            The adopted approach marks wall information at 1 cm resolution in the
+            CloudMap and subsequently transfers it into the corresponding GridMap Cells.
+            To manage noise and prevent error accumulation from distant readings, the
+            effective LiDAR range is capped at 25 cm from the robot center — slightly more
+            than two tile widths. Any hit detected beyond this distance is not marked as
+             _WALL , keeping the map clean and minimizing long-range inaccuracy.
+
+            An important finding was that updating the CloudMap on every tick, or
+            whenever the robot entered a new tile, caused errors to accumulate and walls
+            to appear thicker than their actual physical extent. To address this, CloudMap
+            updates are now performed only upon arrival at a frontier, significantly
+            reducing noise buildup.
+
+             CloudMap output before fix - thick-walled
+                                                                   CloudMap output after fix - thin-walled
+
+            Color Tile Mapping Correction
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                             15
+            A positioning discrepancy was identified in the color tile mapping process.
+            Because the GPS receiver is located at the robot&#39;s center while the color sensor
+            is mounted at the robot&#39;s front, the two can be observing different tiles
+            simultaneously. This mismatch caused a single swamp tile, for example, to be
+            recorded multiple times across different cells, effectively duplicating terrain
+            features. To resolve this, the navigation module was updated to perform color
+            tile mapping exclusively when the robot is at a tile center node, eliminating
+            spurious multi-tile detections entirely.
+            On a color tile test map designed for accuracy verification, all tiles were
+            mapped accurately with the exception of two.
+
+                    color tile test map world image                GridMap output of color tile test map
+
+            Wall Index Correction in GridMap
+            When transferring CloudMap data into the GridMap, it was observed that half-
+            tiles and narrow passages were occasionally mapped inaccurately. Specifically,
+            the 1st and 3rd index positions along each wall edge were prone to incorrect
+            values due to the limited pixel coverage at those positions. A correction step
+            was introduced in the beautiful_my_cell() method: for each of these intermediate
+            wall indices, the values of the neighboring positions (adjacent cells or the
+            center region) are checked, and the index value is adjusted accordingly to
+            ensure structural consistency.
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                           16
+                                       Explanatory image for the beautiful_my_cell() method
+
+            In this image, if the section marked with a circle is empty, the section sharing
+            the same color must unconditionally be cleared.
+
+            6-3. Reliability Tests and quality assurance
+
+            (Various mapping output images attached)
+
+                                                 world map image &amp; GridMap output
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                               17
+                                                                      Erebus Simulation controls capture
+
+                             CloudMap output
+
+            Reliability testing focused primarily on positional consistency — verifying that
+            the structural layout of walls as recorded by the robot matches the actual
+            physical wall configuration of the test maze. Across multiple test runs on
+            different map configurations, the system achieved an accuracy of
+            approximately 80% when evaluated on a custom-built test map. Furthermore,
+            the mapped wall structures were found to be in general agreement with the
+            ground truth, confirming that the CloudMap-to-GridMap pipeline produces
+            spatially accurate representations suitable for navigation.
+
+                                    world map image &amp; GridMap output of only half-tile map
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                                           18
+                                 world map image &amp; GridMap output of Curved Wall Test map
+
+            Other test runs also demonstrate that the environment is precisely and clearly
+            mapped into the GridMap.
+
+Rescue Simulation_Anyang_Additional Software Reference Documents                             19
+</pre><p class=priv><a href=/rcj-rescue-docs-site/previews/2026/S81/tdp/text.txt target=_blank rel=noopener>Open as plain text</a></p></details><p class=priv>19 pages, rendered as images so they load quickly.
+The text above is the document's own, extracted from the PDF.</p><p><a class=pill href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S81-tdp.pdf target=_blank rel=noopener>Download the original PDF (10.6 MB) from GitHub</a></p></section><section id=doc-source_code><h3>Source code</h3><p>The team's own source code, 42 KB. It is a download
+rather than part of this page, because a zip is something you open on your computer.
+It comes from GitHub, which some school networks block.</p><p><a class="pill solid" href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-S81-source_code.zip target=_blank rel=noopener>Download Anyang's source code</a></p></section></div></div></main><footer class=site-footer><div class=wrap><p>Every document here is published with its team's consent, and a team that chose not to
+share something is named as such rather than left blank. Presentation videos are hosted on
+YouTube and load only when you press play.</p><nav><a href=https://rescue.rcj.cloud/>Rescue community site</a>
+<a href=https://junior.robocup.org/rescue/>RoboCupJunior</a>
+<a href=/rcj-rescue-docs-site/keywords/>Browse by topic</a></nav></div></footer><script>document.addEventListener("click",function(e){var t,s,n=e.target.closest("[data-yt]");if(!n)return;if(s=n.dataset.yt,!/^[A-Za-z0-9_-]{6,20}$/.test(s))return;t=document.createElement("iframe"),t.src="https://www.youtube-nocookie.com/embed/"+s+"?autoplay=1&rel=0",t.title=n.getAttribute("aria-label")||"Team presentation",t.allow="autoplay; fullscreen; encrypted-media",t.referrerPolicy="origin-when-cross-origin",t.setAttribute("allowfullscreen",""),n.replaceWith(t)})</script></body></html>

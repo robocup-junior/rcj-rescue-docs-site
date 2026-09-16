@@ -1,0 +1,116 @@
+RC UANL                                                                                                                                RoboCup Junior
+                                                                                                                                                                        Rescue Maze
+About us
+RC-UANL is a team from Mexico, representing FIME and the
+                                                                 SOFTWARE                                                                                                 HARDWARE
+Universidad Autónoma de Nuevo León, that competes in
+the Rescue Maze category at TMR 2026. It integrates
+                                                                 Mapping Algorithm                                                                                        Electronics
+robotics   expertise     with   advanced     technologies   in   The robot's mapping system is based on a DFS (Depth-First Search) algorithm                                                 Microcontroller   responsible                                                                 H-bridge module to
+autonomous systems to develop a robot capable of                 combined with an exploration strategy guided by absolute references,                                                                                                          RGB color sensor to
+                                                                                                                                                                                             for  receiving    information                                                                 control the speed and
+                                                                                                                                                                             Teensy 4.1                                      APDS9960          detect black, blue, red,     TB6612FNG
+navigating complex environments, detecting victims, and          allowing for more consistent and predictable navigation within the maze.                                                    from    the    sensors   and                                                                  direction of the DC
+                                                                                                                                                                                                                                               and silver floors.
+overcoming obstacles, aiming to improve its performance          The environment is represented as a dynamic matrix, where each cell                                                         executing movements.                                                                          motors.
+
+throught the navigation.                                         corresponds to a tile. As the robot advances, it records relevant information
+                                                                                                                                                                                                                                               IMU    that   provides                      DC motors that offer
+          Diego Emilio Evangelista Gomez                         such as walls, available paths, detected victims, and special zones. This                                                   Programmable camera for
+                                                                                                                                                                                                                                               absolute orientation.                       good     torque     and
+                                                                 representation allows for the identification of explored and pending areas,                                                 computer vision. Responsible
+           Designer                                                                                                                                                        OpenMV H7+                                         BNO055           Responsible         for    Micromotor N20   speed. They feature
+                                                                                                                                                                                             for victim detection.
+           Responsible of mechanical design.                     optimizing decision-making.                                                                                                                                                   controlling turns and                       encoders to calculate
+                                                                 Unlike traditional strategies such as the "right-hand rule," the robot prioritizes                                                                                            inclinations.                               the distance traveled.
+                                                                 its movements based on an absolute orientation system. An initial direction is
+           Stefany Giselle Colunga Rangel                                                                                                                                                    High-current     step-down                        Distance sensor with a
+                                                                                                                                                                                                                                                                                         Binary sensor that,
+                                                                 defined as absolute north, determined by the robot's orientation at the start of                                            voltage           converter.                      range of up to 4m.
+           Programmer                                                                                                                                                                                                                                                                    along with the bumper
+                                                                 the execution. From this reference, the exploration priority order is:                                      D24V50F5        Responsible for powering 5V      VL53L0X          Responsible        for Micro Limit Switch
+           Responsible of Mapping Algorithm                                                                                                                                                  components.                                       sensing walls.
+                                                                                                                                                                                                                                                                                         design, allows for the
+                                                                     Absolute North                                                                                                                                                                                                      detection of obstacles.
+                                                                     Absolute East
+           Rogelio Andrade López                                     Absolute South                                                                                                                                                            Programmable      RGB                       Limited-rotation servo
+           Electronics                                               Absolute West                                                                                                           Low-dropout (LDO) linear                          LED         strip/ring.                     motor. Along with a
+           Responsible of PCB design.                            At each intersection, the algorithm evaluates the available directions                                                      voltage          regulator.                       Responsible         for                     rack     and      pinion
+                                                                                                                                                                              AMS1117                                          WS2812                                         SG90
+                                                                                                                                                                                             Responsible for powering                          providing light and                         mechanism,       it    is
+                                                                 following this order, always selecting the unexplored option with the highest
+                                                                                                                                                                                             3.3V components.                                  indicators during the                       responsible           for
+           Axel Uriel Labrada Hernández                          priority. This allows for the generation of more uniform trajectories and
+                                                                                                                                                                                                                                               round.                                      dispensing kits.
+           Programmer                                            facilitates the consistency of the generated map.
+           Responsible of victim detection.                      When the robot reaches a point with no new available routes, the algorithm
+                                                                 executes a backtracking process, returning to previously visited nodes until it                          PCB
+Previous Results                                                 finds new unexplored branches, this ensuring complete coverage of the
+                                                                                                                                                                          The robot's electronic system is integrated through a custom PCB, designed to
+                                                                 environment.
+                                                                                                                                                                          centralize connections and optimize space usage within the chassis. The
+
+                                                                 Track Strategy
+                                The team participated in the
+                                                                                                                                                                          board was developed considering the efficient distribution of all components,
+                                Robocup Mexican Open 2025,                                                                                                                including sensors, actuators, and communication modules. The design also
+                                reaching a 3rd place at a        In the first run, the robot avoids the red zone due to its high complexity,                              considers the proper management of communication protocols such as I2C
+                                national level.                  prioritizing stable navigation and returning to the starting point to obtain the                         and UART. This allows for reduced wiring and improved internal organization.
+                                Winners of the Mexican Open      exit bonus.                                                                                              Thanks to this integration, the PCB acts as the core of the robot, ensuring a
+                                2026                             If a lack of progress occurs after a checkpoint, this objective is discarded, and                        robust and organized connection that is adaptable to future improvements.
+                                We are currently preparing to
+                                represent Mexico at RoboCup
+                                                                 the robot prioritizes exploring the entire map, including the red zone.
+                                                                 The strategy aims to minimize the Lack of Progress (LoP) and maximize the
+                                                                                                                                                                          Mechanics
+                                2026, with the goal of           score through adaptive decisions during execution.
+                                                                                                                                                                          The mechanical design of the robot is aimed at ensuring stable and adaptable
+                                reaching an international
+                                podium finish.
+                                                                 Victim Detection and Delivery                                                                            navigation in complex environments. A compact structure with approximate
+                                                                                                                                                                          dimensions of 16x14x14 cm was developed, allowing for better control within
+
+Platforms and Languages
+                                                                 An OpenMV camera handles real-time victim detection using a resource-efficient, dual-                    the maze. Additionally, a low and centered center of gravity was prioritized,
+                                                                 approach system:                                                                                         achieving greater stability and reducing the risk of tipping over when
+                                                                  Letter Victims: A lightweight MobileNetV2 neural network classifies alphabetical characters
+                                                                                                                                                                          overcoming obstacles such as ramps and speed bumps.
+                                                                 on the maze walls.
+                                                                 Cognitive Targets: A geometry-based Computer Vision algorithm processes targets without
+                                                                 heavy neural networks through three strict stages:
+                                                                                                                                                                          Suspension System
+                                                                  Detection & Proximity Validation: Uses color blob detection and geometric filtering to
+                                                                                                                                                                          The suspension is designed as a mechanical system that allows a certain
+                                                                 identify perspective-distorted ellipses. To comply with the 15 cm deployment rule, analysis
+                                                                 only triggers if the ellipse's minor axis exceeds a safe pixel threshold.                                degree of rotational movement in the wheels through axles and movable
+                                                                  LAB Space Classification: Samples pixels across 5 concentric rings. By calculating the                  joints. When the robot traverses irregularities such as speed bumps, ramps, or
+                                                                 squared Euclidean distance to pre-calibrated LAB centroids, it classifies colors robustly                steps, the suspension absorbs these variations, allowing the wheels to adjust
+                                                                 against varying venue lighting: Blue (2), Green (1), Yellow (0), Red (-1), or Black (-2).                to the terrain. This prevents the loss of contact with the surface and maintains
+                                                                  Health Status Evaluation: Sums the 5 ring values to determine the exact kit requirement
+                                                                                                                                                                          the robot's stability.
+                                                                 (Harmed = 2, Stable = 1, Unharmed = 0). Invalid mathematical sums are instantly rejected as
+                                                                 false positives.
+                                                                                                                                                                          Bumper
+More information                                                 2. Communication & Actuation
+                                                                 UART Protocol: The OpenMV encodes the required kit count (0-2) and transmits it to the main
+                                                                                                                                                                          The robot features a front bumper system made of flexible material,
+                                                                 controller via UART (pins 2 & 5) for fast, reliable synchronization.
+                                                                  Inventory & Kit Management: The robot features two side towers holding 4 rescue kits each.
+                                                                                                                                                                          integrated with limit switches. This mechanism allows it to detect collisions
+                                                                 Based on the UART signal and the target's location, the main controller activates Neopixel               with walls or obstacles, facilitating position correction and reducing
+                                                                 indicators, actuates the corresponding tower's servomotor to drop the kits, and updates its              accumulated errors during navigation.
+                                                                 internal inventory counter accordingly.
+                                                                                                                                                                          Wheels
+                                                                 Movement Functions                                                                                       The tires were designed to maximize traction on different surfaces. They are
+                                                                 Advancement          between      tiles   is   achieved     through         controlled      30   cm
+                                                                                                                                                                          made of silicone and feature a pattern that allows them to adapt to obstacles
+                                                                 movements, utilizing encoders to measure the distance traveled and ensure
+                                                                                                                                                                          such as ramps and stairs, improving the robot's performance on variable
+                                                                 precision in every movement. To maintain the correct orientation, an IMU-
+                                                                                                                                                                          terrain.
+                                                                 based correction system is employed, allowing for precise 90° and 180° turns.
+                                                                 Furthermore, position correction routines are implemented using distance                                 Kit Ejection System
+                                   GITHUB
+                                                                 and contact sensors, allowing the robot to align itself with the walls and
+                                                                 reduce accumulated errors.                                                                               The kit delivery system is based on a servo-driven rack and pinion
+                                                                                                                                                                          mechanism, designed to be compact and precise.

@@ -1,0 +1,100 @@
+RoboCupJunior Rescue Maze 2026 — Incheon
+
+TEAM TOP CLASS
+Autonomous maze rescue robot                  |   League: Rescue Maze                  |    South Korea
+M5Stack Core S3 Lite • BaseX + 4x LEGO EV3 motors • 4x ToF • 2x Color • 2x UnitV2 AI cameras • servo rescue-kit dropper
+
+  THE TEAM                                                                                                                 ROBOT CAPABILITIES
+                                                                                                                           • Fully autonomous maze exploration with complete-coverage mapping
+                                                                [USEONG KIM, HAYOUNG OH]                                   • Precise cell-by-cell navigation with gyro-PD straight driving & 90° turns
+                                                                                                                           • Detects letter victims (Φ/Ψ/Ω) and cognitive targets (colour)
+                                                                     - Hardware & mechanics
+                                                                                                                           • Rescue-kit deployment via servo dropper
+                                                                                                                           • Speed-bump traversal via differential suspension
+                                                                [SOO LEE, HAYOUNG OH]                                      • Black-tile avoidance, checkpoint recovery after lack-of-progress resets
+                                                                     - Software (mapping & motion control)
+
+                                                                [SOO LEE, USEONG KIM]
+                                                                                                                           SOFTWARE — MAIN LOOP
+                                                                     - Vision & sensors (cameras, color, ToF)
+
+                                                                Awards / results:                                                                                          START / restore checkpoint
+                                                                     3rd place in Rescue Maze at the Korean competition                                                                    v
+
+                                                                                                                                                                      Pick next cell (DFS: open/closed lists)
+                                                                                                                                                                                           v
+
+  HARDWARE — ROBOT & SENSORS                                                                                                                                             Turn + drive one cell (gyro-PID)
+                                                                                                                                                                                           v
+
+                                                                                                                                                                Read walls (ToF x4) + floor (Color x2) -> 4-bit map
+                                                                                                                                                                                           v
+
+                                                                      • Controller: M5Stack Core S3 Lite                                                              Scan side cameras (UnitV2) -> victim?
+                                                                        (ESP32-S3, dual-core 240MHz, 9-axis IMU)                                                                           v
+
+                                                                                                                                                                        If victim: deploy rescue kit (servo)
+                                                                                                                                                                                           v
+                                                                      • I2C hub: PaHub (PCA9548A) —
+                                                                        splits the six same-address (0x29) ToF &
+                                                                                                                                                                  Unexplored left? yes: loop     no: A* path home
+                                                                        Color sensors
+
+                                                                                                                           SOFTWARE — ALGORITHMS & TESTS
+                                                                                                                           • Map: 2D grid; each cell is a 4-bit wall code (N/S/W/E); grows from the start cell (auto-expanding)
+                                                                                                                           • Explore: DFS with open/closed lists; A* (heapq, Manhattan h) for the path home
+                                                                                                                           • Motion: our own BaseX DriveBase (4 motors); gyro-PID straight driving & 90° turns
+                                                                                                                           • IMU: BMI270 gyro — integration + 1° deadzone + auto bias re-zero
+     • Drive: BaseX (STM32, I2C) + 4x LEGO EV3 motors,                                                                     • Robust: checkpoint save/restore after a reset; bidirectional drive avoids 180° turns
+       12T→28T gearing, 4WD                                                                                                • Runtime: MicroPython, threaded I2C bus + uasyncio; 2x UnitV2 cameras for victim ID
+
+                                                                                                                            How we test:
+     • Vision: 2x UnitV2 edge-AI cameras (left/right)                                                                       • Desktop A* grid visualiser (astar/visualize.py) before hardware
+       — victim & target                                                                                                    • On-maze tuning: cell distance, gyro 90° turns, ToF wall thresholds
+                                                                                                                            • [TEAM: add measured results — laps completed, victims found, reliability %]
+
+                                                                                                                           SPECIFICATIONS
+
+                                                                                                                           Controller              M5Stack Core S3 Lite (ESP32-S3)
+
+                                                                                                                           Language                MicroPython + Python (sim)
+                                                                      • Distance: 4x ToF VL53L0X (front/back/left/right)
+                                                                                                                           Sensors                 4x ToF, 2x Color, 2x UnitV2, 9-axis IMU
+                                                                        — wall sensing
+                                                                                                                           Construction            LEGO Technic + 3D-printed PLA (Fusion 360)
+
+                                                                                                                           Development time        Early Apr 2026 - Jul 2026 (~3 months)
+                                                                      • Actuator: 2x C017CLS micro-servo
+                                                                        — rescue-kit dropper                               Material cost           [from BOM total — TEAM TO FILL]
+
+                                                                                                                           DEVELOPMENT & BUILD PROCESS
+
+                                                                                                                              • Designed custom parts in Fusion 360, printed in PLA (sensor mounts, dropper, brackets)
+
+     • Floor: 2x Color TCS3472 —
+       black-tile / checkpoint detection
+
+                                                                                                                               • Built drivetrain on a LEGO Technic chassis with differential suspension
+
+  HARDWARE HIGHLIGHTS
+                                                                                                                              • Wrote our own BaseX motor driver from its I2C register map
+  Innovative mechanisms (Rescue Maze):
+
+                                              CUSTOM DRIVE — BaseX + EV3
+                                              No ready-made MicroPython driver exists for the BaseX motor base,
+                                              so we wrote our own from its I2C register map (basex.py: straight, drive,
+                                              encoder odometry).
+                                              Gyro-PD heading control is layered on top.
+
+                                                                                                                              • Verified the maze logic on desktop (grid visualiser) and a motors-disabled dry-run before hardware
+
+                                              DIFFERENTIAL SUSPENSION
+                                              A central differential lets the left and right sides flex independently,
+                                              keeping all four wheels on the ground over speed bumps and
+                                              uneven tiles — reliable traction and odometry
+
+                                              SERVO RESCUE-KIT DROPPER
+                                              Two micro-servos deploy rescue kits to the left / right wall
+                                              when a victim is detected.
+
+Team Top Class • RoboCupJunior Rescue Maze 2026 • South Korea                                                                                                                                  DRAFT — replace [bracketed] text & dashed photo boxes before submitting

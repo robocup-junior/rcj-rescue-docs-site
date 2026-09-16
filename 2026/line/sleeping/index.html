@@ -1,0 +1,650 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Sleeping · RoboCupJunior Rescue</title><meta name=description content="Published team description papers, posters, bills of materials, source code and presentations from the RoboCupJunior Rescue leagues."><link rel=icon href=/rcj-rescue-docs-site/favicons/favicon.ico sizes=any><link rel=icon type=image/png sizes=32x32 href=/rcj-rescue-docs-site/favicons/icon-32x32.png><link rel=apple-touch-icon sizes=180x180 href=/rcj-rescue-docs-site/favicons/apple-touch-icon-180x180.png><meta name=twitter:card content="summary_large_image"><link rel=stylesheet href=/rcj-rescue-docs-site/css/site.min.2b0268f070dd653dfc0701c508fb85fe7f685dd68fe17a67ea93566fd67e77bf.css integrity="sha256-KwJo8HDdZT38BwHFCPuF/n9oXdaP4Xpn6pNWb9Z+d78="><meta property="og:url" content="https://robocup-junior.github.io/rcj-rescue-docs-site/2026/line/sleeping/"><meta property="og:site_name" content="RoboCupJunior Rescue — Team Documents"><meta property="og:title" content="Sleeping"><meta property="og:description" content="Published team description papers, posters, bills of materials, source code and presentations from the RoboCupJunior Rescue leagues."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="2026"><meta property="og:image" content="https://robocup-junior.github.io/rcj-rescue-docs-site/assets/img/logo2.png"><link rel=canonical href=https://robocup-junior.github.io/rcj-rescue-docs-site/2026/line/sleeping/></head><body><a class=skip href=#main>Skip to content</a>
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-award" viewBox="0 0 384 512"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4.0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4.0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4.0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2.8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4.0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1.4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 10-160 0 80 80 0 10160 0zM1.3 441.8 44.4 339.3c.2.1.3.2.4.4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2.0.5.0.7.2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7.8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1.4-.2.7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2.2-.3.4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></symbol><symbol id="i-users" viewBox="0 0 640 512"><path d="M144 0a80 80 0 110 160A80 80 0 11144 0zM512 0a80 80 0 110 160A80 80 0 11512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9.0 31 3.5 44.6 9.7-1.3 7.2-1.9 14.7-1.9 22.3.0 38.2 16.8 72.5 43.3 96-.2.0-.4.0-.7.0H21.3C9.6 320 0 310.4.0 298.7zM405.3 320c-.2.0-.4.0-.7.0 26.6-23.5 43.3-57.8 43.3-96 0-7.6-.7-15-1.9-22.3 13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.4zM224 224a96 96 0 11192 0 96 96 0 11-192 0zM128 485.3C128 411.7 187.7 352 261.3 352h117.3C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.6c-14.7.0-26.7-11.9-26.7-26.7z"/></symbol><symbol id="i-heart" viewBox="0 0 512 512"><path d="M47.6 300.4 228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6.0 115.2.0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></symbol><symbol id="i-chalkboard-user" viewBox="0 0 640 512"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3.0 64 28.7 64 64v288c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384v-32c0-17.7 14.3-32 32-32h64c17.7.0 32 14.3 32 32v32h64V64H224v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 110 192 96 96 0 110-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1.0 485.3.0 411.7 59.7 352 133.3 352z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2 5.2-7.1 10.4-14.2 15.4-21.4 19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2.0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3 5 7.2 10.2 14.3 15.4 21.4 19.8 27.1 39.7 54.4 49.2 86.2h160zM192 512c44.2.0 80-35.8 80-80v-16H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112 8.8.0 16 7.2 16 16s-7.2 16-16 16c-44.2.0-80 35.8-80 80z"/></symbol><symbol id="i-gear" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7.5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6.3-24.5-6.8-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6 4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2 5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5.0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8 8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 100-160 80 80 0 100 160z"/></symbol><symbol id="i-palette" viewBox="0 0 512 512"><path d="M512 256c0 .9.0 1.8.0 2.7-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5.0-48 21.5-48 48 0 3.4.4 6.7 1 9.9 2.1 10.2 6.5 20 10.8 29.9 6.1 13.8 12.1 27.5 12.1 42 0 31.8-21.6 60.7-53.4 62-3.5.1-7 .2-10.6.2C114.6 512 0 397.4.0 256S114.6.0 256 0 512 114.6 512 256zM128 288a32 32 0 10-64 0 32 32 0 1064 0zm0-96a32 32 0 100-64 32 32 0 100 64zM288 96a32 32 0 10-64 0 32 32 0 1064 0zm96 96a32 32 0 100-64 32 32 0 100 64z"/></symbol><symbol id="i-flask" viewBox="0 0 448 512"><path d="M288 0H160 128C110.3.0 96 14.3 96 32s14.3 32 32 32v132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2.0 429.7.0 442.6.0 480.9 31.1 512 69.4 512h309.2c38.3.0 69.4-31.1 69.4-69.4.0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7.0 32-14.3 32-32S337.7.0 320 0H288zM192 196.8V64h64v132.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></symbol></svg><header class=site-header><div class=wrap><a class=brand href=/rcj-rescue-docs-site/><img src=/rcj-rescue-docs-site/assets/img/logo2.png alt="RoboCupJunior Rescue" width=500 height=140>
+<span><b>Team Documents</b><span>Rescue 2026 · Incheon</span></span></a><nav aria-label="Related sites"><a class=pill href=https://rescue.rcj.cloud/events/2026/RoboCup2026/index.html>RoboCup 2026</a>
+<a class=pill href=https://rescue.rcj.cloud/events/2026/RoboCup2026/results.html>Results</a>
+<a class="pill solid" href=https://rescue.rcj.cloud/>Rescue site</a></nav></div></header><nav class=crumbs aria-label=Breadcrumb><div class=wrap><span aria-current=page>Leagues</span>
+<a href=/rcj-rescue-docs-site/2026/line/>Line 2026</a><span class=sep>›</span>
+<span aria-current=page>Sleeping</span></div></nav><main id=main><div class="wrap section"><div class=team-hero><div class=identity><div class=title-row></div><h1>Sleeping</h1><div class=where>Line league · Macao (SAR China) ·
+<span class=num>RoboCup 2026</span></div><div class=register><h2>Document register</h2><ol><li><a href=#doc-poster>Poster<span class=size>1 page</span><span class=state>Published</span></a></li><li><a href=#watch>Presentation video<span class=size>YouTube</span><span class=state>Published</span></a></li><li><a href=#doc-bom>Bill of materials<span class=size>127 KB</span><span class=state>Published</span></a></li><li><span class=absent>Team description paper<span class=size></span><span class=state>Not shared</span></span></li><li><a href=#doc-engineering_journal_optional>Engineering journal<span class=size>41 pages</span><span class=state>Published</span></a></li><li><a href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-L22-source_code.zip target=_blank rel=noopener>Source code<span class=size>4.0 MB · GitHub</span><span class=state>Published</span></a></li></ol><p class=note>Sharing each document is the team's decision. “Not shared” means this team
+chose not to publish it, or did not submit one — not that it is missing from the archive.</p></div></div><div class=photos><div class=photo-main><img src=/rcj-rescue-docs-site/images/2026/L22/robot_photo.webp width=675 height=900 alt="Sleeping's robot" loading=lazy decoding=async></div><div class=photo-sub><img src=/rcj-rescue-docs-site/images/2026/L22/team_photo.webp width=900 height=674 alt="The Sleeping team" loading=lazy decoding=async></div></div></div><div class=intro><h2>In their words</h2><div class=body><p>This autonomous rescue robot features a decoupled dual-processor architecture managed by a modular Finite State Machine (FSM). High-level AI, logic branching, and computer vision pipelines run on a Raspberry Pi 5, while an Arduino Nano handles low-level motor and servo claw limits to eliminate structural processing latency.</p></div></div><div class=keywords><a href=/rcj-rescue-docs-site/keywords/finite-state-machine/>Finite State Machine</a><a href=/rcj-rescue-docs-site/keywords/google-coral-tpu/>Google Coral TPU</a><a href=/rcj-rescue-docs-site/keywords/yolo/>YOLO</a><a href=/rcj-rescue-docs-site/keywords/computer-vision/>Computer Vision</a><a href=/rcj-rescue-docs-site/keywords/hsv-color-segmentation/>HSV Color Segmentation</a><a href=/rcj-rescue-docs-site/keywords/raspberry-pi-5/>Raspberry Pi 5</a><a href=/rcj-rescue-docs-site/keywords/arduino/>Arduino</a><a href=/rcj-rescue-docs-site/keywords/shapr3d/>Shapr3D</a><a href=/rcj-rescue-docs-site/keywords/custom-pcb/>Custom PCB</a><a href=/rcj-rescue-docs-site/keywords/edge-ai/>Edge AI</a></div><div class=doc-view><section id=doc-poster><h3>Poster</h3><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/poster/page-001.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/poster/page-001.webp width=1600 height=1130 alt="Sleeping — Poster, page 1 of 1" loading=lazy decoding=async><figcaption>View full size</figcaption></a></figure></div><details class=doc-text><summary>Read the text of this document — 834 words</summary><pre tabindex=0 role=region aria-label="Extracted text of Poster for Sleeping">LEEPING
+                                                                                                                  S
+                                                                                                                                                                                                                                                                                                                  YouTube
+                              Team from Macau PuiChing
+                                                                                                                                                                                                                                                                                                                                                                                               Photo of Team                                         Our Teacher
+
+                                                                                                                                                                                                                                                                                                                                                                                                       Software
+                Hardware                                                                                                                                                                                                                   Raspberry Pi 5
+                                                                                                                                                                                                                                    Processes images from the USB and
+                                                                                                                                                                                                                                    wide cameras to track the black line ,
+                                                                                                                                                                                                                                                                                                                    USB camer
+                                                                                                                                                                                                                                                                                                                             a
+                                                                                                                                                                                                                                                                                                      Detect
+                                                                                                                                                                                                                                     detect green markers , and identify                                       victim
+                                                                                                                                                                                                                                                                                                                        in t h e
+                                                                                                                                                           04
+                                                                                                                                                                                                                                                                                                                                   evacua
+                                                                                                                                                                                                                                     victim balls using a YOLO AI model.
+                                                                                                                                                          R
+                                                                                                                                                                                                                                                                                                                                         tion zo
+
+                                                                                                                                                      HC-S                                                                                                                                                                                         n e.
+                                                                                                                                                                                          e
+                                                                                                                                                                                   een th
+                                                              Raspberry Pi 5
+                                                                                                                                                                          e b e t w
+                                                                                                                                                                    tanc            stacle.
+                                                                                                                                                                                                                                                                                                                                                                            Python is a widely used, interpreted,        Arduino operates on bare-metal hardware
+                                                                                                                                                 tt i n g t h e d is        n d o b
+                                                                                                                                               ge                     lls a                                                                                                                                                                                                         and powerful high-level
+                      USB                      GPIO                                         GPIO          I2C
+                                                                                                                                                  o b o t s and wa                                                                                                                                                                                                                                                      without an operating system. This ensures
+                                                                                                                                                r                                                                                                                                                                                                                            programming language. The code is          instant I2C data fetching from the VL53L0X and
+                                                                                                                                                                                                                                                                                                                                                                            highly readable and its syntax is close     immediate, jitter-free PWM signals to the servos
+                                                                                                                                                                                                                                                                                                                                                                              to English. Moreover, compared to         for rapid obstacle avoidance.Generating precise
+                                                                                                                                                                                                                                                                                                                                                                                other programming languages,            servo pulses requires strict timing. Arduino
+           USB camera                                                                                                                                                                                                                                                                                                                                                          Python commands are simpler to           handles this via hardware timers, ensuring
+                                        Micro Switch         Pi Camera 3 Wide            HC-SR04       BNO055
+                                                                                                                                                                                                                                                                                                                                                                                write and can achieve the same          smooth servo movements .
+                                                                                                                                                                                                                                                                                                                                                                                   results with fewer codes.
+                                                                                                                                                                                                                                                                                                                                        4 * ES08MA ii servo
+                                                                       USB/GPIO
+
+                                                               Arduino Nano Mini
+                                                                                                                                                                                                                                                                                                                                                                              YOLO V8
+                                                                                                                                                                                                                                                                                                                              Control the arm and the picker to pick
+                                        GPIO                                                  I2C
+                                                                                                                                                                                                                                                                                                                                          up the victims.                         We label more than 3000 image and train
+                                                                                                                                                                                                                                                                                                                                                                                   an Object detection model by using
+                                                                                                                                        Micro Switch
+                                                                                                                                                                                                                                                                                                                                                                                  yolov8n to detect and collect victims in
+                                                                                                                                                                                                                                                                                                                                                                                  evacuation zone.
+                                       4 * ES08MA ii servo                               2 * VL53L0x                           check the robot if it is touching the
+                                                                                                                                       walls or obstacle.
+                                                                                                                                                                                                                                                                                                                                                                                             Google edge tpu give raspberry pi high AI
+                                                                                                                                                                                                                                                                                                                                                                                             performance.
+
+       Power supply
+                                                                                                                                                                                                                                                                                                                                                                                             4 TOPs of AI performance can let us running
+                                                                                                                                                                                                                                                                                                                                       2*V                                                   object detection over 20&#43;fps
+                                                                                                                                                                                                                                                                                                                                          L53L
+                                                                                                                                                                                                                                                                                                                                              0x
+                                                                                                                                                                                                                                                                                                                         getting
+                                                                                                                                                                                                                                                                                                                                 th e  distanc
+                                                                                                                                                                                                                                                                                                                                                e betwe
+                                                                                                                                                                                                                                                                                                                                    robots a            en th e
+                                                                                                                                                                                    Arduino Nano Mini
+                                                                                                                                                                                                                                                                                                                                             nd wall
+                                                                                                                                                                                                                                                                                                                                                     s.                         In the Evacuation Zone, our robot will
+                         Powering the raspberry pi 5              PCB                                                                                                      Control the arm and the picker to pick                                                             BNO055                                                                                            pick up living victims(silver ball) first.                  ①                ③
+  5v DC step down converter                                                                                                                                                                                                                                                                                                                                                          Then put them in to the green
+                                                                   main PCB of our robot                                                                                   up the victims and reading data from
+                                                                                                                                                                                                                                                                   Obtain the robot&#39;s pose angles                                                                               evacuation point. After that, the robot
+                                                                                                                                                                                          vl53l0x.
+                              convert voltage to 12v for                                                                                                                                                                                                           to detect inclines and declines                                                                               will pick up dead victims(black ball)                                ②
+
+                                                                                                       Team members
+           XL4015              powering up the motors                                                                                                                                                                                                                           road.                                                                                             and put it in to the red evacuation
+   DC step down converter
+                                                                                                                                                                                                                                                                                                                                                                                                 point.
+
+                          Giving power to arduino
+                                                                    raspberry pi HAT PCB
+
+                                                                                                                                                                                                                                                                                                                                                                                         Line Following
+                          nano mini and LED light
+  2 * 5v DC step down converter
+                                                                                                                        Li Cheng Lok —                       Lloyd —                                                                                        Mike.V —                                                  Wong Ioi Cheng —
+                                                                                                                         Team Leader &amp;             Main Software Programmer &amp;                                                                     Documentation Specialist &amp;                                        Lead CAD-Designer &amp;
+                         convert voltage to 14v                                                                 Core Technical Architect Functions       Log Editor Acts                                                                           Logistics Manager Serves                                     Electronics Engineer Functions
+     XL6019 DC step up                                                                                                      as the overarching project
+         converter                                                                                                                                                                        Acts as the intelligence developer for
+                                                                                                                        coordinator and technical anchor.                                    the robot&#39;s vision algorithms. He is
+                                                                                                                                                                                                                                                         as the administrative backbone of the                   as the primary mechanical and hardware designer. He
+                                                                                                                                                                                                                                                                                                                                                                          This part of the program divides
+                                                                                                                          He plays a vital role across all
+                                                                         LED light PCB                                                                                                      responsible for selecting hardware
+                                                                                                                                                                                                                                                        team. He functions to meticulously track                 utilized advanced 3D modeling to engineer the custom
+                                                                                                                           dimensions of development,                                     components, drafting the engineering
+
+                         Powering supply
+                                                                                                                         leading the mechanical design,                                         journal, and optimizing core
+                                                                                                                                                                                                                                                            milestone progress, manage task
+                                                                                                                                                                                                                                                       distribution calendars, oversee file version
+                                                                                                                                                                                                                                                                                                                   robot chassis, specialized claw mechanism, and ball
+                                                                                                                                                                                                                                                                                                                 storage compartment, while also leading the schematic
+                                                                                                                                                                                                                                                                                                                                                                            the captured image into 24
+                                                                                                                         hardware assembly, core Python
+                                                                                                                                                                                                                                                                                                                                                                         horizontal slices and analyzes the
+                                                                                                                                                                                           algorithms—specifically the 24-slice
+                         of the whole robot                                                                               programming, and systematic                                     line-following logic, HSV intersection
+                                                                                                                                                                                                                                                        controls, and coordinate team logistics                layout and routing for the custom power-management and
+    3 * 18650 battery                                                                                                                                                                                                                                    during intensive testing sessions at the                                   signal PCB boards.
+                                                                                                                                                                                                                                                                                                                                                                          position of the black line within
+                                                                                                                          debugging to ensure seamless                                       marker detection, and the YOLO-
+                                                                                                                            cross-system integration.                                                                                                           innovation science center.
+                                                                                                                                                                                             driven evacuation zone behavior.
+
+self making wheel                                            Vitctim Picker                                                                                                                                                                                                                                                                                                  each slice to determine its
+                                                                                                                                                                                                                                                                                                                                                                                      location.
+
+                                                                                                                       Award of us                                                                                                    Evolution of robot                                                                                                                                             To detect green intersections, the program follows a
+                                                                                                                                                                                                                                                                                                                                                                                                     quick 4-step pipeline:
+                                                                                                                                                                                                                                                                                                                                                                                                     Color Filtering: It runs cv2.inRange using a targeted
+                                                                                                                                                                                                                                                                                                                                                                                                     green threshold to create a binary mask.
+  this wheel can help our robot pass
+     ramps or speed bump easily
+                                                                                                                                                                                                                                                                                                                                                                                                     Noise Cleanup: Consecutive erosion and dilation
+                                                             We designed a arm for picking up                                                                                                                                                                                                                                                                                                        passes eliminate camera artifacts and smooth out
+                                                              the victims in evacuation zone.                                                                                                                                                                                                                                                                                                        the shapes.
+                                                                                                                                                                                                                                                                                                                                                                                                     Line Verification: It checks a small bounding box
+
+                                                       Storage System                                                                                                                                                                                                                                                                                                                                directly above the green contour; if the pixel
+                                                                                                                                                                                                                                                                                                                                                                                                     average is dark, it confirms a real black line is
+
+                                                          we designed a handle-equipped                🥇Malaysia Open line 2024           🥇China Open &amp; HongKong &amp;                                                                                                                                                                                                                                   present.
+                                                                                                                                                                                                                                                                                                                                                                                                     Direction Choice: Based on marker positions, it
+                                                       compartment designed to prevent balls                                                Singapore Open line 2026
+                                                                                                                                                                                                                                                                                                                                                                                                     commands a Left, Right, or U-turn state.
+                                                           from rolling out prematurely                                                                                                                                RoboCupJunior
+                                                                                                                                                                                                                                                                     RoboCupJunior China
+                                                                                                                                                                                                                    Singapore Open 2025                                                                                     RoboCupJunior World
+                                                                                                                                                                                                                                                                         Open 2026
+</pre><p class=priv><a href=/rcj-rescue-docs-site/previews/2026/L22/poster/text.txt target=_blank rel=noopener>Open as plain text</a></p></details><p class=priv>1 page, rendered as images so they load quickly.
+The text above is the document's own, extracted from the PDF.</p><p><a class=pill href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-L22-poster.pdf target=_blank rel=noopener>Download the original PDF (4.1 MB) from GitHub</a></p></section><section class=video id=watch><h3>Presentation video</h3><button type=button class=facade data-yt=IBlR9MhIkic aria-label="Play Presentation video for Sleeping">
+<img src=/rcj-rescue-docs-site/images/2026/L22/video_thumbnail.webp width=640 height=360 alt loading=lazy decoding=async>
+<span class=play aria-hidden=true></span></button><p class=priv>Hosted on YouTube. The player loads only when you press play.</p><p><a class=pill href="https://www.youtube.com/watch?v=IBlR9MhIkic" target=_blank rel=noopener>Open in YouTube</a></p></section><section id=doc-bom><h3>Bill of materials</h3><iframe src=/rcj-rescue-docs-site/files/2026/L22/bom.pdf title="Bill of materials for Sleeping" loading=lazy></iframe><p class=priv>Shown as the original PDF, because this one is smaller that
+way and its text stays selectable and searchable.</p><p style="margin:10px 0 0"><a class=pill href=/rcj-rescue-docs-site/files/2026/L22/bom.pdf target=_blank rel=noopener>Open Bill of materials</a></p></section><section id=doc-engineering_journal_optional><h3>Engineering journal</h3><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-001.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-001.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 1 of 41" loading=lazy decoding=async><figcaption>Page 1 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-002.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-002.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 2 of 41" loading=lazy decoding=async><figcaption>Page 2 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-003.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-003.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 3 of 41" loading=lazy decoding=async><figcaption>Page 3 of 41 — Open this page on its own</figcaption></a></figure></div><details class=doc-more><summary>Show the remaining 38 pages</summary><div class=doc-pages><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-004.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-004.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 4 of 41" loading=lazy decoding=async><figcaption>Page 4 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-005.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-005.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 5 of 41" loading=lazy decoding=async><figcaption>Page 5 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-006.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-006.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 6 of 41" loading=lazy decoding=async><figcaption>Page 6 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-007.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-007.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 7 of 41" loading=lazy decoding=async><figcaption>Page 7 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-008.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-008.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 8 of 41" loading=lazy decoding=async><figcaption>Page 8 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-009.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-009.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 9 of 41" loading=lazy decoding=async><figcaption>Page 9 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-010.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-010.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 10 of 41" loading=lazy decoding=async><figcaption>Page 10 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-011.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-011.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 11 of 41" loading=lazy decoding=async><figcaption>Page 11 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-012.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-012.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 12 of 41" loading=lazy decoding=async><figcaption>Page 12 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-013.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-013.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 13 of 41" loading=lazy decoding=async><figcaption>Page 13 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-014.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-014.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 14 of 41" loading=lazy decoding=async><figcaption>Page 14 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-015.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-015.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 15 of 41" loading=lazy decoding=async><figcaption>Page 15 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-016.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-016.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 16 of 41" loading=lazy decoding=async><figcaption>Page 16 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-017.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-017.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 17 of 41" loading=lazy decoding=async><figcaption>Page 17 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-018.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-018.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 18 of 41" loading=lazy decoding=async><figcaption>Page 18 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-019.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-019.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 19 of 41" loading=lazy decoding=async><figcaption>Page 19 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-020.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-020.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 20 of 41" loading=lazy decoding=async><figcaption>Page 20 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-021.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-021.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 21 of 41" loading=lazy decoding=async><figcaption>Page 21 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-022.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-022.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 22 of 41" loading=lazy decoding=async><figcaption>Page 22 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-023.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-023.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 23 of 41" loading=lazy decoding=async><figcaption>Page 23 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-024.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-024.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 24 of 41" loading=lazy decoding=async><figcaption>Page 24 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-025.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-025.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 25 of 41" loading=lazy decoding=async><figcaption>Page 25 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-026.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-026.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 26 of 41" loading=lazy decoding=async><figcaption>Page 26 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-027.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-027.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 27 of 41" loading=lazy decoding=async><figcaption>Page 27 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-028.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-028.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 28 of 41" loading=lazy decoding=async><figcaption>Page 28 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-029.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-029.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 29 of 41" loading=lazy decoding=async><figcaption>Page 29 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-030.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-030.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 30 of 41" loading=lazy decoding=async><figcaption>Page 30 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-031.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-031.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 31 of 41" loading=lazy decoding=async><figcaption>Page 31 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-032.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-032.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 32 of 41" loading=lazy decoding=async><figcaption>Page 32 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-033.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-033.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 33 of 41" loading=lazy decoding=async><figcaption>Page 33 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-034.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-034.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 34 of 41" loading=lazy decoding=async><figcaption>Page 34 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-035.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-035.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 35 of 41" loading=lazy decoding=async><figcaption>Page 35 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-036.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-036.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 36 of 41" loading=lazy decoding=async><figcaption>Page 36 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-037.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-037.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 37 of 41" loading=lazy decoding=async><figcaption>Page 37 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-038.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-038.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 38 of 41" loading=lazy decoding=async><figcaption>Page 38 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-039.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-039.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 39 of 41" loading=lazy decoding=async><figcaption>Page 39 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-040.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-040.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 40 of 41" loading=lazy decoding=async><figcaption>Page 40 of 41 — Open this page on its own</figcaption></a></figure><figure><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-041.webp target=_blank rel=noopener><img src=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/page-041.webp width=828 height=1170 alt="Sleeping — Engineering journal, page 41 of 41" loading=lazy decoding=async><figcaption>Page 41 of 41 — Open this page on its own</figcaption></a></figure></div></details><details class=doc-text><summary>Read the text of this document — 2680 words</summary><pre tabindex=0 role=region aria-label="Extracted text of Engineering journal for Sleeping">Engineering Journal (Log)
+               Team : Sleeping
+
+  Participating unit: Macau Pui Ching Middle School
+
+                   Team member:
+
+    Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+        Date of creation: 14th February,2026
+                                                   Table of contents
+Operational Logistic................................................................................................................. 3
+Log number: 1 Event date: 14th of February,2026...................................................................4
+Log number: 2 Event date: 18th of February,2026...................................................................6
+Log number: 3 Event date: 21th of February,2026...................................................................9
+Log number: 4 Event date: 27th of February,2026.................................................................10
+Log number: 5 Event date: 5th of March,2026.......................................................................14
+Log number: 6 Event date: 10th of March,2026.....................................................................17
+Log number: 7 Event date: 15th of March,2026.....................................................................21
+Log number: 8 Event date: 21th of March,2026.....................................................................24
+Log number: 9 Event date: 27th of March,2026.....................................................................27
+Log number: 10 Event date: 1st of April,2026........................................................................29
+Log number: 11 Event date: 5th of April,2026........................................................................35
+Log number: 12 Event date: 11th of April,2026......................................................................39
+Log number: 13 Event date: 11th of April,2026......................................................................40
+Operational Logistic
+  ●​ Means of communication:
+         ○​ Verbal communication: Our team can communicate verbally and discuss
+             ideas, opinions, and facts by having conversations between members. It 1s
+             among the easiest and most efficient methods for several people to work
+             together productively in a group. Each member of our team is tasked with
+             Overseeing several project areas through verbal communication.
+  ●​ Meeting frequency:
+         ○​ We as a team agreed to have three weekly meetings. Meeting every day
+             would make time more compact because we still have to go to school. If we
+             had to maintain our concentration on both our project and our academic
+             responsibilities, we would not be able to guarantee our productivity. As a
+             result, our team thinks that meeting three times a week is the most effective
+             way to handle our workload.
+  ●​ Location:
+         ○​ Macau Pul Ching Secondary School Innovation Science and Education
+             Center (Fablab): We are able to access a wide range of components in the
+             laboratory because of the diversity of supplements. Not to add, Fablab offers
+             an adequate and comfortable envirouent for us to debug our program and
+             robot. In order to maintain the integrity of the work, educators working in the
+             laboratory can also offer suggestions for our project.
+  ●​ Distribution of work:
+         ○​ Assign work to members, create personal task: lists and attendance
+             calendars, and make sure that everyone completes the assigned duties in the
+             allotted time Here is a table with the task assignments:
+
+        Members                 Robot         Hardware      Programming        Log book
+                               designs
+
+      Li Cheng Lok                ✓               ✓               ✓               ✓
+
+          Lloyd                   ✓                                               ✓
+
+         Mike.V                                                   ✓               ✓
+
+     Wong Ioi Cheng                               ✓                               ✓
+Log number: 1                     Event date: 14th of February,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ Our team documented the robot’s limited design and drew the next stage
+   ●​ comprehending the competition guidelines and test location
+
+2. Rules Analyse
+
+   1.​ The robot car will need to start from the tile with a black horizontal line, then follow
+       the line and stop on the tile with a red line.
+   2.​ Different tiles have different patterns, and the path may change between different
+       rounds.
+   3.​ Checkpoints are included in the path, and the robot can restart at the tile with
+       checkpoint.
+   4.​ Speed Bumps, Debris, and Obstacles may appear in the path and robots need to try
+       to come across those.
+   5.​ The robot needs to turn according to the direction with green intersection markers.
+   6.​ Tiles will be used as ramps to allow the robot to climb up and down from different
+       levels.
+   7.​ Robots need to come over and keep balance when crossing a seesaw.
+   8.​ In the Evacuation Zone, robots need to place the black dead victims in the red
+       evacuation point and silver living victims in the green evacuation point.
+
+Our team tries to draw out an example path and try to figure out the route that we should
+follow, so that we can think about how the robot can come over each ordeal.
+
+Example path:
+
+The red dotted line next to the path is the route that we should follow.
+3. Planning
+   ●​ Complete the robot’s initial design according to the require and the need to let the
+      robot be able to come across all the challenges.
+   ●​ Begin to talk about the coding and algorithm planning that has to be done
+Log number: 2                      Event date: 18th of February,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+      ●​ Finish choosing what sensor or hardware that we are going to use on the robot
+         according to their function and also the competition roles.
+
+2. Hardware introduction
+         After careful analysis and judgment by our team through the competition rules, we
+finally selected different sensors to solve different tasks. For example, we chose to use
+HC-SR04 ultrasonic sensor for getting the distance between robot and obstacles or walls,
+and we may use USB camera to capture the environment so that the robot can follow the
+line or catch the ball.
+
+          Hardware                    Function                     Sensor’s picture
+ 1.       DC step up converter        Increase the voltage
+
+ 2.       5v step down conventer      Change the voltage to 5V
+3.   USB Camera              Capture image in front of
+                             the robot
+
+4.   Picamera 3 wide         Capture image of the
+                             line under the robot
+
+5.   Google coral edge tpu   Provide 4Tops AI
+                             performence for raspberry
+                             pi
+
+6.   5v converter            Change the voltage to 5V
+
+7.   HC-SR04 ultrasonic      Get the distance between
+     sensor                  robot and obstacles or
+                             walls
+
+8.   emax servo              Control the open and
+                             close of the clip
+
+9.   BNO055                  Get the inclination of the
+                             robot
+10.    Raspberry pi 5               Main controller
+
+11.    18650 battery                Power the raspberry pi
+
+12.    Arduino nano mini            Control the servo
+
+13.    Micro switch                 Detecting obstacles
+
+14.    vl53l0x                      get distance of the front
+
+3. Planning
+   ●​ After selecting the sensor, start designing the robot through 3D design, and design
+      the robot based on the functions of the selected sensor.
+   ●​ Start trying out a basic walking program, which allows the robot to follow a route.
+Log number: 3                   Event date: 21th of February,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ Start 3D designing the chassis of the robot.
+
+2. Design drawing
+
+3. Planning
+   ●​ Design the full appearance of the robot based on the needs of the sensors we
+      selected last time.
+Log number: 4                  Event date: 27th of February,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ Design the appearance of the robot based on the needs of the sensors we selected
+      last time by using Shapr3D.
+
+2. Preliminary design
+Front：​​        ​     ​    ​      ​      Back：
+
+Right：​​        ​     ​    ​      ​      Left：
+3. Designs detail introduction
+Some of the designs you see are tailor-made specifically for this competition, crafted to align
+with its unique requirements and themes, and will be showcased in detail below.
+
+1）Touch
+       Function：Detect obstacles while following the line, if it reaches a obstacle it will get
+       around it.
+
+       Displayment：
+
+2）Claw
+       Function：Catch the ball with servos and gears
+
+       Displayment：
+
+       Design that allow the claw to move forward and backward：
+       Design that allow the claw to open and close ：
+
+       The full design of the claw:
+
+3）Ball’s placement
+       Function：A place where the ball is temporarily stored before reaching the Evacuation
+       Zone and after collecting the ball by the claw. And it is designed with handle.
+
+       Displayment：
+4）Ball’s gap
+       Function：Prevent the ball from rolling down directly. When it reaches the Evacuation
+       Zone, the loop will open and the ball will roll down.
+
+       Displayment：
+
+3.Planning
+   ●​ Start to figure out a basic walking program, which allows the robot to follow a route.
+Log number: 5                     Event date: 5th of March,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Wong Ioi Cheng
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1.Tasks done today
+   ●​ Finish the design of the PCB1 and PCB2,so that electronic parts stay in place and
+      connect properly, a PCB is used in all electronic devices.
+   ●​ Write the program of collecting the data of the black line.
+
+2.Basic Program
+   ●​ This is the schematic diagram of PCB 1. ​
+
+   ●​ This is the schematic diagram of PCB 2.
+●​ This is PCB 1
+
+●​ This is PCB 2
+   ●​ This is the program of collecting data of lines.
+
+3.Planning
+   ●​ Write the program of following the black line and detect the green intersection marker
+      for turning to different directions.
+Log number: 6                    Event date: 10th of March,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ Write the program of following the black line and detect the green intersection marker
+      for turning to different directions.
+   ●​ Test the program.
+
+2. Basic Program
+1) Line following program
+
+   ●​ This part of the program divides the captured image into 24 horizontal slices and
+      analyzes the position of the black line within each slice to determine its location.
+
+   ●​ By extracting contours and calculating moments, the program identifies the center
+      point of the black line in each segment, allowing the robot to adjust its path
+      accordingly.
+   ●​ The program can detect the position of the black line that is closest to the edge of the
+      image, ensuring accurate tracking even when the line is near the boundary.
+
+1) Green intersection marker detecting program
+
+   ●​ This part of the program is designed to detect green intersection markers on
+      the track, which are used to control the robot’s turning direction at junctions.
+   ●​ It uses color segmentation in the HSV space to isolate green regions, filters
+      out noise by size and shape, and identifies valid markers for decision‑making.
+   ●​ Based on the position of the green marker and the surrounding black lines,
+      the program determines whether the robot should turn left, turn right, or go
+      straight.
+Here is the manuscript of the detecting order and how to determine which direction
+to go. And also how it works when the robot need to turn around.
+3.Actual measurement
+
+4.Planning
+   ●​ Take photos of the balls and collect data.
+   ●​ Train the model of identifying the balls.
+Log number: 7                        Event date: 15th of March,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ Take photos of the balls and collect data.
+   ●​ Train the model of identifying the balls.
+
+2. Photos
+These are the photos examples for collecting data. We have collected more than 5,000
+photos from different angles to detect balls of different colors, so that the ball collection
+process can be faster and more accurate.
+
+In this section, we used universe.roboflow.com to train the model.
+
+This is a photo example with no ball, and it will be marked as no annotation.
+
+Balls that are in the red or green evacuation point won’t be detected.
+Here is examples of detecting balls, silver balls is marked with a green block,and
+black ball is marked with a purple block, more than one ball can be marked at the
+same time.
+
+Example 1.
+Example 2.
+
+4.Planning
+   ●​ Start to train the robot to overcome challenges like getting around obstacles,etc.
+   ●​ Detect the red or green evacuation.
+Log number: 8                   Event date: 21th of March,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd, Mike.V
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ Start to train the robot to overcome challenges like getting around obstacles,etc.
+   ●​ Detect the red or green evacuation.
+
+2. Program
+These are the programs for obstacle avoidance.
+
+When touch detects obstacles：
+
+Get around obstacles：
+&#34;Return to route&#34; after obstacle avoidance is completed :
+3.Red or green evacuation
+Here are the programs of red or green evacuation.
+
+This code defines the `FindPutState` class, which detects either a green or red drop-off zone
+based on the given color parameter. It waits 0.6 seconds after entering the state for stable
+detection, then creates a color mask to isolate the target zone, displays the mask, and finds
+contours in the masked image to locate the drop-off area.
+
+4.Planning
+   ●​ create a venue for robot training.
+Log number: 9                     Event date: 27th of March,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ create a venue for robot training.
+
+2. Photos
+We use tape to post different patterns to meet our daily training and make the robot more
+stable.
+
+The whole venue：
+
+Some examples (the red dotted line is the route)：
+3.Planning
+   ●​ complete the ball part after entering the room.
+Log number: 10                  Event date: 1st of April,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ complete the ball part after entering the room.
+
+2. Program
+Included:
+
+   ●​ Seek ball
+   ●​ Detection ball (YOLO)
+   ●​ Pick up the ball
+   ●​ Find the putting area
+   ●​ Selease the ball
+   ●​ Counting the number of balls picked up and the number of balls released
+
+   1)​ Variable records the number of balls picked up and released
+
+   2)​ YOLO model detection ball
+
+   3)​ FindBallState — find and move toward the ball
+4)​ PickState — pick up the ball (picking up the ball)
+
+5)​ FindPutState — Find the red/green put area
+6)​ PutState — put action
+This set of code handles the robot’s complete ball-handling task: it uses a YOLO model to
+detect balls, navigates toward them, grabs the ball with servos when close enough, then
+searches for the corresponding red or green drop-off zone based on color. After reaching the
+zone, it releases the ball using the rear servo and returns to search for more balls.
+
+3.Planning
+   ●​ complete the program of entering and leaving the room.
+Log number: 11                   Event date: 5th of April,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ complete the program of entering and leaving the room.
+
+2. Program
+1）Entering the room after detected the silver line
+2）Leaving the room
+
+TurnState (hit the wall and turn)：
+
+CheckState (check before entering the room)：
+MoveLState / MoveRState (adjust position in the room)：
+
+GoGoGo (rush out after entering the room)：
+
+BeforeGoState (prepare before entering the room)：
+GoBackState (Leave the room: Back &#43; Turn)：
+
+This group of states controls the robot’s room entry and exit. The GoState uses
+distance sensors and line detection (black/silver) to navigate inside the room, adjust
+position, avoid walls, exit when seeing a black line, and back out when seeing a
+silver line.
+
+3.Planning
+   ●​ complete the program for the finishing red line
+Log number: 12                   Event date:11th of April,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ complete the program for the finishing red line
+
+2. Program
+
+3.Planning
+   ●​ test the entire robot and improve it
+Log number: 13                      Event date:11th of April,2026
+
+Members attended: Li Cheng Lok, Lloyd, Mike.V, Wong Ioi Cheng
+
+Editor: Lloyd
+
+Location: Macau Pui Ching Secondary School Innovation Science and Education
+Center
+
+1. Tasks done today
+   ●​ test the entire robot and improve it
+
+2. Problem
+When clamping the ball, the accuracy will be significantly affected due to light
+leakage from the environment, which may cause unstable visual detection,
+misalignment of the ball position, and inconsistent clamping movements, ultimately
+reducing the success rate of picking up the ball.
+
+3.Solution
+Therefore, to solve this problem and improve the stability and success rate of ball clamping,
+we specially added light-blocking baffles to the bottom of the robot.
+</pre><p class=priv><a href=/rcj-rescue-docs-site/previews/2026/L22/engineering_journal/text.txt target=_blank rel=noopener>Open as plain text</a></p></details><p class=priv>41 pages, rendered as images so they load quickly.
+The text above is the document's own, extracted from the PDF.</p><p><a class=pill href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-L22-engineering_journal.pdf target=_blank rel=noopener>Download the original PDF (7.4 MB) from GitHub</a></p></section><section id=doc-source_code><h3>Source code</h3><p>The team's own source code, 4.0 MB. It is a download
+rather than part of this page, because a zip is something you open on your computer.
+It comes from GitHub, which some school networks block.</p><p><a class="pill solid" href=https://github.com/robocup-junior/rcj-rescue-docs-site/releases/download/assets-2026/2026-L22-source_code.zip target=_blank rel=noopener>Download Sleeping's source code</a></p></section></div></div></main><footer class=site-footer><div class=wrap><p>Every document here is published with its team's consent, and a team that chose not to
+share something is named as such rather than left blank. Presentation videos are hosted on
+YouTube and load only when you press play.</p><nav><a href=https://rescue.rcj.cloud/>Rescue community site</a>
+<a href=https://junior.robocup.org/rescue/>RoboCupJunior</a>
+<a href=/rcj-rescue-docs-site/keywords/>Browse by topic</a></nav></div></footer><script>document.addEventListener("click",function(e){var t,s,n=e.target.closest("[data-yt]");if(!n)return;if(s=n.dataset.yt,!/^[A-Za-z0-9_-]{6,20}$/.test(s))return;t=document.createElement("iframe"),t.src="https://www.youtube-nocookie.com/embed/"+s+"?autoplay=1&rel=0",t.title=n.getAttribute("aria-label")||"Team presentation",t.allow="autoplay; fullscreen; encrypted-media",t.referrerPolicy="origin-when-cross-origin",t.setAttribute("allowfullscreen",""),n.replaceWith(t)})</script></body></html>

@@ -1,0 +1,94 @@
+!
+                                                                      Robomanics
+                                                                      Egypt | Rescue Simulation
+   ll o      eam
+He      nd
+           T
+   f ou       ics!
+ I       m an
+        o
+   Rob
+
+                                                                                         Meet The Team
+
+                                                                                                                                   participa
+                                                                                                                                            ted
+                                                                                                                                    in Nation
+                                                                                                                                              al
+                                                                                                                                     RoboCup
+                                                                                                                                     2025 and
+                                                                                                                                     achieved
+                                                                                              Ziad ElGa                            2nd Plac
+                                                                                                          mal                                e
+                                                                         Fareeda         Mapping
+                                                                        Navigati
+                                                                                  Hossam
+                                                                                o   n & Dete
+                                                                                            ction           La i l a E l h
+                                                                                                          Navigati     adidy
+                                                                                                                  on & Det
+                                                                                                                          ection
+
+                                                                      Team Leadership
+
+                                                                                            Coach:
+                                                                                      Dr. Amal Mehanna
+                                                                                          Co-Coach:
+                                                                                      AL. Ibrahim Tagen
+
+                                                                                                                Meet The Robot
+                      Flow Chart
+                                                                                            Programming
+                                                                                              Language
+                                  Start Program
+
+                             Initialize Robot Sensors
+
+                            Initialize Map and Variables
+
+                                 Main Loop Starts
+
+                                                                                            Python
+      Read Sensors
+
+  Update Robot Position
+
+                                                    Path Planning Algorithm
+   Mapping Algorithm
+
+                                                                                                    Mapping Algorithm
+                                                                               NO
+
+                                                    Choose Next Movement
+
+          Victim or
+          Cognitive                                        Move Robot
+           Target
+          Detected?
+                      YE
+                        S
+
+                                                           All Reachable
+                                             NO
+
+                 Start Program                                  Areas
+                                                             Explored?
+
+             Initialize Robot Sensors
+     NO
+
+                                                                YES
+
+           Initialize Map and Variables             Plan Path Back to Start
+
+                Main Loop Starts                     Return to Starting Tile
+
+  Check Obstacles, Holes, Swamps                        Send Exit Command
+
+                                                                                          Occpancy Grid
+                Is Robot                                                                   Map (Real-
+                 Stuck?                                                                       Time)
+            S
+           YE
+
+     Call Lack of Progress / Recover                        End Program

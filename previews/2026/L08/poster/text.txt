@@ -1,0 +1,24 @@
+DMS-Kaede                                     Hardware: kouta Sakata
+                                                                            Electricity: kai Sonoda
+                                                                            Software: yakumo Kusanagi
+
+                                       Mechanism                             PCB
+                                      ・Arm
+                                      There are three servo motors: ・BMS Circuit Board
+                                      two are used to move the base When the LiFe battery is fully
+Software                              of the arm, and the other is for charged, the LED on the
+・Line Tracking                        the arm that grasps the ball.     protection circuit stays lit;
+Controlled by five sensors and PD     ・Suspension                       when the charge level
+control. The central sensor detects                                     drops below
+                                      This design allows the motors on
+derailment.                                                             a certain point,
+                                      both sides to move up and down
+・Rescue                               along the central support column, it begins to flash.
+Use OpenMV. Detect silver → Move      making it easier to navigate steps.
+to the center → Rotate while
+                                                                             ・sensor
+                                      Additionally, the
+searching for the ball → Find the     support column is                      I'm using five sensors, all
+zone corresponding to the color of     designe to                            facing forward and lined up
+the picked-up ball → Drop the ball    accommodate                            side by side.
+→ Repeat                              the Open MV.

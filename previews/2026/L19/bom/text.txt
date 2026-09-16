@@ -1,0 +1,32 @@
+Team name:                         Pharaoh
+           Local Currency         Egyptian pound EGP
+
+                                                                                   Unit cost      Total Cost
+#           Part name                   Autor               Source      Quantity    (Local          (Local       Status
+                                                                                   Currency)      Currency)
+                                     Raspberry Pi
+1    Raspberry Pi 5 (8GB)                              Makers Electronics   1   R$13,000.00      R$13,000.00     New
+                                      Foundation
+2       Arduino Nano                   Arduino         Makers Electronics   1    R$215.00         R$215.00       New
+3      Coral Edge TPU                Google Coral      Makers Electronics   1   R$9,650.00       R$9,650.00      New
+4   REV Continuous Servo             REV Robotics        Rev Robotics       4   R$1,277.00       R$5,108.00      Used
+5      180° Mini Servo                 Generic           Rev Robotics       1   R$1,277.00       R$1,277.00      Used
+6    REV Robotics Wheels             REV Robotics        Rev Robotics       2    R$638.00        R$1,276.00      Used
+     REV Robotics Omni
+7                                    REV Robotics        Rev Robotics       2      R$1,584.00     R$3,168.00     Used
+            Wheels
+  Raspberry Pi Camera Module         Raspberry Pi
+8                                                      Makers Electronics   1      R$1,000.00     R$1,000.00      New
+               3                     Foundation
+     Raspberry Pi Camera Module      Raspberry Pi
+9                                                      Makers Electronics   1      R$1,000.00     R$1,000.00      New
+               3 Wide                Foundation
+      Yahboom TinyF Time-of-
+10                                    Yahboom              Yahboom          3      R$920.00       R$2,760.00      New
+           Flight Sensor
+11     BNO055 IMU sensor                               Makers Electronics   1      R$100.00       R$100.00        New
+
+                                                                                                  Total Cost
+                                                                                                Local Currency
+
+                                                                                                R$38,554.00

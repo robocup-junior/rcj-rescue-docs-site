@@ -1,0 +1,66 @@
+Who are We?                                                                                                                                                          wall token detection
+          We are from Argentina, participating for the second time in the                                                                                                          Uses a custom image processing method to detect victims and
+international RoboCup competition, in the Rescue Simulation category.                                                                                                      cognitive targets on walls, using the front and left cameras. A color
+Previously, we took part in RoboCup Americas 2025 In which we got the                                                                                                      threshold highlights key colors and removes background noise, then
+first place and then in Robocup Salvador 2025 in wich we got third place.                                                                                                  contours are extracted to identify potential signs. Victims are recognized
+This poster presents the most important aspects of our robot's software,                                                                                                   by analyzing black and white pixel distribution across five regions in a 3×3
+highlighting the strategies and improvements developed for RoboCup 2026.                                                                                                   grid. Cognitive targets are confirmed through shape and color validation —
+                                                                                                                                                                           near-square contour, minimum area, valid color present — with no letter
+team:                                                                                                                                                                      analysis needed.
+
+      Martina Talamona            Ramiro Francavilla       Emanuel Hamui
+       Programming & testing.     Programming & testing.      Mentor.
+                                                                                                                                                                              Original    Proper       Concentric         Original    Proper     Cleaned
+                                                                                                                                                                               image     threshold   coloured rings        image     threshold    image
+
+             robot’s hardware components
+   Three 40x40 cameras (left, front and right) for robust visual analysis,
+   enabling the detection of signs, fake tokens and Cognitives targets.
+   A differential drive system with two independently controlled wheels
+                                                                                                                                                                                                      navigation system
+   for precise movement and smooth turns.                                                                                                                                        We use a hybrid pathfinding system combining Dijkstra’s algorithm
+   A distance sensor for obstacles detection aided by Lidar.                                                                                                                for global planning and Greedy Best First Search for precise, pixel-level
+   A LIDAR sensor provides high-resolution 2D mapping and accurate                                                                                                          navigation in tight spaces. The map grows dynamically with LiDAR data,
+   obstacle detection, improving path planning when combined with                                                                                                           adapting to any environment size. Obstacles like walls and black holes
+   camera system.                                                                                                                                                           are marked as non-traversable. Swamp tiles are assigned an additional
+   GPS: due its noise the Gps is still being fundamental, the robot                                                                                                         traversal cost, discouraging re-entry while still allowing passage if no
+   averages multiple readings while stationary and applies stronger                                                                                                         other route exists. Straight paths are prioritized to optimize movement,
+   corrections after a LOP event to maintain a stable position estimate.                                                                                                    straight paths are prioritized, and the final route is smoothed to
+   Inertial unit: For directional alignment.                                                                                                                                eliminate unnecessary steps. We use Godot Engine to create a real-time
+                                                                                                                                                                            visualization. This allowed us to improve our navigation algorithm.
+
+                         robot’s software                                                                                                                                                    visualizer (godot engine)
+    We use Python as our programming language. Our code follows a
+    modular structure with over 10 specialized modules for tasks                                                                                                             In the visualizer we can see
+    such as navigation, mapping, image processing,Vector for                                                                                                                 the cost of each minitile(g)
+    mathematical functions, tile classification, and robot control.                                                                                                          and the number of walls(w)
+    This design simplifies maintenance, testing, and expansion by                                                                                                            it has around it.
+    assigning clear responsibilities to each subsystem and supporting                                                                                                        Points painted as violet are
+    efficient team collaboration.                                                                                                                                            the lowest cost path that
+                                                                                                                                                                             the robot has planned.
+                                                                                                                                                                             Black color represent walls
+                                innovations                                                                                                                                  and obstacles.
+ We split obstacle detection using Lidar and the front camera; Lidar to
+ see if there is something close, and as a helper is the front camera,
+ we take the left most, the right most and the center pixel and we
+ compare those values exlcuding walls and token colours. Once the                                                                                                                                         mapping
+ obtacle is confirmed, they are marked as "X" in the matrix                                                                                                                 Our mapping system constructs a dynamic, grid-based map as the robot
+                                                                                                                               Robocup Salvador 2025 third place   explores. Each tile is subdivided into four sections to allow precise classification
+ representation.                                                             Robocup Americas 2025 first place
+ We also implemented a swamps avoidance navigation, where each                                                                                                     of terrain types and obstacles. LIDAR sensors detect walls and continuously
+ detected swamps pixel receives an additional cost, and it’s minitile                                                                                              update the map in real time. As the robot moves, the map expands automatically
+ visit count is increased proportionally to further discourage re-entry.                                                                                           to include newly discovered areas. Tiles are classified using sensor input,
+ We implemented a positioning based in the LiDAR’s front ray (ray                                                                                                  distinguishing features such as swamp, checkpoint, or black hole. Obstacles are
+ 256), each time the robot moves, the difference between the previous                                                                                              marked as non-traversable and recorded as "X" in the matrix representation, while
+                                                                                                                                                                   visited tiles are displayed in green. For efficient pathfinding and local analysis, the
+                                                                                                         CAETI-UAI
+ and current front-ray distance is used to calculate how far it traveled
+ in X and Y based on its heading.                                                                                                                                  system maintains a cropped matrix centered around the robot’s current position.
+  example of                                                                                                                                                                         Map
+                                                                                                We fail. We learn. We improve. We try again.                                                                          matrix
+  how we                                                                                                    That is our principle.
+                                                                                                                                                                                                                       with
+  represent
+                                                                                                 technologies                                                                                                          the
+  obstacles:
+                                                                                                                                                                                                                       Map:

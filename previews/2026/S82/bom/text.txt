@@ -1,0 +1,248 @@
+RESCUE JUNIOR - Bill of Materials (BOM)
+
+Team name:                             Black Radiators
+
+Every Line/Maze team has to submit a bill of materials for their robot
+
+Instructions:
+*Enter Team name above
+*All costs need to be in local currency and their approximate conversion into
+dollars.
+*All components worth less can be summarized in one line quantity 1 and
+their total cost (e.g. Screws)
+*In the Local Currency Name column, the team must enter the name of the
+local currency, if it is different from US dollars.
+
+*In the software sheet, in the Author column, the name of the designer,
+writer, or company that owns the software or library should be entered. If the
+team created their own algorithm, dataset, or AI model, they can include
+their names as authors.
+
+*On the hardware sheet, in the "Author" column, enter the name of the
+company, engineer, or part manufacturer. If the team made a custom part,
+such as the robot housing, the team should include their names as the
+authors.
+*IMPORTANT* The "Hardware" sheet is not required for simulation
+                                                                                                                  Name of the            Total Cost      Total Cost ($)
+     Team name:                                    Black Radiators                                              Local Currency         Local Currency    U.S.A. Dollars
+                                                                                                                 Brazilian Real
+                                                                                                                     EUR                   R$0,00            $0,00
+
+#   Component                          Part name                     Autor   Source   Quantity   Unit cost   Unit cost (US Dollars)   Total Cost (Local Total Cost
+                                                                                                 (Local                               Currency)         (USA Dollars)
+  1 Not required for the Simulation                                                                                                                                $0,00
+    league (virtual robot) - see the                                                             Currency)
+  2                                                                                                                                              R$0,00            $0,00
+    SOFTWARE sheet
+  3                                                                                                                                              R$0,00            $0,00
+  4                                                                                                                                              R$0,00            $0,00
+  5                                                                                                                                              R$0,00            $0,00
+  6                                                                                                                                              R$0,00            $0,00
+  7                                                                                                                                              R$0,00            $0,00
+  8                                                                                                                                              R$0,00            $0,00
+  9                                                                                                                                              R$0,00            $0,00
+ 10                                                                                                                                              R$0,00            $0,00
+ 11                                                                                                                                              R$0,00            $0,00
+ 12                                                                                                                                              R$0,00            $0,00
+ 13                                                                                                                                              R$0,00            $0,00
+ 14                                                                                                                                              R$0,00            $0,00
+ 15                                                                                                                                              R$0,00            $0,00
+ 16                                                                                                                                              R$0,00            $0,00
+ 17                                                                                                                                              R$0,00            $0,00
+ 18                                                                                                                                              R$0,00            $0,00
+ 19                                                                                                                                              R$0,00            $0,00
+ 20                                                                                                                                              R$0,00            $0,00
+ 21                                                                                                                                              R$0,00            $0,00
+ 22                                                                                                                                              R$0,00            $0,00
+ 23                                                                                                                                              R$0,00            $0,00
+ 24                                                                                                                                              R$0,00            $0,00
+ 25                                                                                                                                              R$0,00            $0,00
+ 26                                                                                                                                              R$0,00            $0,00
+ 27                                                                                                                                              R$0,00            $0,00
+ 28                                                                                                                                              R$0,00            $0,00
+ 29                                                                                                                                              R$0,00            $0,00
+ 30                                                                                                                                              R$0,00            $0,00
+ 31                                                                                                                                              R$0,00            $0,00
+ 32                                                                                                                                              R$0,00            $0,00
+ 33                                                                                                                                              R$0,00            $0,00
+ 34                                                                                                                                              R$0,00            $0,00
+ 35                                                                                                                                              R$0,00            $0,00
+ 36                                                                                                                                              R$0,00            $0,00
+ 37                                                                                                                                              R$0,00            $0,00
+ 38                                                                                                                                              R$0,00            $0,00
+ 39                                                                                                                                              R$0,00            $0,00
+ 40                                                                                                                                              R$0,00            $0,00
+ 41                                                                                                                                              R$0,00            $0,00
+ 42                                                                                                                                              R$0,00            $0,00
+ 43                                                                                                                                              R$0,00            $0,00
+ 44                                                                                                                                              R$0,00            $0,00
+ 45                                                                                                                                              R$0,00            $0,00
+ 46                                                                                                                                              R$0,00            $0,00
+ 47                                                                                                                                              R$0,00            $0,00
+ 48                                                                                                                                              R$0,00            $0,00
+ 49                                                                                                                                              R$0,00            $0,00
+ 50                                                                                                                                              R$0,00            $0,00
+ 51                                                                                                                                              R$0,00            $0,00
+ 52                                                                                                                                              R$0,00            $0,00
+ 53                                                                                                                                              R$0,00            $0,00
+ 54                                                                                                                                              R$0,00            $0,00
+ 55                                                                                                                                              R$0,00            $0,00
+ 56                                                                                                                                              R$0,00            $0,00
+ 57                                                                                                                                              R$0,00            $0,00
+ 58                                                                                                                                              R$0,00            $0,00
+ 59                                                                                                                                              R$0,00            $0,00
+ 60                                                                                                                                              R$0,00            $0,00
+ 61                                                                                                                                              R$0,00            $0,00
+ 62                                                                                                                                              R$0,00            $0,00
+ 63                                                                                                                                              R$0,00            $0,00
+ 64                                                                                                                                              R$0,00            $0,00
+ 65                                                                                                                                              R$0,00            $0,00
+ 66                                                                                                                                              R$0,00            $0,00
+ 67                                                                                                                                              R$0,00            $0,00
+ 68                                                                                                                                              R$0,00            $0,00
+ 69                                                                                                                                              R$0,00            $0,00
+ 70                                                                                                                                              R$0,00            $0,00
+ 71                                                                                                                                              R$0,00            $0,00
+ 72                                                                                                                                              R$0,00            $0,00
+ 73                                                                                                                                              R$0,00            $0,00
+ 74                                                                                                                                              R$0,00            $0,00
+ 75                                                                                                                                              R$0,00            $0,00
+ 76                                                                                                                                              R$0,00            $0,00
+ 77                                                                                                                                              R$0,00            $0,00
+ 78                                                                                                                                              R$0,00            $0,00
+ 79                                                                                                                                              R$0,00            $0,00
+ 80                                                                                                                                              R$0,00            $0,00
+ 81                                                                                                                                              R$0,00            $0,00
+ 82                                                                                                                                              R$0,00            $0,00
+ 83                                                                                                                                              R$0,00            $0,00
+ 84                                                                                                                                              R$0,00            $0,00
+ 85                                                                                                                                              R$0,00            $0,00
+ 86                                                                                                                                              R$0,00            $0,00
+ 87                                                                                                                                              R$0,00            $0,00
+ 88                                                                                                                                              R$0,00            $0,00
+ 89                                                                                                                                              R$0,00            $0,00
+ 90                                                                                                                                              R$0,00            $0,00
+ 91                                                                                                                                              R$0,00            $0,00
+ 92                                                                                                                                              R$0,00            $0,00
+ 93                                                                                                                                              R$0,00            $0,00
+ 94                                                                                                                                              R$0,00            $0,00
+ 95                                                                                                                                              R$0,00            $0,00
+ 96                                                                                                                                              R$0,00            $0,00
+ 97                                                                                                                                              R$0,00            $0,00
+ 98                                                                                                                                              R$0,00            $0,00
+ 99                                                                                                                                              R$0,00            $0,00
+100                                                                                                                                              R$0,00            $0,00
+                                                                                                                                                              Name of the           Total Cost      Total Cost ($)
+    Team name:                                                          Black Radiators                                                                      Local Currency       Local Currency    U.S.A. Dollars
+
+                                                                                                                                                                  Euro                R$0,00              $0,00
+
+#   Name                         Software's Tool/Library   Description                                                          Source                  Autor                    Cost (Local       Cost (USA
+                                                                                                                                                        Python Software          Currency)         Dollars)
+  1 Python                       Software's Tool           Programming language of the robot controller                         python.org                                       FREE              FREE
+                                                                                                                                                        Foundation
+  2 Webots                       Software's Tool           3D robot simulator that runs the Erebus world                        cyberbotics.com         Cyberbotics Ltd.         FREE              FREE
+  3 Erebus                       Software's Tool           RoboCupJunior Rescue Simulation platform (Webots plugin & API)       erebus.rcj.cloud        RoboCupJunior Rescue     FREE              FREE
+                                                                                                                                                        Simulation Committee
+  4 OpenCV                       Library                   Computer vision: HSV masking and contour detection for victims       opencv.org              OpenCV.org               FREE              FREE
+  5 NumPy                        Library                   Array math for the occupancy grid and the hazmat scanline            numpy.org               NumPy Developers         FREE              FREE
+  6 Ultralytics YOLO             Library                   Neural-network detector for the letter victims (H/S/U)               ultralytics.com         Ultralytics              FREE              FREE
+  7 Matplotlib                   Library                   Live occupancy-grid visualisation during development                 matplotlib.org          Matplotlib Development   FREE              FREE
+                                                                                                                                                        Team
+                                                                                                                                                        Black Radiators team
+  8 Custom YOLO victim dataset & AI
+                                 model
+                                    dataset / model        Self-built dataset and trained YOLO weights for the letter victims   Self-made                                        FREE              FREE
+  9 Visual Studio Code           Software's Tool           Code editor / IDE used to develop the controller                     code.visualstudio.com   Microsoft                FREE              FREE
+ 10 Git & GitHub                 Software's Tool           Version control and code hosting                                     git-scm.com             Software Freedom         FREE              FREE
+                                                                                                                                                        Conservancy / GitHub
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100

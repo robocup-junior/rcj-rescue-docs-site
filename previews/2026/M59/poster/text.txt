@@ -1,0 +1,123 @@
+RESCUE RATS - SLOVAKIA
+                       RoboCupJunior - Rescue Maze 2026
+Movement System                                                     Victim Recognition
+Motors and Motor Bus                                               Letter Victim Recognition                                                  Cognitive Targets Recognition
+                                                                   Using two separates cameras on each side and OpenCV on                     For cognitive targets, the robot samples the average color
+JGY-370 Motors: The robot is driven                                the Raspberry Pi 5, the vision pipeline adjusts image                      values of 5 concentric rings around the largest detected
+by four 12V JGY-370 DC motors                                      contrast and saturation before thresholding. It utilizes                   shape contour. Each ring is scored based on its BGR signature.
+equipped with built-in quadrature                                  OpenCV’s matchShapes() function to compare runtime contours                If all 5 rings match the target criteria, their values are
+encoders for distance counting.                                    against pre-made 64x64 .npy reference arrays of Greek letters              compiled into a validated victim score.
+                                                                                                         (Ω- Omega, Φ- Phi, and Ψ- Psi).
+Motor Bus: To handle the high-current                                                                                                         Reliability Filter:
+demands of the power subsystem without                                                                                                        To eliminate false positives
+interfering with sensitive logic, the motors are wired into                                                                                   from single-frame noise,
+a power bus supplied by a 14.7V LiPo battery. The ESP32                                                                                       the camera processes 5
+regulates this power via MDD10A Cytron motor drivers, running                                                                                 sequential frames per wall.
+them at a lower PWM (60-80/255) to prevent overheating.                                                                                       The final victim classification
+                                                                                                                                              is decided by majority vote
+Wheel Design and Turning                                                                                                                      across those 5 readings.
+
+Movement relies on specialized wheels featuring integrated
+outer rollers. Because these rollers rotate perpendicular to the
+direction of travel, they reduce the friction and force required
+to spin in place. Backed by real-time gyroscope tracking, this
+setup allows the robot to execute 90°and 180° grid turns while
+maintaining a straight line during forward travel.
+
+                      Prior Solution: Our initial build utilized
+                      standard Arduino Kit Wheels. These
+                      suffered from turning resistance, causing
+                      wheel slippage, odometry drift, and                                                                                             Maze Mapping
+                      frequent wall collisions during sharp grid
+                      maneuvers.                                                                                                                      The mapping engine treats the maze as
+                                                                                                                                                      an expanding coordinate dictionary. Each
+                                                                                                                                                      coordinate entry tracks cardinal wall states, tile
+                                                                                                                                                      color, and victim registration to prevent accidental
+                                                                                                                                                      double-drops of rescue kits.
+
+                                                                                                                                                      The Weighted Dijkstra Exploration Algorithm
+
+                                                                                                                                                      Instead of standard flood-fill, our navigation relies
+                                                                                                                                                      on a weighted version of Dijkstra’s Algorithm that
+                                                                                                                                                      dynamically recalculates paths at every exploration
+
+Obstacle Detection
+                                                                                                                                                      cycle iteration based on live map data:
+
+                                                                                                                                                      Unvisited Tiles: Cost = 1 (Highly Preferred)
+Wall Detection                                                                                                                                        Visited / Silver Tiles: Cost = 2
+                                                                                                                                                      Incline Tiles (Ramps): Cost = 3
+The robot features 8x VL53L1X                                                                                                                         Red Penalty Tiles: Cost = 10
+Time-of-Flight (ToF) laser distance                                                                                                                   Blue Penalty Tiles: Cost = 50
+sensors placed one on each corner of the sidewalls. These                                                                                             Black Tiles (Pits): Cost = (Strictly Unpassable)
+sensors allow the robot to maintain a safe distance from
+walls and calculate its alignment. Because all 8 sensors                                                                                              This cost matrix forces the robot to prioritize
+share the same default I2C address, we utilize the hardware                                                                                           efficient, unvisited routes and avoiding high-penalty
+XSHUT pins at boot, to dynamically overwrite and reassign                                                                                             terrain or dead ends.
+unique addresses.
+                                                                                                                                                                                      Output format:
+Color of Tiles Detection                                           Microcontrollers                                                                                                   {(x_value, y_value):
+                                                                                                                                                                                          {'Walls':{'direction':True/False
+                                                                                                                                                                                          ..., ..., ...}
+A TCS34725 RGB color sensor is mounted to the underside            Our architecture relies on a clean                                                                                     'tile_color':'color',
+                                                                   split between high-level computation                                                                                   'victim':None}}
+                of the front chassis. It constantly scans
+                the floor to identify special tiles (such as       and real-time hardware execution.                                                                                  Output of the top-right tile
+                                                                                                                                                                                      {(3,1):
+                black pits, penalty zones, or silver                                                                                                                                      {'Walls':{'N':True,'S':False,
+                checkpoints), triggering immediate path            Raspberry Pi 5: Acts as the main                                                                                       'W':True,'E':True},
+                recalculations.                                    master controller, running the Python                                                                                  'tile_color':'blue',
+                                                                   software stack responsible for heavy                                                                                   'victim':None}}
+                                                                   OpenCV image processing, mapping data, and Dijkstra
+                                                                   pathfinding decisions.
+Detection of Stairs and Ramps                                                                                                                           visualization of map matrix
+                                                                   ESP32 Microcontroller: Acts as the hardware control unit
+A BNO055 9-axis IMU (combining an                                  running embedded C++. It directly interfaces with the motor
+accelerometer and gyroscope) tracks the                            drivers, reads the encoder ticks, manages the I2C sensor bus
+robot's real-time incline. When a ramp or                          telemetry, and executes low-level movement adjustments.
+stair configuration is detected, the low-level
+controller automatically raises the motor
+PWM output to prevent stalling on the slopes.
+
+                                                                                                                                                      Challenges
+                                                                                                                                                     I2C Bus Reliability
+                                                                                                                                                     The initial I2C bus built with Dupont connectors caused
+                                                                                                                                                     connection dropouts between the eight VL53L1X sensors
+                                                                                                                                                     and the IMU.We replaced it with a custom screw-in
+                                                                                                                                                     terminal bus, which improved physical durability
+                                                                                                                                                     and connection stability.
+Rescue Kits Handling                                               Strategy                                                                          Electromagnetic Interference (EMI)
+                                                                                                                                                     Motor driver noise often caused sensor communication
+Dispensing Mechanism: The rescue kit                               Our navigation strategy relies on a continuous loop of sensor                     failures. We mitigated this by wrapping sensitive cables
+deployment module is entirely modeled                              polling, environmental mapping, and real-time path                                in aluminum shielding and intertwining SDA/SCL lines
+in-house and 3D printed. It features a                             recalculation. At each tile, the robot averages its sensor pairs to               to create an enclosed field, effectively cancelling out
+gravity-fed vertical storage magazine that                         classify tile attributes and record wall structures. It then passes               electromagnetic interference.
+holds the rescue kits securely during maze                         this live map data into a weighted Dijkstra algorithm, which
+navigation.                                                        naturally prioritizes exploration by assigning low costs to                       Crash-Proofing
+                                                                   unvisited tiles while heavily penalizing dangerous zones or                       To prevent data loss during crashes, we utilize Python
+Servo-Driven Actuation: When the                                   blocking black pits entirely.                                                     Context Managers. If the software fails, the system
+mapping logic confirms a valid victim,                                                                                                               automatically closes the serial port and saves the
+a 5V servo motor controlled by the                                                                                                                   active map as a .npy file. This ensures the map is
+ESP32-S3 rotates a notched distribution                            If the robot experiences a lack of progress or gets trapped,                      preserved and prevents "port busy" errors during rapid
+wheel. This mechanical sweep isolates                              the emergency recovery routine is triggered via a physical switch.                restarts.
+and drops exactly one rescue kit down                              The internal coordinates then automatically reset to the nearest
+the deployment chute onto the tile.                                safe silver checkpoint tile, allowing the system to seamlessly
+                                                                   recalculate a new path and continue the autonomous run without
+                                                                   human intervention.
+
+Meet the Team
+Karolína (Mechanical Design):                                            Martin (Software):                                       Our Journey
+                                                                         Developed the entire software stack from scratch,        We started from scratch, building our own practice field and refining our
+Managed the mechanical development, including                                                                                     design through many iterations. While we faced challenges, including
+the 3D modeling and printing of the main chassis and                     encompassing the maze-solving algorithms, sensor
+                                                                         data processing, and victim identification using         burned components and failed tests, each mistake taught us something new.
+the rescue kit deployment mechanism, ensuring all                                                                                 This process led us to win the national round, earning our place
+components were refined through multiple design                          OpenCV and Python.
+                                                                                                                                  at the world competition RoboCupJunior 2026 in Incheon, South Korea.
+iterations.
+                                                                         Nikita (Documentation):
+Anton (Electronics): Oversaw the assembly and wiring                     Managed all project records, including the creation of   Future Plans
+of all electronic systems, such as the distance sensors,                 the competition poster, which proved essential for       We are focused on rigorous testing, improving software stability
+color sensor, and IMU, leveraging past experience                        maintaining clear documentation during building and      and enhancing mechanical durability.
+to ensure reliable connectivity and testing throughout                   testing periods.                                         Our goal is to complete a full maze run, identify every victim,
+the competition.                                                                                                                  and return to the start.
