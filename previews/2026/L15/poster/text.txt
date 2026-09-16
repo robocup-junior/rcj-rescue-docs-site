@@ -1,0 +1,62 @@
+INŽINIERI
+                                                                                                          INŽINIERI
+                                                                                                                           Rescue line                                                                                                                               Slovakia
+
+Software                                                                                                             Robot Model                                                                                    About Us
+                                                                                                                        Our robot features a swing axle that helps it stay balanced on all four wheels with equal   We are a team of four students from a secondary vocational
+ We use the Arduino IDE where we write code in C++ programming language. The
+                                                                                                                        force. We also implemented a collection mechanism (gatherer) driven by a servo motor.       school of electrical engineering. We have been competing in the
+ software is divided into multiple modules based on their functionality, ensuring clear
+                                                                                                                        On the gatherer are another servos that move with hands collecting the victims.             RoboCup for 5 years, winning the Slovak Championship in our
+ structure and easy maintenance. Custom functions, variables, and comments improve
+                                                                                                                        Additional servos operate the mechanical hands that collect the victims, which the          category three times. We have also attended European
+ code efficiency and readability. A state-based control system manages the robot’s
+                                                                                                                        mechanism then transfers to the storage area located at the rear of the robot.              Championship twice. Each member of our team has a specific role.
+ behavior and enables switching between different tasks.
+                                                                                                                        3D Design
+ Testing                                                                                                                The entire model of our robot was designed in Fusion 360, and developement took us
+ All hardware components were tested under real competition conditions to verify                                        six months. The design of our robot is based on a previous version used in the latest
+                                                                                                                                                                                                                    Sebastián Janovčík
+ their reliability and compatibility with the robot. Component testing was completed                                    RoboCup competition. We optimized the model of our robot for the best possible
+                                                                                                                                                                                                                    Responsible for programming the core program logic, calibration, sensor
+ before the development of the main control logic.                                                                      results and precise part fitting.
+                                                                                                                                                                                                                    testing and problem-solving. He also developed the movement algorithms,
+                                                                                                                                                                                                                    intersection detections, and even the victim vision system.
+
+                                                                                          Strategy
+                                                                                                                                                                                                                    Andrej Gajdoš
+                                                                                           Line                                                                                                                     In charge of soldering electronic components, selecting suitable parts, and
+                                                                                                                                                                                                                    managing the design and development of PCB layouts and schematics.
+                                                                                           The robot follows the line using a line sensor at the bottom of the robot, which                                         Oversees the integration and final assembly of the robot, ensuring proper
+                                                                                           contains 7 phototransistors. Intersections are evaluated by combining data from the                                      functionality and reliability of all hardware systems. Also responsible for
+                                                                                           line sensor and the camera. The gyroscope is helpful in certain situations, such as                                      final system testing, debugging hardware issues, and preparing and
+                                                                                           navigating a ramp or avoiding obstacles.                                                                                 delivering project presentations.
+
+                                                                                           Evacuation Zone
+                                                                                           Side-mounted infrared sensors provide reliable victim detection. The robot scans the                                     Matúš Capko
+                                                                                           evacuation zone while navigating around its perimeter. Detected victims are captured                                     Lead designer of the robot’s 3D models, who also created the schematics
+                                                                                           and collected. After collecting all victims, the robot sorts and places them into the                                    and PCBs. He was responsible for soldering and finalizing all hardware
+                                                                                           correct evacuation points.                                                                                               components, as well as developing the website.
+
+                                                                                                                                                                                                                    Sebastián Surovček
+                                                                                                                                                                                                                    Responsible for developing the main program logic, calibrating the system,
+                                                                                                                                                                                                                    testing sensors, and finding solutions to technical problems, while also
+                                                                                                                                                                                                                    improving overall system performance and reliability.
+
+Electrical Design
+    Electrical Parts
+    Raspberry pi pico 2 - for controlling the whole robot
+    4x 6V 60rpm pololu motors - for robot movement
+    4x mg90s servos - for gatherer movement
+    2x MX1508 motor drivers - for motor control
+    2x GP2Y0E03 IR sensors - for victims dectection
+    BNO055 rientation sensor - for orientation and better movement
+
+                                                                                                                                                                                                                                                                                        inzinieri_sose
+    Pixy 2 camera - for green squares detection on intersections
+    Self-made line sensor - for line following
+    PCF8591 A/D converter module - for line sensor to run via I2c communication
+    bus
+    And others…
+    PCBs
+    We have decided to use PCB for eliminating wires and better design for our robot.

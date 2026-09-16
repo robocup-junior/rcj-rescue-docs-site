@@ -1,0 +1,66 @@
+M64
+     TOKAI Susano Divine eyes and feet. Precision rescue.                                                      HARDWARE SPECIFICATIONS                    VICTIM DETECTION
+                                                                                                                                                          Two OpenMV H7 Plus cameras detect victims on the left and
+                                                                                                    Dimensions: L210 x W198 x H207mm
+                                                                                                                                                          right walls.
+                                                                                                    Weight: 1,550g                                        Letter victims Φ/Ψ/Ω are recognized by an image model trained
+                                                                                                    Main Controller: Teensy 4.1 (816MHz) x2               with multiple fonts and rotations.
+                                                                                                    Motor: RB-Dfr-759 x4 (6V DC 6.5kg-cm 100RPM)          Recognition targets are detected as
+                                                                                                    Motor Driver: MDD10A x2                               circular candidates, then the upper half is
+                                                                                                    Vision System: OpenMV H7 Plus x2                      scanned vertically. LAB values are
+                                                                                                    Battery: • LF6.6V [ 2200mAh ]                         converted into color codes, the color-layer
+                                                                                                                                                          sum is calculated, and a 5-frame majority
+                                                                                                            • Anker PowerCore 5V [ 5000mAh ]
+                                                                                                                                                          vote stabilizes the result. The result is
+                                                                                                    Sensor: • ToF Distance Sensor (VL53L0X x6)            sent to the main board by UART and used
+                                                                                                             • Color Sensor (TCS34725 x1)                 for rescue kit deployment.
+                                                                                                             • IMU(BNO08x x1)
+                                                                                                    Display: OLED SSD1315 x2
+                                                                                                    Servo Motor: SG90 x2 LED: x6(for Display)
+                                                                                                    Button: Tact Switch x3 Touch Sensor: Tact Switch x2
+
+                                                                                                                                                          COLOR DETECTION
+NAVIGATION ALGORITHM
+                                                                                                                                                          C, R, G, and B values are treated
+Frontier search, Backtracking & BFS
+                                                                                                                                                          as a vector in color space, and a
+                                                                                                                                                          weighted Euclidean distance is
+                                          ★: Current position
+                                                                                                                                                          calculated. (C weight: 1/2)
+                                          ※: Unexplored tile
+                                          1–4: BFS distance
+                                           : Explored
+                                          ①: Selected path
+                                             (left priority)
+
+BACKUP SYSTEM                                                                                                                                             WALL TRACE & GYRO TRACE
+    Category                          Function                                                                                                            PD-controlled center driving
+                                                                                                                                                          The robot keeps the center of the corridor using the
+                 Red-zone exit localization
+                                                                                                                                                          distance difference between the left and right walls.
+                 SD-card map matching on restart                                                                                                          Early Detection
+  Localization
+                 Re-check uncertain wall detection                                                                                                        Angled front sensors detect
+                                                                                                                                                          the presence or absence of
+                 Re-check ramp entrance/exit walls
+                                                                                                                                                          walls early.
+                 Timeout fallback action                                                                                                                  Gyro Trace
+                 Periodic gyro correction & centering                                                                                                     When no wall is
+     Action                                                                                                                                               available, the robot
+                 Color tile re-check
+                                                                                                                                                          follows its heading using
+                 Recovery mode when no route remains                                                                                                      the gyro sensor.
+
+XY COORDINATE TRACKING                                              MISSION COMPLETE ARCHITECTURE                                                         RESCUE KIT MECHANISM
+                                                                                                                                                          ① Servo-controlled arms securely hold the rescue kits.
+                                                                                                                                                          ② The arms rotate inward and move to the loading
+                                                                                                                                                           position.
+                                                                                                                                                          ③ As the arms return, one kit is pushed out and
+                                                                                                                                                            dropped. Steps ①–③ are repeated.
+
+Exploration area: “+” active search    “-” unexplored or explored
+Return when both become “-”
+Other: bump, ramp, stairs                                                                                                                                           ➀              ➁              ➂
+Susano(素戔嗚): A hero of Japanese mythology who defeated Yamata-no-Orochi and saved a princess. We inherit that spirit and challenge rescue in the maze.
+Yatagarasu (八咫烏): The three-legged crow said to have guided Emperor Jimmu to victory. It symbolizes guidance toward the correct path and our pledge for reliable, rapid rescue.
+Kusanagi-no-tsurugi(草薙の剣): A legendary sword found in the tail of Yamata-no-Orochi. Like this sword, our technology cuts through difficulty and opens a path through the maze.

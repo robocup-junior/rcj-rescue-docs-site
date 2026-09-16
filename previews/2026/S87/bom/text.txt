@@ -1,0 +1,26 @@
+Team name:                                      OGEE
+
+# Name               Software's Tool/Library   Description
+
+1 Git                Software's Tool           Version control for managing functions
+
+2 Open CV            Library                   Image processing library
+6 Matplotlib         Library                   Python graphics generation library
+4 Visual Studio Code Software's Tool           Software
+
+5 Numpy              Library                   Array and math library
+                                                     Local Currency     Local Currency U.S.A. Dollars
+
+                                                       Turkish Lira         R$0,00         $0,00
+
+                                                                        Cost (Local    Cost (USA
+Source                                              Autor               Currency)      Dollars)
+
+                                                     Software Freedom
+Git - Descargas                                           Conservancy FREE             FREE
+
+OpenCV - Biblioteca abierta de Computer Vision              Opencv.org FREE            FREE
+Matplotlib — Visualización con Python               Matplot lib dev team FREE          FREE
+Visual Studio Code: edición de código. Redefinido               Microsoft FREE         FREE
+
+NumPy                                                Numpy developers FREE             FREE

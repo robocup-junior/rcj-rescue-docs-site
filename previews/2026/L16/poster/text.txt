@@ -1,0 +1,23 @@
+Kavosh_Line
+RoboCupJunior Rescue Line 2026 | Canada |
+Kavosh Al & Robotics Academy
+
+            16 YEARS OF ROBOCUP History
+
+                                                                                                                 Victims Rescuing Systems: Arm System
+
+                                                                                          TCRT5000                                                                 Victims Rescuing Systems: Victim Tank
+
+                                                                                                     BNO055
+
+                                                                        AX-12A
+                                                                                                              APDS9960
+
+    JAY JAY CZJ ZHOU          Carson Gao             ETHAN-CHAN
+       Electronics                                                                                                                  VL53L1X
+                          Mechanical Design            Software                  XL-320
+    Mechanical Support   Electronics Integration   Sensor Integration
+                                                                                                 XC-430                                                 GP2Y0D810Z0F
+                                                                                                                                                                               Teensy 4.1
+
+      KAV                SH

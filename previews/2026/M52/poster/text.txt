@@ -1,0 +1,68 @@
+ROBOCUP JUNIOR RESCUE MAZE
+
+                                   OPTIMAZE
+TEAM MEMBERS: JASMINE LVOV, MATAN KARAIM, NOAM KALMAR
+MENTOR: MAXIM LVOV
+COUNTRY: ISRAEL
+                             Jasmine Lvov                                      Matan Karaim                                            Noam Kalmar
+                    Head of design, hardware, and electronics                     Head of software                               Head of victim recognition software
+
+                                                                                                                              National Soccer lightweight Entry Vice
+                   National OnStage Champion(2023-2025)                National OnStage Champion(2023-2025)
+                                                                                                                                         Champion (2022)
+                   Europian Vice OnStage Champion(2023)                Europian Vice OnStage Champion(2023)
+                                                                                                                                National Soccer lightweight Entry
+                     Europian OnStage Champion(2025)                     Europian OnStage Champion(2025)
+                                                                                                                                         Champion (2023)
+                   National Rescue Maze Champion (2026)                National Rescue Maze Champion (2026)
+                                                                                                                              National OnStage Champion (2024-2025)
+                                                                                                                                Europian OnStage Champion(2025)
+                                                                                                                              National Rescue Maze Champion (2026)
+
+       Victim recognition                                                                                                                  Arduino and Raspberry Pi
+                                                                                                                                               Communication
+ All of the code related to the cameras, letter,
+  and cognitive victim recognition doesn’t run                                                                                          The robot's main processor is the Arduino
+     on the Arduino but on the Raspberry Pi.                                                                                           Mega 2560, which uses C++ and is in charge
+  The raspberry searches both cameras for a                                                                                            of receiving and analyzing information from
+             potential letter or target.                                                                                                   the sensors, controlling the motors,
+Once he has a potential, to be sure, he begins                                                                                            navigating the maze, and dropping the
+ a scan in which he checks several times what                                                                                                          rescue kits.
+ the victims type. To recognize a letter victim,                                                                                      The secondary processor is the Raspberry Pi,
+it searches for pixel sequences and compares                                                                                          that rans Python; it's in charge of processing
+ them to a previously seen example of each of                                                                                            the images received from the cameras.
+ the three victim letters to check for a match.                                                                                          When it recognizes a victim, it sends the
+ To find a cognitive target, it finds a circle and                                                                                    Arduino a message via serial communication,
+samples pixels from each layer to check for its                                                                                             and the robot reacts accordingly.
+  color. In the end, when the Raspberry is sure
+  of the victim’s type, it sends the Arduino the
+ appropriate serial message so he could react
+                   accordingly.
+
+                                                                                                                       Hardware
+                Navigation and Mapping                                              The robot is fully designed in Fusion360 and brought to life using laser cutting anfd 3d
+                                                                                                                           printing.
+                                                                                   The robot uses a combination of an Arduino and a Raspberry Pi 4 since the Arduino isn’t
+  The robot navigates the maze by using real-time sensor feedback
+                                                                                              strong enough to process the image received from the camera.
+  with dynamic mapping and a Breadth First Search (BFS) algorithm.
+    The robot has four Time-of-Flight (ToF) distance sensors and a                For navigating in the maze, the robot uses a combination of VL53L0X Tof, TCS34725 color
+   BNO055 gyroscope, which allows it to know how much distance                   sensors, and Bno055 imu to detect the walls, the different colored tiles, and stay aligned in
+         he passed, straighten in the corridors, and make turns.                                                  the middle of the corridor.
+    At each new tile, the distance sensors scan for walls, constantly            For driving, the robot uses 4 25ga-370 (with the L298N motor driver) and 4 Omni wheels. In
+                    updating the robot’s internal map.                            the past, we tried making our own wheels, but since they were 3d printed and we didn’t
+    If the robot detects an open, unvisited adjacent tile, it chooses                      manage to make them have enough grip, we switched to Omni wheels.
+                  the direct path and moves towards it.                           To indicate the current state of the robot and if victims are found, we have an LCD screen
+    However, when the robot encounters a dead end or finds itself                and 2 LED strips, one for the victim type and one for the current status, with 4 LEDs to mark
+   surrounded only by walls and already visited tiles, it initiates the                                               where the walls are.
+      BFS algorithm to determine its next move based on the map
+                             generated so far.                                 The robot is powered by a portable charger for the Raspberry Pi and a 12V lithium battery for
+                                                                                 the rest of the robot. They are placed between the levels so that they don’t throw off the
+       The algorithm calculates the shortest way from the robot's
+                                                                                                                      center of mass.
+   current position to all accessible cells, effectively identifying the
+       closest unvisited tile in the entire maze. Once this target is           The kit deployment mechanism uses a stepper motor with a kick leg, and the kits sit in an L-
+   selected, the algorithm computes the fastest route to get there,             shaped tube to avoid accidentally losing kits while driving or having too many kits fall when
+       allowing the robot to efficiently backtrack and continue its                                                  treating a victim.
+                    exploration without getting stuck.                            To avoid accidentally getting stuck in the gaps between the walls the robot has a rounded
+                                                                                                                        front extantion.

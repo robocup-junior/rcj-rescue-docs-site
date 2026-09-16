@@ -1,0 +1,45 @@
+CEBELÜ
+                                                                                                                                                                                                                                             The Cebelu soldiers were cavalry troops
+                                                                                                                                                                                                                                             in the Ottoman Empire. They served
+                                                                                                                                                                                                                                             under the timar system and joined the
+                                                                                                                                                                                                                                             army during wars. Cebelu soldiers were
+                                                                                                                                                                                                                                             equipped with horses and weapons
+                                                                                                                                                                                                                                             provided by their timar holders. They
+
+                                                                                                           RoboCupJunior Rescue Maze
+                                                                                                                                                                                                                                             played an important role in the Ottoman
+                                                                                                                                                                                                                                             military for many years.
+
+                                                                                                           We are a rookie team, we dont have any awards
+
+Hardware                                                                                                                                                                                            Software
+ToF Sensors (8x) (Purple): Four side-mounted, two front-facing, and two
+diagonal ToF sensors are used for wall following, maze navigation, robot
+alignment, ramp detection, and obstacle detection. The diagonal sensors were
+positioned using trigonometric calculations to improve obstacle recognition and
+validate ramp identification.
+
+IMU: Provides orientation and motion data, enabling more reliable alignment,
+precise turns, and stable movement on ramps.
+
+Victim Cameras (Left & Right) (Black): Used to detect victims on both sides of
+the maze and determine the correct side for rescue kit delivery.
+
+Color Sensor: Used to detect floor colors such as black tiles and other field
+markings.
+
+Encoders: Measure wheel rotation for accurate distance tracking and movement
+control.
+
+DC Gear Motors: Provide the driving force for the robot. Their speed and
+direction are controlled precisely to ensure smooth navigation, accurate turns, and
+reliable movement through the maze.
+
+                           Muhammed Hakan Özkan: Team                                 Ömer Kaan Özden: 3D Designer and         Fevzi Gümüştekin: Electronics       Mustafa       Altan      Dağ:       Software   Fatih Kürşat Cansu: Team Mentor
+                           Captain                                                    Mechanical Engineer                      Engineer                            Developer                                      Provides guidance to the team. The adult
+                           Leads the team. Responsible for project                    Responsible for designing and printing   Designs and builds electronic       Develops and programs robots algorithm         individual responsible for ordering and
+                           planning, coordinating members and                         mechanical parts and mechanisms of       systems of the robot. Integrating   and code. Integrating hardware into            tracking materials, required documents
+                           ensuring smooth communication. Also                        robot. Takes part in manufacturing the   software into system with           system with Electronics Engineer. He           for regulation (deed of consent etc.),
+                           takes part in manufacturing and                            robot. Also has unique singing and       Software Developer. He loves        loves talking with people, we are sure he      travel planning, and coordination of
+                           programming process. He loves to plan                      dancing skills we want him to perform.   jumper wires                        is going to socialize in the field.            students while abroad.
+                           things.

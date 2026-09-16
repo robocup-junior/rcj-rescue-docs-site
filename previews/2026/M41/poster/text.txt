@@ -1,0 +1,98 @@
+CAP.MARCO MORETTI                               LORIS BERRA                                        SANDRA D’ARRIGO                      FEDERICO BARBAN
+                                                      SOFTWARE ENGINEER                               ELETTRONIC                                        ARDUINO ENGINEER                        DESIGNER 3D
+
+                                                                                                                            TEAM
+                                          Our team brings together students from electronics and computer science, each contributing specialized skills that strengthen the project. Loris Berra, an
+                                          electronics student with three years of RoboCup experience across multiple categories, has worked on industrial projects at STMicroelectronics and
+                                          Pomini, and developed sensor‑based safety systems using ultrasound and YOLO‑based AI. He handled the electronic integration and PCB
+                                          development. Marco Moretti, computer science student and Lead Software Engineer, specializes in Python, AI, mapping, pathfinding, and computer
+                                          vision. He competed in the 2025 Italian Rescue Maze Championship, the 2025 OnStage Advanced World Cup - earning recognition for best technical
+                                          documentation - and the 2026 Italian Rescue Maze Championship, finishing 5th. Sandra D’Arrigo, computer science student and Arduino specialist,
+                                          competed in the 2025 and 2026 Italian Rescue Maze Championships and contributed to the visual design and presentation materials for the 2025
+                                          World Cup. Federico Barban, computer science student and mechanical/3D modeling specialist, has been active in 3D design since age 12 and created
+                                          all robot components from scratch. This is his first robotics competition. The strength of our team lies in the diversity of our skills - electronics, software,
+                                          mechanics, and design. Each member brings a different perspective, and this variety allows us to solve problems more effectively, learn from one
+                                          another, and continuously improve. Collaboration is essential: by combining our individual strengths, we transform complex challenges into achievable
+                                          goals and build a more complete, innovative robot.
+
+                     COMPONENTS                                                                       HARDWARE                                                                                                     INNOVATIONS
+                                                                                                                        6
+
+ 1. 1× Raspberry Pi 5 (8GB): Handles high-level processing                                                     13                                   3     3
+ 2. 4× Motors: JGY‑370 DC 12V 100 RPM: Precise movement with
+                                                                                                                                    7
+    encoders
+                                                                                   12
+ 3. 2× OpenMV Cam H7 Plus: For target & possible letter                                          7                                                                 7
+    recognition                                                                                        1
+                                                                                             1                                                                                       The robot uses 8 cm wheels equipped with a toothed TPU tread that ensures
+ 4. 1× Raspberry Pi Active Cooler: Cool down Raspy
+                                                                                                                                                                                     excellent traction on ramps, obstacles, and uneven terrain. The tires are made
+ 5. 1× 9G Micro Servo Motor: Handles kits deployment                                                                                                                   2             entirely of TPU, a flexible and durable material chosen for its superior grip and
+ 6. 1× TCS34725FN RGB Color Sensor: Tile type recognition             2                                                         4
+                                                                                                                                                                                     ability to maintain consistent contact with the ground. This combination improves
+                                                                                                 14
+ 7. 6× VL6180X ToF Sensors: Mesure distance from walls                                                                                                                               stability during movement, enhances obstacle‑handling performance, and
+ 8. 1× BNO055 Gyroscope: For precise rotations & straight                                                                                                                            contributes to smoother, more reliable locomotion across irregular surfaces.
+    movements                                                                                                               8
+                                                                   18
+ 9. 1× Arduino Mega Dollatek PRO ATmega USB CH340G:                                                                                                        9
+                                                                                                           7
+    Manages low-level hardware operations
+10. 1× TB6612FNG Motor Driver Board: Handle motors              15
+                                                                                                                                        10                             2
+                                                                                                 7                                                                 7
+11. 1× PCB: Connect components while reducing cables                                    17
+
+12. 1× XHC‑N 84 Power Bank: Charge the Raspy                              2
+13. 1× MOD‑HW‑201 Infrared Sensor: Identify checkpoints
+                                                                                                                                                              11                     Each motor is mounted on a dedicated suspension system that absorbs terrain
+14. 1× HALJIA Red Push Button: Trigger a LoP
+                                                                                                                                                                                     irregularities, reduces vibrations, and maintains consistent wheel‑to‑ground
+15. 2× LED Strips: Illuminates the walls for better recognition                                                                     7
+                                                                                                                                                                                     contact. The system helps the robot keep traction even when crossing uneven
+16. 1x LED Strip: Report victims to the referee                               16
+                                                                                                                                                                                     surfaces or small obstacles. The lubricated rods further minimize friction and
+17. 1× Mini Toggle Switch: Cut the power
+                                                                                                                    5                                                                mechanical oscillations, improving smoothness during acceleration and rotation.
+18. 1× Sport Power 1600 mAh 11.1 V 120C Battery: Powers the
+                                                                                                                                                                                     This setup increases overall stability, protects the mechanical components from
+    motors & the LED strips
+                                                                                                                                                                                     stress, and ensures more reliable movement in variable terrain conditions.
+
+                                                                                                           SOFTWARE
+                       HARDWARE MANAGING (ARDUINO)                                                                                                                     TARGET RECOGNITION (PYTHON)
+
+                     COMMAND W
+
+                                                                                                                                                   Leveraging a concurrent, multi-threaded software framework, Python and MicroPython form the core
+     In our architecture, the Arduino Mega manages low-level hardware operations in real time, controlling the                                     cognitive backbone of our robot's high-level intelligence, seamlessly orchestrating real-time maze mapping,
+     motors and polling sensors to guarantee immediate responsiveness. The only exceptions are the color and                                       dynamic pathfinding, and advanced computer vision.
+     infrared reflection sensors, which are routed directly to the Raspberry Pi 5 to feed its high-level processing                                To achieve real-time execution, our vision pipeline was consist of a distributed, two-tiered framework.
+     and strategic logic.                                                                                                                          Visual target localization is offloaded to an OpenMV H7 Plus edge camera running MicroPython. It isolates
+     To ensure precise maneuverability, a full PID controller executes stable rotations by comparing target                                        regions of interest using wide-spectrum color blobbing followed by a localized Hough Circle Transform.
+     angles with real-time feedback, while a wall-alignment routine dynamically calculates the robot's heading error                               The detected circle is split into five concentric rings analyzed via a LAB color space area-voting
+     by applying the atan2 function to the differential readings of two parallel side-facing ToF sensors. finally a                                mechanism. By algebraically summing the numerical weights of the dominant colors, the system
+     dedicated speed-ramping module smoothly governs acceleration and braking to prevent wheel slippage and                                        automatically identifies victim types and filters out fake targets. If a non-circular shape or character is found,
+     minimize mechanical stress.                                                                                                                   the cropped frame is streamed to the Raspberry Pi 5 for letter classification.
+     This integrated Master-Slave paradigm effectively balances deterministic hardware control with high
+     computational power , ensuring highly reliable autonomous navigation even under complex arena conditions.                                                                             KNN (PYTHON)
+                                       MAPPING (PYTHON)
+
+                                                                                                                                                   Once a visual region of interest (ROI) is isolated by the OpenMV camera, the cropped frame is instantly
+                                                                                                                                                   streamed to the Raspberry Pi 5 via a dedicated communication interface. A specialized Python-based K-
+     The robot builds a map of the environment as it moves, updating it in real time using sensor and camera data.
+                                                                                                                                                   Nearest Neighbors (KNN) pipeline then executes high-speed, rotation-invariant classification on the
+     The area is divided into a grid of cells, where each cell stores information such as explored zones, tile types,
+                                                                                                                                                   detected blob. By offloading the initial shape detection to the edge co-processor, the Raspberry Pi's CPU
+     and walls. Python handles logging this data and updating the map with every forward step, marking features
+                                                                                                                                                   overhead is minimized, dedicating its multi-threaded architecture strictly to classification and pathfinding. This
+     encountered along the way. This enables the robot to avoid previously visited areas, choose more efficient
+                                                                                                                                                   distributed approach ensures deterministic real-time processing, allowing the master system to instantly
+     routes using Dijkstra algorithm, and plan the optimal path to the goal. Ultimately, this mapping system is an
+                                                                                                                                                   update the maze navigation matrix or execute corresponding victim-handling routines without continuosly
+     essential tool for autonomous navigation, allowing the robot to orient itself and make real-time decisions
+                                                                                                                                                   halting the robot's exploration.
+     based on exploration data.
+
+        Modello 3D                                                                                                                           PCB                                                                                                           Github

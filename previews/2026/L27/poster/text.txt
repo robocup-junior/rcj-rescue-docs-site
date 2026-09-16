@@ -1,0 +1,91 @@
+BRASIL
+
+                        HARDWARE
+                        HARDWARE                                                                      TEAM
+                                                                                                    HARDWARE                                                         SOFTWARE
+                                                                                                                                                                     HARDWARE
+ The Ligeirinho was built entirely from scratch for RoboCup                                                                                       Our software operates based on a deterministic Finite
+ 2026, featuring an innovative double-front architecture.                                           EDGAR ALVES ARRIGONI                          State Machine (FSM).
+ Instead of adapting commercial kits, the chassis is entirely                                       Hardware      Engineering      and            For line tracking, we developed a high-speed PID
+ 3D printed. We designed the structural core to lower the                                           Manufacturing     (3D     modeling,           control loop based on a virtual pixel array extracted
+ center of gravity and integrated hand-curing silicone tires                                        mechanical      structure      and            from the bottom camera, allowing for precise 90-
+ on repurposed vacuum cleaner wheels, ensuring zero                                                 manufacturing of customized tires).           degree turns without traditional infrared sensors.
+ slippage on 25-degree ramps. To overcome ambient light
+ restrictions during line following, we developed a fully                                                                                         For the Rescue Area, we run a lightweight Convolutional
+ enclosed, light-sealed dome for the lower camera.                                                                                                Neural Network (CNN). This Artificial Intelligence model
+                                                                                                    GABRIEL DOMINICINI DA FONSECA                 runs locally at a stable 3 FPS, instantly detecting and
+                                                                                                    Software Engineering and Control              classifying victims (alive/dead) based on color to trigger
+                                                                                                    (Computer vision algorithms, PID              our automated triage mechanism. For the triangles we
+                                                                                                    tuning and AI model training).                use only OpenCV and algorithms, not AI.
+         CONTROLLERS
+        CONTROLADORES
+
+                        MAIN BOARD                                                                  BERNARDO SCHMIEDEL RAYMUNDO
+                                                                                                    Full-Stack Mechatronics Leader
+                                                                                                    (Custom electronics/PCB fabrication,                   ALGORITHM
+                                                                                                                                                         CONTROLADORES
+                                                                                                    hardware-software integration, and
+                                                                                                    troubleshooting).
+
+                                                                                                                                                                 RESCUE AREA
+                                                                                                    JULIO CESAR GOLDNER VENDRAMINI
+                                                                                                    Team Mentor.
+
+       Powered by a Banana Pi M4 Zero, this
+       central unit handles all power and
+       processing requirements. It is responsible
+       for processing images from the dual-
+       camera system, running the PID control
+       loop, and executing AI models in real time.
+
+                                                                                                                                                                  MAIN LOOP
+           SENSORS
+        CONTROLADORES
+     REED SWITCHES                      DISTANCE SENSOR
+
+            Quant.: 2                                 Quant.: 6
+
+ Magnetic sensors in the              In the front, on the
+
+                                                                                     LIGEIRINHO
+ bumper for collision                 sides, and three in
+ detection.                           the robot's bucket.                               HARDWARE
+
+                                                                                    OUR HISTORY
+                                                                                   CONTROLADORES                                                      HARDWARE  INNOVATIONS
+                                                                                                                                                      SOLUÇÕES DE HARDWARE
+     GYROSCOPE                                       CAMERA                   We are the oldest Team of Brasil on active and
+                                                                              over time we have achieved:                                                          LIGHT                       SILICONE
+                                                                                 2022 – 1st place in the State Championship                                        DOME                        TIRES
+                                                                                 (ES) and participation in the National
+                                                                                 Championship.
+                        Quant.: 1                                 Quant.: 2      2023 – 1st place in the State Championship
+In the middle of the                  Bottom camera for line                     (ES) and 1st place in the National                               A custom-printed 3D-             Hand-cured silicone tires
+robot,    it      has     a           PID (inside the sealing                    Championship (BR).                                               printed fairing for the          mounted on vacuum
+microcontroller          to           dome); Front camera for                    2024 – 5th place in the World Championship                       lower     camera      that       cleaner   wheels      for
+process the x, y, and z tilt          AI-powered victim and                      (RoboCup).                                                       completely blocks out            maximum traction.
+planes.                               OpenCV-powered                             2025 – 1st place in the State Championship                       external light, correcting
+                                      detections.                                (ES), 2nd place in the National Championship                     reflection problems.
+                                                                                 (BR) and 1st place in the National Superteams
+                                                                                 Championship (BR).
+                                                                                                                                                      LIGHT DIFFUSER                   MOUNTING SIDE
+        ACTUATORS
+      CONTROLADORES
+              MG90S                                  Traction                     1st PLACE OBR           1st PLACE OBR        1st PLACE OBR
+              MICRO                                                               STATE (ES) 2022         STATE (ES) 2023    NATIONAL (BR) 2023
+              SERVO                                  Motors                                                                                                                        Features a modular side
+    Quant.: 4                                                                                                                                     The Light Dome features
+              MOTOR                                                                                                                               a built-in diffuser for the      bracket to quickly attach
+They control the victim-                 Quant.: 4                                                                                                internal LEDs, ensuring          a screen and keyboard,
+grabbing claw and the               They provide high torque                                                                                      perfectly          uniform       allowing for on-the-fly
+automated internal ramp             for climbing ramps and                                                                                        illumination           and       debugging and code
+of the split bucket.                overcoming obstacles.                                                  1st PLACE OBR     2nd PLACE OBR and    eliminating glare for the        adjustments.
+                                                                                     5th PLACE
+Have a modified extra                                                             ROBOCUP RESCUE
+                                                                                  LINE WORLD 2024
+                                                                                                           STATE (ES) 2025        1st PLACE
+                                                                                                                               SUPERTEAMS
+                                                                                                                                                  bottom            camera's
+plate for reading.                                                                                                           NATIONAL (BR) 2025   computer vision.
+
+                                                                                                                                                                        LIGEIRINHO

@@ -1,0 +1,23 @@
+Component Name/ Description               Supplier/Source    Status   Kit or Custom-build   Quantity    Unit Price (local currency)   Unit Price USD   Total price (Local currency)   Total price USD
+Freenove ESP32 CAM Dev Board Kit, Microcontroller      amazon.se       New             Kit               1                 259.00 kr               $27.44                 259.00 kr                 $27.44
+               ESP32 Microcontroller                   amazon.se       New             Kit               1                 56.75 kr                 $6.01                  56.75 kr                  $6.01
+         TB6612FNG Dual DC motor Driver               amazon.se        New             Kit               1                 45.85 kr                 $4.86                  45.85 kr                  $4.86
+               Breadboads 400 point                   amazon.se        New             Kit               2                 33.75 kr                 $3.58                  67.50 kr                  $7.15
+               Heat Shrinking Tubes                   amazon.se        New             Kit            1(Pack)              88.88 kr                 $9.42                  88.88 kr                  $9.42
+           TCS-34725 RGB-Color sensor                 amazon.se        New             Kit               2                 53.61 kr                 $5.68                 107.22 kr                 $11.36
+            Jumper wires (F-F, F-M, M-M)              amazon.se        New             Kit            2 (Pakcs)            89.99 kr                 $9.53                 179.98 kr                  $9.42
+             MG90 metal geared Servos                  amazon.se       New             Kit               2                 56.66 kr                 $6.00                 113.32 kr                 $12.00
+                 Small 4-pin Button                    amazon.se       New             Kit               2                  0.78 kr                 $0.08                  1.56 kr                   $0.17
+               9g Micro Servo Motor                    amazon.se       New             Kit               1                 24.83 kr                 $2.63                  24.83 kr                  $2.63
+        ToF Lidar distancesensor 30-1000mm           electrokit.com    New             Kit               1                 269.00 kr               $28.50                 269.00 kr                 $28.50
+ N20 12VDC Encoded motor 1:150(gear ratio) 200rpm    electrokit.com    New             Kit               2                 141.55 kr               $14.99                 283.10 kr                 $29.99
+             65mm rubber robot wheels                electrokit.com    New             Kit               2                 39.50 kr                 $4.18                  79.00 kr                  $8.37
+          SparkFun Buck Regulator 5V 3.5A            electrokit.com    New             Kit               1                 149.00 kr               $15.78                 149.00 kr                 $15.78
+         6-Axis IMU accelerometer and gyro           electrokit.com    New             Kit               1                 79.00 kr                 $8.37                  79.00 kr                  $8.37
+                16mm Caster wheel                    electrokit.com    New             Kit               1                 16.00 kr                 $1.69                  16.00 kr                  $1.69
+              PLA 3D printing filament               clasohlson.com    New             Kit             0.5 kg              149.50 kr               $15.84                 149.50 kr                 $15.84
+          7.4V, 2000mAh, 5C LiPo Battery            eu.robotshop.com   New             Kit               1                 158.69 kr               $16.81                 158.69 kr                 $16.81
+              5 infrared sensore array              eu.robotshop.com   New             Kit               1                 60.70 kr                 $6.43                  60.70 kr                  $6.43
+            M5Stack Catch Unit (SG92R)              eu.robotshop.com   New             Kit               1                 69.76 kr                 $7.39                  69.76 kr                  $7.39
+                                                                                       Kit
+                     Total price:                                                                                                                                        2,258.64 kr               $229.61

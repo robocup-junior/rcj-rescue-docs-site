@@ -1,0 +1,27 @@
+LFI RESCUE UNIT
+   RoboCupJunior 2026 Incheon, Korea - Rescue Maze
+   Our Team progress
+
+    September 2025                  March 2026              April 2026          April 2026      Present
+Francisca and Linda joined ROBO-VEHICLE PILSEN 2026        LF Rescue Unit    First place in the RoboCup
+ the Robotics Club of the   Line following competition       is joined by   RoboCup Portugal     2026
+ German School of Lisbon    3rd in “Best Presentation in         Ivan           Open 2026.      Incheon
+                               English”, 10th overall
+
+  Hardware & software solutions
+    Combination of LEGO EV3 and Raspberry Pi
+      EV3 Brick: runs MicroPython and is responsible for
+      navigation through motor control and sensor
+      processing
+      Raspberry Pi: runs Python + OpenCV for camera-
+      based victim detection and servo control.
+
+    Custom 3D-printer rescue kit deployer:
+      Gravity-assisted feeding
+      Rotary base housing with a servo-controlled release
+      mechanism which alligns the opening to dispense a
+      predefined number of kits
+
+System architecture overview - EV3 & Raspberry Pi
+
+                           Francisca, Ivan & Linda - Deutsche Schule Lissabon

@@ -1,0 +1,161 @@
+HARDWARE
+
+                                                                                                                                                                                                                  Name of the           Total Cost            Total Cost ($)
+       Team name:                                                                   RescueBot IITA                                                                                                               Local Currency       Local Currency          U.S.A. Dollars
+                                                                                                                                                                                                                 Argentine Peso
+                                                                                                                                                                                                                                       1,031,132.16             $543.29
+                                                                                                                                                                                                                      ARS
+Excha
+nge
+rate                                                                                                                                                                                        Unit cost (Local     Unit cost (US      Total Cost (Local       Total Cost (USA                      Kit / Custom-
+   #
+used:               Component                                      Part name                                             Autor                              Source           Quantity                                                                                                  Status
+                                                                                                                                                                                              Currency)            Dollars)            Currency)                Dollars)                              built
+1 USD
+= ARS1 Main PCB fabrication batch     Team-designed 2-layer PCB, 169.91 mm x 122.91 mm, batch of 5       RescueBot IITA (team) / JLCPCB     JLCPCB Gerber quotation                     1            22,889.88             $12.06              22,889.88                  $12.06 New            Custom-built
+1,898.
+                                      boards
+Prices
+review
+       2 Chassis & rescue mechanism   3D-printed PLA chassis, claw, mounts, storage and deposit guides   RescueBot IITA (team)              Self-made / local PLA estimate              1            35,000.00              18.44              35,000.00                  $18.44 New            Custom-built
+ed on
+         (custom)
+2026-
+06-08.
+Hardw
+       3 Main computer                Raspberry Pi 4 Model B 8GB                                         Raspberry Pi Ltd                   MercadoLibre                                1           329,005.40             173.34             329,005.40                $173.34 New             Commercial part
+are
+status
+and 4 Microcontroller                 Teensy 4.1                                                         PJRC / SparkFun                    SparkFun                                    1            59,787.00              31.50              59,787.00                  $31.50 New            Commercial part
+kit/cus
+tom-
+built 5 Camera                        USB wide-angle camera 140 deg (HBV-1716WA / ASIN B0DR7XXJL1)       Yosoo / HBVCAM                     Tiendamia / Amazon mirror                   1            47,670.00              25.12              47,670.00                  $25.12 New            Commercial part
+fields
+are
+includ6 IMU                           BNO055 9-DOF Absolute Orientation IMU Breakout                     Bosch / Adafruit                   Adafruit                                    1            66,335.10              34.95              66,335.10                  $34.95 New            Commercial part
+ed in
+colum
+ns L- 7 ToF distance sensor           VL53L0X module                                                     Generic                            MercadoLibre                                2            10,989.00               5.79              21,978.00                  $11.58 New            Commercial part
+M.
+
+    8 Ultrasonic sensor               HC-SR04                                                            Generic                            MercadoLibre                                3             2,940.00               1.55                8,820.00                  $4.65 New            Commercial part
+
+    9 Color/proximity sensor          APDS-9960 / GY-9960 RGB, gesture and proximity module              Broadcom / Avago / module vendor   MercadoLibre                                1             8,090.00               4.26                8,090.00                  $4.26 New            Commercial part
+
+   10 Drive motor + encoder           DFRobot FIT0441 12V 159RPM brushless motor with encoder            DFRobot                            DFRobot                                     4            37,770.20              19.90             151,080.80                  $79.60 New            Commercial part
+
+   11 Servo                           DFRobot SER0056 2kg 300 deg clutch servo                           DFRobot                            DFRobot                                     5            11,388.00               6.00              56,940.00                  $30.00 New            Commercial part
+
+   12 Omniwheel                       58mm aluminum omniwheel, 12kg load rating                          Generic / Fulai-style              eBay equivalent                             2            35,834.24              18.88              71,668.48                  $37.76 New            Commercial part
+
+   13 Fixed wheel                     Pololu 1420 60x8mm wheel - unit cost split from pair price         Pololu                             Pololu                                      2             6,405.75               3.38              12,811.50                   $6.75 New            Commercial part
+
+   14 Battery                         CNHL LiPo 11.1V 3S 2200mAh 30/60C with XT60                        CNHL                               MercadoLibre                                1            66,119.00              34.84              66,119.00                  $34.84 New            Commercial part
+
+   15 Buck regulator (compute rail)   XL4016 8A adjustable step-down, set to 5.0V                        Generic (XL4016 module)            MercadoLibre equivalent                     1             8,249.00               4.35                8,249.00                  $4.35 New            Commercial part
+
+   16 Buck regulator (servo rail)     MP1584 3A adjustable step-down, set to 6.1V                        Generic (MP1584 module)            MercadoLibre                                2             3,799.50               2.00                7,599.00                  $4.00 New            Commercial part
+
+   17 Power connector                 XT60 male/female connector pair                                    Generic / Amass-style              MercadoLibre                                1             3,545.00               1.87                3,545.00                  $1.87 New            Commercial part
+
+   18 Limit switches                  FCL/FCR micro limit switches for deposit alignment                 Generic / Candy-Ho                 MercadoLibre                                2             4,493.00               2.37                8,986.00                  $4.74 New            Commercial part
+
+   19 Main switch                     12V ON/OFF power/start switch                                      Generic                            MercadoLibre                                1             2,610.00               1.38                2,610.00                  $1.38 New            Commercial part
+
+   20 Indicators                      Buzzer + status LEDs                                               Generic                            MercadoLibre packs                          1            13,449.00               7.09              13,449.00                   $7.09 New            Commercial part
+
+   21 Relay module                    5V 1-channel relay module                                          Generic / WEB3ARG                  MercadoLibre                                1             3,499.00               1.84                3,499.00                  $1.84 New            Commercial part
+
+   22 Wiring & fasteners              Cables, connectors, M3 screws, nuts, standoffs and heat-shrink     Various / local store              Local store estimate                        1            25,000.00              13.17              25,000.00                  $13.17 New            Commercial
+                                                                                                                                                                                                                                                                                                materials / custom
+                                                                                                                                                                                                                                                                                                assembly
+                                                                                                                                                                                                                                         SOFTWARE
+
+                                                                                                                                                                                                     Name of the          Total Cost        Total Cost ($)
+       Team name:                                                                   RescueBot IITA                                                                                                  Local Currency      Local Currency      U.S.A. Dollars
+
+                                                                                                                                                                                                    Argentine Peso          R$0.00              $0.00
+
+Softw
+are
+#        Name                                  Software's           Description                                                             Source                                    Autor                          Cost (Local         Cost (USA Dollars)
+tools,
+librari                                        Tool/Library                                                                                                                                                          Currency)
+es,
+team 1 drivebase (custom)                      Library              Custom motor/encoder drivebase control for the Teensy                   RescueBot IITA repo                       RescueBot IITA (team)          FREE                FREE
+algorit
+hms
+and AI
+       2 claw (custom)                         Library              Custom five-servo rescue mechanism control: pickup, sort and deposit    RescueBot IITA repo                       RescueBot IITA (team)          FREE                FREE
+assets
+are
+free/n
+       3 PID (custom/local)                    Library              PID control for motor and movement regulation                           RescueBot IITA repo                       RescueBot IITA (team)          FREE                FREE
+o-cost
+for the
+team.
+     4 Adafruit BNO055                         Library              Driver for the BNO055 9-DOF IMU                                         github.com/adafruit/Adafruit_BNO055       Adafruit                       FREE                FREE
+
+     5 Adafruit APDS9960                       Library              Driver for the APDS-9960 color/proximity sensor                         github.com/adafruit/Adafruit_APDS9960     Adafruit                       FREE                FREE
+
+     6 Adafruit Unified Sensor / BusIO         Library              Sensor abstraction and I2C device layer                                 github.com/adafruit                       Adafruit                       FREE                FREE
+
+     7 VL53L0X (Pololu)                        Library              Driver for the VL53L0X time-of-flight sensor                            github.com/pololu/vl53l0x-arduino         Pololu                         FREE                FREE
+
+     8 NewPing                                 Library              HC-SR04 ultrasonic helper library included locally for tests/examples   bitbucket.org/teckel12/arduino-new-ping   Tim Eckel                      FREE                FREE
+
+     9 Servo (Arduino)                         Library              Servo PWM control for rescue mechanism                                  arduino.cc                                Arduino                        FREE                FREE
+
+   10 elapsedMillis                            Library              Non-blocking timing helper                                              github.com/pfeerick/elapsedMillis         Paul Stoffregen / community    FREE                FREE
+
+   11 OpenCV contrib Python                    Library              Image processing for line, marker and rescue-zone vision                pypi.org/project/opencv-contrib-python    OpenCV.org                     FREE                FREE
+
+   12 NumPy                                    Library              Array and math operations                                               numpy.org                                 NumPy developers               FREE                FREE
+
+   13 pySerial                                 Library              UART communication with the Teensy                                      pyserial.readthedocs.io                   pySerial developers            FREE                FREE
+
+   14 TensorFlow Lite Runtime                  Library              On-device victim/zone inference                                         tensorflow.org/lite                       Google                         FREE                FREE
+
+   15 Ultralytics YOLOv8                       Library              Rescue-detector training and export                                     ultralytics.com                           Ultralytics                    FREE                FREE
+
+   16 AGCWD + anti-flash preprocessing (custom) Algorithm           Adaptive illumination correction for the 2026 LED-wall rule             RescueBot IITA repo                       RescueBot IITA (team)          FREE                FREE
+
+   17 CentroidTracker (custom)                 Algorithm            Target stability/tracking between AI inferences                         RescueBot IITA repo                       RescueBot IITA (team)          FREE                FREE
+
+   18 camthreader (custom)                     Library              Threaded camera capture with latest-frame buffer                        RescueBot IITA repo                       RescueBot IITA (team)          FREE                FREE
+
+   19 Rescue victim/zone dataset + exported    Dataset / AI model   Roboflow dataset and YOLOv8/TFLite/ONNX model trained by the team       Roboflow dataset - roboliga-2025-kh2ly    RescueBot IITA (team)          FREE                FREE
+      model (custom)
+
+   20 PlatformIO                               Software's Tool      Teensy firmware build system                                            platformio.org                            PlatformIO                     FREE                FREE
+
+   21 Visual Studio Code                       Software's Tool      Code editor                                                             code.visualstudio.com                     Microsoft                      FREE                FREE
+                                                                                                                                                                         SOFTWARE
+
+                                                                                                                            Name of the                   Total Cost        Total Cost ($)
+      Team name:                                       RescueBot IITA                                                      Local Currency               Local Currency      U.S.A. Dollars
+
+                                                                                                                           Argentine Peso                   R$0.00              $0.00
+
+Softw
+are
+#       Name         Software's        Description                                              Source         Autor                                Cost (Local          Cost (USA Dollars)
+tools,
+librari              Tool/Library                                                                                                                   Currency)
+es,
+team22 Fusion 360    Software's Tool   3D CAD design of chassis and rescue mechanism            autodesk.com   Autodesk                             FREE/EDUCATION       FREE/EDUCATION
+algorit
+hms
+and AI
+     23 EasyEDA      Software's Tool   PCB schematic and layout design                          easyeda.com    EasyEDA / LCSC                       FREE                 FREE
+assets
+are
+free/n
+     24 Roboflow
+o-cost
+                     Software's Tool   Dataset annotation and management                        roboflow.com   Roboflow                             FREE                 FREE
+for the
+team.
+   25 Kaggle         Software's Tool   Model training and validation with cloud notebooks/GPU   kaggle.com     Kaggle / Google                      FREE                 FREE
+
+   26 Git / GitHub   Software's Tool   Version control and repository hosting                   github.com     GitHub / Software Freedom Conservancy FREE                FREE

@@ -1,0 +1,14 @@
+Name of the             Total Cost      Total Cost ($)
+     Team name:                               Speshari                                 Local Currency         Local Currency    U.S.A. Dollars
+
+                                                                                             Euro                 0,00 €            $0,00
+
+                                                                                                              Cost (Local      Cost (USA
+#     Name                 Software's Tool/LibrDescription                Source    Autor                     Currency)        Dollars)
+    1 Open CV              Library             Image processing library   Open CV                Opencv.org FREE               FREE
+    2 Eigen                Library             Linear algebra library     Eigen              KDE community FREE                FREE
+    3 Git                  Software’s tool     Version control            Git               Linux foundation FREE              FREE
+    4 Visual studio code   Software’s tool     Editor                     VS Code                   Microsoft FREE             FREE
+    5 Vim                  Software’s tool     Editor                     Vim               Bram Moolenaar FREE                FREE
+    6 GCC                  Software’s tool     Compiler collection        GCC       Free software foundation FREE              FREE
+    7 Webots               Software’s tool     Simulation platform        Webots                Cyberbotics FREE               FREE

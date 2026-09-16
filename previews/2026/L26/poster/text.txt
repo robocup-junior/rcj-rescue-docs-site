@@ -1,0 +1,45 @@
+CNT -RO
+                                                 Lm2596 DC-DC               BO
+                                                                     From
+                                                 converter is used to regulate
+
+                                                                          Th  T
+                                                 and stabilize the voltage before
+
+                                                                            a
+                                                 supplying power to the robot
+                                                                                                                 ila
+    Gyro ZX-IMU
+                                                                               Pixy 2.1 CMUcam5
+                                                                               camera used for ball
+                                                                                                                    nd
+    The ZX-IMU gyroscope is                                                    detection and color
+    used for precise angle                                                     classification
+    measurement and
+    accurate robot turning
+
+                                                                                    ZX-Sonar1M
+                                                                                    for obstacle and wall detection
+SENSOR SEN002
+line-tracking sensor is used to
+detect black and white lines,
+enabling the robot to follow
+                                                                               POP-32i
+the designated path
+                                                                               to process and execute
+                                                                               programmed commands
+
+                                                       Motor PG-300
+                                                       to drive the robot
+                    MG90S servo                        according to received
+                    Used to control the                commands
+                    gripper and release balls
+                    from the storage box
+
+                                                                          Soft Ware
+                                                The robot is programmed in C/C++ on the POP32
+                                                platform. It uses a State Machine for task control,
+                                                PID for line following, real-time sensor processing
+                                                for navigation, obstacle avoidance, intersection
+                                                detection, gap recovery, and MG90S servo control
+                                                for rescue ball delivery.

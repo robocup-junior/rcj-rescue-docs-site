@@ -1,0 +1,91 @@
+TEAM
+                                                                                                                                      RESCUE LINE                                                                                                                         SOFTWARE
+          ALEJANDRO BENJAMÍN VARGAS GALLARDO
+             Capitán. - Programador y Diseñador
+                             Elec.
+           Primarily responsible for programming the
+                                                                                                                                                                                                                                                                      The robot uses two languages: Python on the Raspberry Pi, responsible
+           line follower, green and red tape detection,                                                                               D30V30F3.                     D36V50F5.                 x4 MOLICEL P28A.                                                        for image processing and decision-making, and C++ on the Teensy,
+                   and communication between                                                                                3V to 3.7A regulator, its only   5V to 5A regulator, only     18650 type cells are used in
+               microcontrollers, in addition to PCB                                                                          job is to keep 2 LEDs lit to     provides power to the                                                                                   responsible for motor control.
+                                                                                                                                                                                             series to provide the
+                            fabrication.                                                                                        illuminate the track.             raspberry pi5.                                                                                      The Raspberry Pi captures frames from the camera and processes them
+                                                                                                                                                                                            voltage required by the
+                                                                                                                                                                                                     robot.                                                           to detect the black line, green turns, and red signals, as well as to
+               HILEL OMAR ARIAS CASTRO                                                                                                                                                                                                  x4 Pololu 20DX46L.
+                                                                                       D36V50F12.                                                                                                                                                                     control AI models running on a USB Coral Accelerator. Based on its
+          Cocapitán. - Creación de modelos IA.                                                                                                                                                                                        Motors, the robot's main
+                                                                                      12V regulator,                                                                                                                                                                  detections, it calculates a direction value and sends it to the Teensy via
+          He performed by creating and training                                     supplies DC power                                                                                                                                   actuator, cause it to
+                                                                                                                                                                                                                                                                      serial communication. The Teensy receives this value and converts it
+             our machine vision models from                                            for the other                                                                                                                                   navigate on the track.
+                                                                                                                                                                                                                                                                      into motor speeds, while also independently reading its own distance
+           scratch for silver tape detection and                                      components.
+                                                                                                                                                                                                                                                                      sensor to react to obstacles. Both controllers run in a continuous loop
+                    victim recognition.
+                                                                                                                                                                                                                                                                      throughout the entire process.
+                                                                                       Rpicam Model3                                                                                                                                         Teensy 4.0
+                                                                                             Wide.                                                                                                                                      Controls the robot's
+            IVANNA ZOÉ SALAZAR ALMAGUER                                             It handles the entire                                                                                                                             actuators and sensors,
+                   Diseñadora Mecánica                                              view of the track and                                                                                                                            motors, laser sensor, servo,                      Diagrama de Flujo - Line Follower:
+             Their job consisted of making the                                     is used in conjunction                                                                                                                                        etc.
+            necessary parts for our robot, made                                    with the Raspberry Pi
+            with the Fusion 360 software to later                                              5.                                                                                                                                          x3 Servo MG90S.
+                                                                                       Raspberry pi5.                                                                                                                                     It helps control the
+                       be 3D printed.
+                                                                                    Their job is to track                                                                                                                            camera's tilt angle to adjust
+                                                                                      the line using the                                                                                                                             for an ideal view, and is also
+                                                                                      camera and send                                                                                                                                used in the victim collection
+                                                                                     data to the teensy.                                                                                                                                        system.
+              ÁNGEL ISAAC DEL RIO GALVAN
+                        Programador.
+              Their focus was on programming
+                                                                                                                                                                                                                                              x4 VL53L4CD.
+            motors, performing the sequences of                                      x2 TB6612FNG.
+                                                                                                                                                                                                                                         These sensors help us
+                                                                                     Used for motor
+             turns depending on the green light                                                                                                                                                                                        detect obstacles and follow
+                                                                                    control, regulating
+           cases, laser sensors and servos for the                                                                                                                                                                                     walls to exit the evacuation
+                                                                                   speed and direction.
+                     collection of victims.                                                                                                                                                                                                        zone.
+
+                                                                             x2 LED Smd Blanco 3w.
+                                                                                                                                                                                                                                             BMS 4S 40A.
+                                                                              It helps considerably in
+                                                                                                                                                                                                                                      It helps us to monitor and
+                                                                             the lighting of the track,
+                                                                                                                                                                                                                                        protect the cells against
+                                                                             this avoids irregularities
+                                                                                                                                                                                                                                      discharges and overloads.
+                                                                               in the perceived data.
+
+                                                                                                                                                                          BNO055.                        Switch ON/OFF.
+                                                                                                                                  USB Acelerator.
+                                                                                                                                                               Este giroscopio ayuda a que los   Nos permite pausar y reactivar el
+                                                                                                                          Este dispositivo TPU nos permite
+                                                                                                                                                              giros en zona de evacuación sean   robot físicamente sin necesidad
+                                                                                                                                correr modelos de IA
+                                                                                                                                                                           precisos               de detener el programa a nivel
+                                                                                                                             desarrollados por nosotros
+                                                                                                                                                                                                             software
+                                                                                                                                       mismo.
+      Preparatoria 20 UANL
+ Coordinador: Adolio Sanchez Villarreal
+
+                                                                                                                                              Innovación
+                                                                                                            Our main mechanical innovation was the design of our custom PCB, as we had to develop it in
+                                                                                                                                                                                                                                                                        Diagrama de Flujo - Evacuation Zone:
+             Experiencias Previas
+                                                                                                            tandem with the mechanical design. This allowed us to achieve shorter physical connections
+                                                                                                            and, consequently, faster communication between components. In addition to fulfilling its
+In our initial participation, we obtained 3rd place. Although the performance                               electronic function satisfactorily, its role as the main chassis is crucial, making the robot more
+                                                                                                            stable and secure. Another benefit is the easy access to all the robot's connections, which
+was competitive, we managed to gain experience and carried out a post-
+                                                                                                            allows for faster external modifications.
+competition analysis, realizing that we had a very poor center of mass in
+addition to finding weaknesses in the software, problems that are not
+noticeable at first glance but that failed on the track. For our second version,
+we optimized both the traction and weight distribution of our robot,
+completely changing the main power supply method and patching various
+problems at the software level.

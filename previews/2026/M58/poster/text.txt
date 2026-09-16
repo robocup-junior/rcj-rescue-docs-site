@@ -1,0 +1,116 @@
+RRR Kabelmüsli                                                                                                                                                                                              Our Team
+
+                                                                                                                                                                                                                                                                                                        ial
+                                                                                                                                                                                                                                                                                                     fic
+                                                                                                                                                                                                                                                                                                  .of
+                 RoboCup Junior Rescue Maze
+
+                                                                                                                                                                                                                                                                                                up
+                                                                                                                                                                                                                                                                                              oc
+                                                                                                                                                                                                                                                                                            ob
+                     SFZ Tuttlingen, Germany
+
+                                                                                                                                                                                                                                                                                          @r
+                     @kabelmuesli
+
+1 TEAM OVERVIEW                                             2 ROBOT HARDWARE                                                                      3 SOFTWARE ARCHITECTURE                                                                                                                   4 Electronics
+                                                                Gravity-Fed Tower: Stores
+                 Team Captain                                   kits vertically
+                                                                                                                                              1. PERCEPTION           (A) ToF Sensor System            (B) Other Sensors              1. PERCEPTION                (A) Dual Camera        CUSTOM PCB
+                                                                                                                                                   LAYER                                                                                   LAYER                        System
+
+                 Software                                       Servo Escapement: Uses                                                             (Sensors)
+                                                                                                                                                                         Data Polling
+                                                                                                                                                                         Distance Calibration
+                                                                                                                                                                                                                     Output:                    (Vision)
+                                                                                                                                                                                                                    Orientation
+                                                                servo and two-armed
+                                                                                                                                                                         I2C Communication
+                                                                                                                                                                                                                       Color                                                                 Designed to improve reliability and reduce wiring
+                 Debugging                                                                                                                                                            Output:                      Reflectance                                          Output:
+
+                                                                catch                                                                                                              Distance Values
+                                                                                                                                                                                                                     Distances
+                                                                                                                                                                                                                  Encoder Values
+                                                                                                                                                                                                                                                                       Video Stream          complexity
+                                                                Single-Kit Release: Drops                                                             Teensy 4.1                                                                                Raspberry Pi 5
+                                                                                                                                                                                                                                                                                             Integrated 12 V, 5 V, and 3.3 V power supplies
+                 Software                                       the bottom kit while                                                                                                                                                                                                         Onboard sensor integration
+                                                                                                                                               2. COGNITION                                                                                                                                  Modular connectors for additional sensors
+                 Electronics                                    catching the rest                                                                                               (A) Navigation                                       (B) Mapping                 (C) Image Processing
+                                                                                                                                                   LAYER                                                                                                                                     Integrated motor drivers
+                                                                                                                                                                                  Path planning                                        Robot localization          Image acquisition
+                 Marketing                               Sensors:                                                                                                                 Obstacle avoidance: Black Tiles/Ramps/...            Maze mapping                Neural Network-           Compact, lightweight design
+                                                                                                                                                                                  Route optimization: accounts Tile/Turn               Environment                 Victim Detection
+                                                                8x VL53L1X                                                                                                        duration                                             tracking                    Victim localization       Simplified assembly and troubleshooting
+                                                                                                                                                                                                              Output:
+                                                                                                                                                                                                                                            Output:                    Output:
+                                                                3x VL53L8CX                                                                                                                             Where to go next + Route       Instruction: Step/Turn        Victim Detected
+                 Hardware                                       1x QTRXL-HD-01A                                                                  Raspberry Pi 5
+                 Electronics                                    1x APDS 9960                                                                   3. EXECUTION
+                 Assembly                                       1x WT901
+                                                                                                                                                                      (A) Motor Control System                           (B) PID Control Loops                     (C) Dropoff
+                                                                                                                                                   LAYER                 Communication with
+                                                                                                                                                                                                                    Ensures accurate 90° turns and stable
+                                                                                                                                                                                                                                                                    Controls Servo
+                                                                                                                                                                         Motors                                     driving
+                                                                                                                                                                                                                                                                    Orientation
+                                                         Motors:                                                                                                         Controls Motor Speeds                      Compensates for inconsistent speeds
+                                                                                                                                                                                                                    Receives sensor data from the                   Drops off Rescue
+                 Hardware                                                                                                                                                                                           Perception Layer                                Kit to the victim
+                                                                4x Pololu Metal                                                                                                                                         Output:
+                 Assembly                                       Gearmotor 20Dx55L
+                                                                                                                                                                     Motoron M2T256                                   Motor Speeds
+
+                 Design
+
+ 5 VICTIM DETECTION                                                                                               6 MAPPING & NAVIGATION                                                                    7 INNOVATION
+                                                                                                                     Localization & Mapping
+                      DETECTION PIPELINE                                                                             Distance sensors, wall measurements, and the gyro are used to
+                                                    Capturing 640x480 images                                                 estimate the robot's position and orientation.                              Innovation: coupled axle suspension system with
+                               Image Acquisition    Lens distortion corrected using custom dewarping algorithm
+                                & Preprocessing     Exposure & Color correction → compensation for lighting                                                                                              ball joints
+                                                    conditions                                                       Path Planning
+                                                                                                                        Shortest-path algorithm determines optimal route to next
+                                                                                                                                                                                                                 Each two wheels are rigidly mounted on one axle
+                               Region of Interest
+                                                                                                                                                                                                                 The front and rear axles are connected to each
+                                                    Predefined Regions of Interest
+                                   Filtering        Avoid locking to the next Tile                                     unknown cell. Turn Costs are included so smoother paths are
+Raspberry Pi 5                                                                                                                                  preferred
+                                                                                                                                                                                                                 other via rods
+(processing of   ArduCam                            Color Thresholding
+   the data)                   Victim Candidate     Black-mask pipeline                                               Motion Control                                                                             The connection uses ball joints
+                  IMX219          Extraction           Adaptive thresholding
+                                                       CLAHE contrast enhancement                                    PID-Controller regulates movement and turning. Wall distances                               This enables the axles to adapt to uneven
+                                                                                                                              and heading errors are used for correction
+                                Neural Network
+                                                    Candidates are passed to a neural network                                                                                                                    ground and tilt
+                                                    Model classifies victim symbols (Φ, Ψ, Ω)
+                                 Classification
+                                                    Second model classifies targets and decodes ring patterns         Obstacle Handling                                                                          Result: All four wheels remain in contact with
+                                                                                                                        Black tiles, ramps, and unexpected obstacles are detected.                               the ground at the same time
+                                  Detection         Detections are tracked over several frames                        Recovery behaviors allow the robot to continue operating after
+                                 Stabilization
+                                                    Victim only recognized after being confirmed over multiple
+                                                    frames                                                                                     disturbances.                                                     Advantage: high stability and consistent traction
+                                                                                                                                                                                                                 even on uneven terrain
+                                 Localization
+                                                    horizontal position of victim within the image is converted
+                                                    into relative position value
+                                                                                                                      Navigation
+                                                    Information is used by navigation system to align robot
+                                                    with victim                                                          The robot builds a grid map of the maze while exploring. A
+                                                    Images are saved in a gallery for debugging purposes
+                                                                                                                        Dijkstra-based path planner uses this map to find the most
+                                Documentation
+                                                    Victim data is saved in the map                                   efficient routes to the next unknown tile or back to the starting
+                                                                                                                                                     tile.
+
+ 8 ACCOMPLISHMENTS                                                                                                     9 Our Partners                                                                                                                                   10 CONTACT
+    2024 (Maze Entry)                     2025 (Maze)                                   2026 (Maze)
+                                                                                                                                                                                                                                                                                 rrrkabelmuesli@gmail.com
+      1st German Open                4th German Open                                  1st German Open
+ 3rd European Championship      5th European Championship
+                                                                                                                                                                                                                                                                                 @kabelmuesli
+                                                                                                                                                               Thank you for making this possible!

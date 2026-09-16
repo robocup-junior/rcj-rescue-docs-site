@@ -1,0 +1,111 @@
+PCMS_ET
+SOFTWARE                                                                                                                                                                               EXPLORING ALL OF THE MAZE BY
+OVERVIEW                           FLOW-CHART OF THE                                                                                                                                   SHORTEST ROUTE
+                                   MAIN LOOP
+our programming is based on                                                                                                                                                            Base Method: We designed a maze exploration method that
+the Robot Operating System                                                                                                                                                             maintains a two-dimensional map of discovered tiles and selects
+(ROS), an environment that                                                                                                                                                             robot actions based on its orientation and local information.
+provides files and services for                                                                                                                                                        Baseline Reference and Its Limitation: As a reference, we applied
+communication between                                                                                                                                                                  a right-hand-based exploration strategy. When the number of
+programs. This allows us to                                                                                                                                                            maze tiles is N, this approach requires approximately 2.2N search
+divide the tasks between several                                                                                                                                                       actions on average, resulting in inefficient exploration.
+programs at the same time.                                                                           LAO CHI IENG                     LUI IEK TONG                                     Proposed Solution: To improve efficiency, we developed an
+                                                                                                                                                                                       original algorithm that combines depth-first search and breadth-
+CIRCUIT DESIGN                                                                                                  Hardware               Hardware                                        first search, named DBFS (Depth and Breadth First Search).
+SUB BOARD                                                                                                       Traversing alorithm    Documentation                                   Algorithm Mechanics: DBFS prioritizes movement toward the
+- Controls 10 laser distance sensors and a gyroscope via I2C
+                                                                                                                                                                                       nearest reachable tile among known candidates. Robot behavior
+- Aggregates sensor readings and sends data to the main board
+                                                                                                                                                                                       is divided into search and move, defined below.
+through UART                                                                                         WONG CHI KIO                     LEI UN HOU
+MAIN BOARD                                                                                                                                                                                       SEARCH                             MOVE
+Central controller with reserved PCB interfaces:                                                                Software               Logs
+                                                                                                                Image recognition      Sensor system                                   Adjacent unexplored tiles are    The robot selects the next
+- 2 motor ports (2.54P), driving 4 motors (2 front, 2 rear)
+                                                                                                                                                                                       added to a LIFO structure        destination from UNSEARCH.
+- 3 I2C ports, 4 ADC inputs, and 4 GPIO pins
+                                                                                                                                                                                       named UNSEARCH with the          Using BFS, the robot computes
+- 2 UART connections (sub board + camera module)
+                                                                                                                                                                                       priority:                        the shortest path and runs a
+- Powered by a 12V battery with a 12V–5V converter for                                                                                                                     TB6612FNG
+
+                                                                                                                                                                                        [ LEFT → FRONT → RIGHT ]        brief simulation before moving.
+board operation
+                                                                                                                                                   JY61P SERIAL
+                                                                                                                                                   ACCELERATION SENSOR
+                                                                                                                                                   ELECTRONIC GYROSCOPE
+                                                                                                                                                   MODULE ATTITUDE ANGLE
+
+- Includes an OLED display and three buttons (power,                                                                                               MEASUREMENT
+
+                                                                                                                                                                                                                                      Next destinationis
+motor enable, start)                                                                                                                                                                                                              tile 3. Run a simulation
+                                                                                                                                                                                                                                  tofind the shortestpath
+                                                                                                                                                                                                          PUSH          POP-UP
+                                                                                                                                                                                                                                           to this tile.
+HARDWARE
+                                                                                                                                        DC DC BUCK BOOST
+                                                                                                                                        CONVERTER VARIABLE
+                                                                                                                                        VOLTAGE REGULATOR: 12V
+                                                                                                                                        TO 5V
+
+ SENSOR & ACTUATOR INTEGRATION                                                                                                                                                                SEARCH AND MOVE ARE EXECUTED ALTERNATELY.
+ - Path tracking: 9 Laser Sensor VL53L0X array at front.                                                                                                                                    EXPLORATION ENDS WHEN UNSEARCH BECOMES EMPTY
+ - Victim recognition: Vision modules (Sipeed MaixCAM) on
+                                                                                                                                                                                       RESULT
+                                                                                                                                         ESP32 WROOM-32E
+
+ both sides.
+ - Terrain perception: Color sensor (bottom) for forbidden                                                                                                                             DBFS was evaluated against a right-hand-based method. The
+ zones; bumper switches (front sides) for collision
+                                                                                                                                                 ESP32-PICO KIT
+
+                                                                                                                                                                                       number of search actions was reduced by approximately 33%,
+ prevention.                                                                                                                                                                           improving exploration efficiency and enabling more reliable
+ - Drive system: 25GA-370 DC geared motors with encoders                                                                                                           ESP32 DEVELOPMENT
+                                                                                                                                                                   BOARD               exit reach and Exit Bonus achievement
+ for odometry.
+CONTROL & CIRCUIT SYSTEM                                                                                                                                                               IMAGE RECOGNITION USING MACHINE
+- ESP32 main controller.                                                                                                                                                               LEARNING
+- Two custom PCBs for power management, signal
+                                                                                                                                                                                       Victims on maze walls are detected while the robot moves
+transmission, and sensor integration, reducing wiring issues
+                                                                                                                                                                                       forward using UART communication with camera modules.
+and improving anti-interference.
+CHASSIS & SUSPENSION                                                                                                                                                                   Color victims are identified using LAB thresholding, while
+- Ground clearance: 25 mm.                                                                                                                                                             letter victims are recognized by a trained machine learning
+- Rocker-bogie (parallel linkage) suspension for terrain                                                                                                                               model. White LEDs are used to reduce the
+                                                                    DS3225 30KG RC
+
+adaptability.
+                                                                    DIGITAL SERVO
+                                                                                                                                                                                       influence of ambient lighting, improving
+- Battery placed at center-bottom for low CG and balanced                               25GA-370 12V 58RPM DC
+                                                                                                                                                                                       recognition accuracy.
+                                                                                        REDUCER GEAR MOTOR
+
+weight distribution.                                                                                                                                                                                           Machine Learning Details: Letter
+RESCUE KIT DEPLOYMENT SYSTEM                                                                                     X9
+                                                                                                                                                                                                               recognition uses a MobileNet-V2 model
+- Dual-slide track with a central rotating disk for left/right                                   V2 LASER RANGING
+                                                                                                 SENSOR VL53L0X
+                                                                                                                                                                                                               trained on approximately 6,000 self-
+delivery.                                                                                                                                                                                                      collected images. The model is converted
+- Bottom guide rail ensures precise drop into victim zones.                                                                                                                                                    to TensorFlow Lite and deployed for real-
+                                                                                                RP-L-170 THIN FILM
+
+WHEELS & TIRE DESIGN                                                                            FLEXIBLE FORCE
+                                                                                                                                                                                                               time inference
+                                                                                                                                        ROBOT &
+                                                                                                PRESSURE SENSOR
+
+- 3D-printed resin hubs with tooth grooves for obstacle climbing.
+                                                                                                                                                                                       Training progress is monitored using learning curves to prevent
+- Ring grooves lock silicone tires firmly, preventing slippage or                    25GA-370 12V 58RPM DC                              COMPONENT                                      overfitting, and recognition accuracy improves with continued
+detachment during turns/climbs.
+                                                                                     REDUCER GEAR MOTOR
+
+                                                                                                                                                                                       training.
+                                                                                     WITH ENCODER
+
+                                                                    SIPEED MAIXCAM

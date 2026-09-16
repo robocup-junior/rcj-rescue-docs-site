@@ -1,0 +1,44 @@
+About us                                              SIMPLE       Rescue Maze                       Software
+            Kyung-Wook Lee
+          Software programming
+                                             VL53L4CD
+                                                                                OpenMV H7                              OpenMV
+                                             ultra sensor
+               Hyundo Kim                                                                                    Camera program Software:
+            Program & 3D model                                                                      identify color & letters and send it over main
+                                                                                                                       program
+                                             OpenMV H7
+               Yujeong Shin
+                                                                               Spike-Prime motor
+              General Manager
+                                                                                                                 Visual Studio Code
+               Seung-Ho Lee                                                                                     Main program & logics.
+             Hardware producer                 Touch                              Geekservo        responsible for main programs for the hardware
+                                               Sensors                           programmable      & complete the missions based on the info. given
+                                                                                2kg motor (blue)                     by OpenMV.
+
+     Hardware
+                 Chassis:
+   The chassis is made by the turntables
+   in Lego placed in between the Spike-                     Algorithms
+         Prime hub & back motors.
+
+               Kit Deployment:
+   The 3D models made for deploying the
+   kits left and right separately with the
+          single hole on a cylinder.
+              ex) Geneva drive
+
+Robot Revolution
+               1st hardware :
+       it is designed as a chassis
+         on the middle for better
+        movement over obstacles.
+                Improvements:
+       Added more models & sensors
+           ex) kits, cameras, ultra
+                  sensor,etc.
+                   Final:
+        Final hardware includes all
+       the models that were made by
+      3D & OpenMV hubs & sensors.

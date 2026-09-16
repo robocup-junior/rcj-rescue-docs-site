@@ -1,0 +1,48 @@
+AFIF (LEADER)                               HAZIEQ                                    MUQRI (MENTOR 1)
+                                          HARDWARE AND MOVEMENT LEAD                  GREEK LETTER DETECTION                    CONSULT–DESIGN & HARDWARE
+
+                                          HAFIY(CO-LEADER)                            ADAM                                      AMEERUL (MENTOR 2)
+                                          MAPPING AND NAVIGATION LEAD                 COGNITIVE TARGET DETECTION                CONSULT–ALGORITHM & STRATEGY
+
+    1     HARDWARE PART                        200mm                                         COMPONENT
+                                                                                                     CONFIGURATION
+
+      CF-REINFORCE MATERIAL FOR           HORIZONTAL        HARDWARE INNOVATION      DUAL CAMERA                               SWAPPABLE POWER
+                 CHASSIS                  SPRING-LOADED                          ADJUSTABLE ANGLE                              TOOL BATTERY DOCK
+   ABS- CF for body panels (high          RESCUE KIT DEPLOYMENT
+                                                                      Two IMX219 160° wide- angle
+   stiffness, heat resistance), PETG-                                                                                       20V 1.5Ah power tool battery
+                                          Spring- loaded magazine with dual       cameras mounted left and right at
+   CF for chassis frame (toughness                                                                                          on a quick- release dock.
+                                          slide ramps (left and right).           100–110mm height with adjustable
+   under drive loads), PLA for                                                                                              Swappable     in   seconds
+                                          MG996R servo actuates the ejector       15–20° tilt. Enables continuous
+   accessories.                                                                                                             betweenrounds withouttools
+                                          arm to                                  bilateral victim wall scanning while
+   CF materials                                                                                                             ensuring full
+                                          deploy kit                              moving — no stop-
+   reduce flex                                                                                                              power capacity
+                                          within                                  and- rotate needed. Tilt
+   under field                                                                                                              for every
+                                          15cm of                                 mechanism allows
+   impact.                                the victim.                                                                       scoring run.
+                                                                                  field- day angle tuning.
+
+    2      SOFTWARE PART                               SYSTEM ARCHITECTURE                GREEK                ALGORITHMS & METHODS COGNITIVE
+                                                                                          LETTER                                       TARGET
+                                                                                          DETECTION                                 DETECTION
+                                                                                          S1 – Capture Dataset for 10,500   S1 – Detect outermost circle
+                                                                                          images, 3500 for each letter      S2 – Template matching into
+                                                                                          class.                            1:2:3:4:5 diameter ratio
+                                                                                          S2 – Train TensorFlow CNN to      S3 – NumPy masking per ring
+                                                                                          generate model.                   with HSV dominant color.
+                                                                                          S3 – Detectionbased on            S4 – Sum weightage for all 5
+                                                                                          trained model                     rings
+
+   The robot calibrates floor colors, initializes the 2D grid map, then navigates                    AUTONOMOUS MAZE NAVIGATION
+   autonomouslyusing the Right- Hand Rule. It responds to floor tiles in real time,
+   stops on blue, reverses on black, and saves checkpoints on silver. Both cameras        RIGHTHANDRULE –                           EMPTY TILE– Recover
+   scan for victims simultaneously,deployingrescue kits and blinking the RGB LED          Follow wall for exploring               based on non- discovered
+   on detection.                                                                          and mapping tile.                              tile from mapping
+
+Faizuddin Centre of Educational Excellence                                                                                     RoboCup Junior 2026

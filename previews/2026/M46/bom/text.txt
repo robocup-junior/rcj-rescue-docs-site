@@ -1,0 +1,134 @@
+RESCUE JUNIOR - Bill of Materials (BOM)
+
+Team name:                              DELTA
+
+Every Line/Maze team has to submit a bill of materials for their robot
+
+Instructions:
+*Enter Team name above
+*All costs need to be in local currency and their approximate
+conversion into dollars.
+*All components worth less can be summarized in one line quantity 1
+and their total cost (e.g. Screws)
+*In the Local Currency Name column, the team must enter the name
+of the local currency, if it is different from US dollars.
+
+*In the software sheet, in the Author column, the name of the
+designer, writer, or company that owns the software or library should
+be entered. If the team created their own algorithm, dataset, or AI
+model, they can include their names as authors.
+*On the hardware sheet, in the "Author" column, enter the name of
+the company, engineer, or part manufacturer. If the team made a
+custom part, such as the robot housing, the team should include their
+names as the authors.
+*IMPORTANT* The "Hardware" sheet is not required for simulation
+         Team name:                                                      DELTA
+
+#      Component                       Part name                                          Author                  Source
+     1 Drive Motors                    MG996R Servo 360° Rotation (Continuous)            TowerPro                makerstore.com.au
+     2 Long Range Distance Sensor      Adafruit VL53L4CX                                  Adafruit                adafruit.com
+     3 Short Range Distance Sensor     Adafruit VL53L4CD                                  Adafruit                adafruit.com
+     4 Small Servo Motors              FS90MR 9g Servo Motor                              FeeTech                 core-electronics.com.au
+     5 Microcontroller                 Teensy 4.1                                         Teensy                  core-electronics.com.au
+     6 Cameras                         OpenMV AE3                                         OpenMV                  openmv.io
+     7 GY-BNO055                       9 axis IMU                                         No Brand                aliexpress.com
+     8 Small Switch                    125V 6A Switch                                     E Switch                digikey.com.au
+     9 Large Switch                    125V 10A Switch                                    E Switch                digikey.com.au
+    10 Colour Sensor                   Adafruit AS7341 10 Channel Colour Sensor           Adafruit                adafruit.com
+    11 Battery                         Nano-Tech 2S Cell 7.4V Battery                     Turnigy power-systems   Pre Owned/ Unknown
+    12 Silicone for wheels             Transil 25A 2kg Silicone                           Barnes                  barnes.com.au
+    13 Ball Bearing                    Ball Bearing - 8 mm ID, 22 mm OD 7 mm Race Width   RS Pro                  au.rs-online.com
+    14 Fasteners                                                                                                  Pre Owned/ Unknown
+    15 Limit Switches                  LS2501F350C2A                                      E-Switch                digikey.com.au
+    16 Needle  Roller Bearing          17 mm ID Roller Bearing Needle, 30 mm OD           SKF                     au.rs-online.com
+    17 Robot Frame                     Custom Made                                        Ethan Seymour           CNC & 3D Printer
+    18 Wheels                          Custom Made                                        Ethan Seymour           3D Printer & Silicone moulding
+    19 PCBs with electronic components Custom Made                                        Ethan Seymour/ jlcpcb   https://jlcpcb.com/
+    20 Cables                          Various Cables                                                             core-electronics.com.au
+    21
+    22
+    23
+    24
+    25
+    26
+                              Name of the            Total Cost     Total Cost ($)
+                             Local Currency        Local Currency   U.S.A. Dollars
+                             Australian Dollar
+                                  AUD                $1,099.44        $774.45
+             Unit cost                            Total Cost      Total Cost
+Quantity     (Local        Unit cost (US Dollars) (Local          (USA Dollars)
+           4        $16.70                $11.78           $66.80         $47.12
+           2        $21.21                $14.95           $42.42         $29.90
+           8        $21.21                $14.95          $169.68        $119.60
+           3         $5.70                 $4.02           $17.10         $12.06
+           1        $57.15                $40.32           $57.15         $40.32
+           2       $141.88               $100.00          $283.76        $200.00
+           1        $12.59                 $8.84           $12.59          $8.84
+           5         $3.26                 $2.29           $16.30         $11.45
+           3         $0.93                 $0.65            $2.79           $1.95
+           1        $26.98                $18.95           $26.98          $18.95
+           1         26.18                $18.45           $26.18          $18.45
+           1      $154.00               $108.59           $154.00         $108.59
+           1        $5.99                 $4.22             $5.99           $4.22
+           1        $30.00                $20.96           $30.00          $20.96
+           4         $6.74                 $4.75           $26.96          $19.00
+           2         $8.18                 $5.77           $16.36          $11.54
+           1         21.24                $14.93           $21.24          $14.93
+           4         $1.00                 $0.70            $4.00           $2.80
+           1       $104.14                $73.19          $104.14          $73.19
+           1        $15.00                $10.58           $15.00          $10.58
+                                                            $0.00           $0.00
+                                                            $0.00           $0.00
+                                                            $0.00           $0.00
+                                                            $0.00           $0.00
+                                                            $0.00           $0.00
+                                                            $0.00           $0.00
+       Team name:                                            DELTA
+
+#      Name                        Software's Tool/LibraryDescription                 Source
+     1 Visual Studio Code          Software's Tool        Software                    code.visualstudio.com/
+     2 OpenMV IDE                  Software's Tool        Camera Image Processing     openmv.io
+     3 Fusion                      Software's Tool        3D CAD model & PCB Design   autodesk.com
+     4 Github                      Software's Tool        Code Version Control        github.com
+     5 Bambu Studio                Software's Tool        3D Printing Slicer          bambulab.com
+     6 Makera Carvera Controller   Software's Tool        CNC Controller              global.makera.com
+     7 Edge Impulse                Software's Tool        AI model tool               www.edgeimpulse.com/
+     8 AS7341                      Library                Colour Sensor Library       github.com/adafruit/Adafruit_AS7341
+     9 BNO005                      Library                IMU Library                 github.com/adafruit/Adafruit_BNO055
+    10 NeoPixel                    Library                Neopixel RGB LED library    github.com/adafruit/adafruit_neopixel
+    11 VL53L4CD                    Library              Short Distance LRF library    github.com/pololu/vl53l4cd-arduino
+    12 VL53L4CX                    Library              Long Distance LRF library     github.com/stm32duino/VL53L4CX
+    13 Servo                       Library              Servo Motor Library           github.com/michaelmargolis/SlowServo
+    14 BusIO                       Library              I2C, UART, SPI control        github.com/adafruit/Adafruit_BusIO
+    15 Sensor                      Library              Sensor drivers                github.com/adafruit/adafruit_sensor
+    16
+    17
+    18
+    19
+    20
+    21
+    22
+    23
+    24
+    25
+          Name of the                  Total Cost         Total Cost ($)
+         Local Currency              Local Currency       U.S.A. Dollars
+
+         Brazilian Real                   R$0.00              $0.00
+
+Author                           Cost (Local Currency) Cost (USA Dollars)
+                          Microsoft FREE              FREE
+                          OpenMV FREE                 FREE
+                         Autodesk FREE/EDUCATION      FREE/EDUCATION
+                          Microsoft FREE              FREE
+                       Bambu Lab FREE                 FREE
+                           Makera FREE                FREE
+            Qualcomm Technologies FREE                FREE
+                           Adafruit FREE              FREE
+                           Adafruit FREE              FREE
+                           Adafruit FREE              FREE
+                             Pololu FREE              FREE
+                 STMicroelectronics FREE              FREE
+                   Michael Margolis FREE              FREE
+                           Adafruit FREE              FREE
+                          Adafruit FREE               FREE

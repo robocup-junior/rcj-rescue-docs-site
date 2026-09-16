@@ -1,0 +1,79 @@
+Dry Lettuce
+Hardware
+                                                                                  Pi Camera Module 3 Wide 2x for line follow and one front
+                                                                                                                   facing for rescue to detect
+                                                                                                                   evacuation poits and victims
+                                                                                                                                                                        3D                        A cooler housing
+                                                                                                                                                                                                with mounted fan for
+                                                                                                                                                                                                                        Ramp to store two
+                                                                                                                                                                                                                         victims, while the
+We designed a PCB with some
+                                                          VL53L1X Time
+                                               of Flight Sensor                                                          Polulu 20mm Metal                            Printed                     the Pi and STM32      dead victim is held
+                                                                                                                                                                                                                             in the claw
+components being soldered in-house.
+This allowed for space saving and more     2x: One primary sensor at
+                                           the front, and one on the
+                                                                                                                         Gear Motors                                   Parts
+                                                                                                                          4x each with magnetic encoders
+reliable power management systems. It       claw for verifying victim
+                                                                                                                          for accurate speed and distance
+                                                             capture
+also reduced hardware complexities once HC-SR04
+it was working. The main motivation for
+                                        Ultrasonic                                                                                    OLED Display
+this was gaining more experience with
+circuit design and layout.                  Sensor                                                                                    Shows Pi & STM32 temperatures,
+                                                                                                                                      ROS output for debugging, a
+                                           Mounted on the side                                                                        status code, and turn angle
+                                         and used for navigating
+                                              around obstacles
+
+                                            STM32F407                                                                                 80mm Pololu
+                                                                                                                                                                             Battery holder
+                                        Microcontroller                                                                               Wheels                                  which allows
+                                                                                                                                      Larger wheels compared to
+                                  Secondary processing unit for                                                                       previous designs to get over           removal after
+                                  controlling motors, servos and                                                                                                                                                  Claw which
+                                                                                                                                      speed bumps better                   removing the base
+                                               illumination LEDs                                                                                                                                                  conforms to
+                                                                                                                                                                                                                   ball shape
+                                                                                                                         Raspberry Pi
+                                                       SG90 Servos
+                                                   3x: claw, claw lift and ball
+                                                                                                                         AI Hat+ 2
+                                                                                                                          Offloads processing of victim
+                                                                                                                                                                                        Software
+                                                              storage release                                             recognition machine learning                 Below is the high level             Below is a diagram of the
+                                                                                                                                                                     main loop logic on the Pi.            ROS2 node connections
+                                                                                                                                                            Yes
+                                                                                                                                            Red Strip?            Exit loop and end
+                                                                                                           Main processing                         No
+                                                                                        Raspberry Pi 5     unit with 8GB of                 Silver Strip?
+                                                                                                                                                            Yes
+                                                                                                                                                                  Begin rescue lifecycle node
+                                                                                                           RAM                    Repeat           No
+                                                                                                                                                            Yes
+                                                                                                                                             Obstacle?            Trigger obstacle navigation (blocking)
+
+Team           We have been a team since 2022, with Toby, Landon and Bain doing robotics                                                           No
+
+               since 2017, and William joining our school’s robotics program in 2021.
+                                                                                                                                            Line Follow
+                                                                                                                                                                                  Rescue
+                                                                                                                                           Line Follow
+                                                                                                                                  The robot’s algorithm
+                                                                                                                                  constructs a graph-based map
+                                                                                                                                  rather than simply tracking the
+                                                                                                                                  largest contour. It compares
+                                                                                                                                  intersections with the line
+                                                                                                                                  position and links these into a
+                                                                                                                                  network of connected nodes.
+
+                                                                                                                                 Past Achievements
+                                                                                                                                 Our achievements from competing at RoboCup
+                                                                                                                                 Junior Australia:
+                                                                                                                                    1st in the NSW state competition in 2022, 2023
+                                                                                                                                    and 2025, and 2nd in 2024
+                                                                                                                                    1st in the Australian National competition in 2025,
+                                                                                                                                    3rd in 2022 and 2023, and 2nd in 2024

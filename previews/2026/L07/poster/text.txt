@@ -1,0 +1,16 @@
+CHEN-RUI HUANG
+This report poster and some          In accordance with the current Rescue Line regulations,
+programming language                 we identified the key requirements for our robot and
+writting                                        outline potential solutions.
+YOUE-TENG LUO
+Programming languag             The team then evaluated these approaches based on criteria
+writing                               such as reliability, effectiveness, safety, ease of
+                                         implementation, and individual expertis.
+KUIX-UAN ZHANG
+Partial robot body
+and programming language
+writting
+YONG-LI ZHU
+Robot body design
+and some programming language
+writting
